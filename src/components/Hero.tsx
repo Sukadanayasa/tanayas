@@ -7,36 +7,36 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-20">
       {/* Animated Background (waves/gradient) */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-blue-800/70 to-teal-700/80 animate-gradient-move" />
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-teal-700 animate-gradient-move" />
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/70 via-blue-800/60 to-teal-700/70" />
+      <div className="absolute inset-0 bg-black/30" /> {/* Slightly darker, more subtle overlay */}
       {/* Tagline */}
-      <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-        <p className="text-base sm:text-lg text-cyan-200 font-semibold tracking-wide mb-2">
-          Island Hopping Made Effortless
+      <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
+        <p className="text-base sm:text-lg text-cyan-300 font-semibold tracking-wide mb-3 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+          Your Ultimate Guide to Bali Island Hopping
         </p>
-        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white mb-6 leading-tight">
-          Get Real-Time Fastboat Schedules,
+        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white mb-6 leading-tight animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+          Seamless Fastboat Travel to
           <br />
-          <span className="text-cyan-300">
-            Insider Tips &amp; Local Support
+          <span className="text-cyan-400">
+            Nusa Penida, Gili Islands & Lombok
           </span>
         </h1>
-        <p className="text-lg sm:text-xl lg:text-2xl text-blue-100 mb-10 max-w-3xl mx-auto leading-relaxed">
-          Plan your Bali island adventure with expert guidance, up-to-date
-          routes, and honest local advice—no stress, no guesswork.
+        <p className="text-lg sm:text-xl lg:text-2xl text-blue-100 mb-10 max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+          Get real-time schedules, expert local advice, and personalized support for your perfect island adventure. No hidden fees, just honest guidance.
         </p>
         <button
           onClick={scrollToContact}
-          className="group inline-flex items-center space-x-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-12 py-6 rounded-full font-bold text-xl shadow-2xl hover:shadow-cyan-500/25 transform hover:scale-105 transition-all duration-300 ease-out"
+          className="group inline-flex items-center space-x-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-10 py-5 rounded-full font-bold text-lg sm:text-xl shadow-2xl hover:shadow-cyan-500/30 transform hover:scale-105 transition-all duration-300 ease-out animate-fade-in-up"
+          style={{ animationDelay: '0.7s' }}
         >
           <span>Plan My Trip Now</span>
           <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
         </button>
-        <p className="text-sm text-blue-200 mt-4 opacity-90">
-          Free • Instant • No Booking Required
+        <p className="text-sm text-blue-200 mt-4 opacity-90 animate-fade-in-up" style={{ animationDelay: '0.9s' }}>
+          Free Service • Instant Information • No Booking Required
         </p>
       </div>
       {/* Scroll Indicator - only on desktop */}
