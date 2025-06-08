@@ -33,7 +33,7 @@ const Header: React.FC = () => {
             : "0 1px 8px 0 rgba(0,0,0,0.03)", // Added subtle shadow for non-scrolled state
         }}
       >
-        <div className="w-full px-4 py-3"> {/* Removed container mx-auto */}
+        <div className="w-full px-4 py-3">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div
@@ -70,7 +70,7 @@ const Header: React.FC = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden p-2 text-gray-600 hover:text-blue-700 transition-colors duration-200 relative z-50"
+              className="lg:hidden p-2 text-gray-600 hover:text-blue-700 transition-colors duration-200 relative z-50 border border-blue-400 rounded-full"
               aria-label="Toggle menu"
             >
               {/* Animated Hamburger to X */}
