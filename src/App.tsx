@@ -1,14 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, lazy, Suspense } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Destinations from './components/Destinations';
-import HowItWorks from './components/HowItWorks';
-import Testimonials from './components/Testimonials';
-import FAQ from './components/FAQ';
-import TravelTips from './components/TravelTips';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
+
+// Lazy load components for faster initial page load
+const Destinations = lazy(() => import('./components/Destinations'));
+const HowItWorks = lazy(() => import('./components/HowItWorks'));
+const Testimonials = lazy(() => import('./components/Testimonials'));
+const FAQ = lazy(() => import('./components/FAQ'));
+const TravelTips = lazy(() => import('./components/TravelTips'));
+const Contact = lazy(() => import('./components/Contact'));
+const Footer = lazy(() => import('./components/Footer'));
 
 function App() {
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
@@ -67,14 +69,18 @@ function App() {
       <Header theme={theme} toggleTheme={toggleTheme} />
       <main>
         <Hero />
-        <Destinations />
-        <HowItWorks />
-        <Testimonials />
-        <FAQ />
-        <TravelTips />
-        <Contact />
+        <Suspense fallback={null}>
+          <Destinations />
+          <HowItWorks />
+          <Testimonials />
+          <FAQ />
+          <TravelTips />
+          <Contact />
+        </Suspense>
       </main>
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
       <FloatingWhatsApp />
     </div>
   );

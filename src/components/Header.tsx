@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, memo } from "react";
 import { Menu, X, MessageCircle, Sun, Moon } from "lucide-react";
 
 interface HeaderProps {
@@ -6,7 +6,7 @@ interface HeaderProps {
   toggleTheme: () => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
+const Header: React.FC<HeaderProps> = memo(({ theme, toggleTheme }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -146,6 +146,6 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
       </div>
     </>
   );
-};
+});
 
 export default Header;

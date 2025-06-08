@@ -1,7 +1,7 @@
-import React from "react";
+import React, { memo } from "react";
 import { Facebook, Instagram, Twitter, MessageCircle } from "lucide-react";
 
-const Footer: React.FC = () => {
+const Footer: React.FC = memo(() => {
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -109,6 +109,6 @@ const Footer: React.FC = () => {
       </div>
     </footer>
   );
-};
+});
 
 export default Footer;
