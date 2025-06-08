@@ -1,11 +1,10 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import { destinations } from "../data/content";
+import useScrollToSection from "../hooks/useScrollToSection"; // Import the new hook
 
 const Destinations: React.FC = () => {
-  const scrollToContact = () => {
-    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-  };
+  const scrollToSection = useScrollToSection(); // Use the custom hook
 
   return (
     <section
@@ -51,7 +50,7 @@ const Destinations: React.FC = () => {
                 </p>
 
                 <button
-                  onClick={scrollToContact}
+                  onClick={() => scrollToSection("contact")} // Use the hook function
                   className="group/btn inline-flex items-center space-x-2 text-blue-600 hover:text-blue-800 font-semibold transition-all duration-300 dark:text-blue-400 dark:hover:text-blue-500"
                 >
                   <span>Learn More &amp; Get Schedules</span>

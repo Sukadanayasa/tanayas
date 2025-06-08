@@ -1,10 +1,9 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
+import useScrollToSection from "../hooks/useScrollToSection"; // Import the new hook
 
 const Hero: React.FC = () => {
-  const scrollToContact = () => {
-    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-  };
+  const scrollToSection = useScrollToSection(); // Use the custom hook
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -29,7 +28,7 @@ const Hero: React.FC = () => {
           routes, and honest local advice—no stress, no guesswork.
         </p>
         <button
-          onClick={scrollToContact}
+          onClick={() => scrollToSection("contact")} // Use the hook function
           className="group inline-flex items-center space-x-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-12 py-6 rounded-full font-bold text-xl shadow-2xl hover:shadow-cyan-500/25 transform hover:scale-105 transition-all duration-300 ease-out dark:from-cyan-600 dark:to-blue-700 dark:hover:from-cyan-700 dark:hover:to-blue-800 dark:shadow-lg dark:hover:shadow-cyan-700/25"
         >
           <span>Plan My Trip Now</span>

@@ -19,10 +19,14 @@ export interface FAQItem {
   answer: string;
 }
 
+// Define specific literal types for icons and colors used in TravelTip
+export type TravelTipIcon = "Clock" | "PackageCheck" | "Heart" | "CalendarPlus";
+export type TravelTipColor = "blue" | "green" | "red" | "purple";
+
 export interface TravelTip {
   id: string;
   title: string;
   description: string;
-  icon: string;
-  color: string;
+  icon: TravelTipIcon; // Use the specific icon type
+  color: TravelTipColor; // Use the specific color type
 }

@@ -1,23 +1,26 @@
 import React from "react";
 import { Clock, PackageCheck, Heart, CalendarPlus } from "lucide-react";
-import { travelTips } from "../data/content";
+import { travelTips, TravelTipIcon, TravelTipColor } from "../data/content"; // Import specific types
 
 const TravelTips: React.FC = () => {
-  const iconComponents = {
+  // Map string icon names to Lucide React components
+  const iconComponents: Record<TravelTipIcon, React.ElementType> = {
     Clock,
     PackageCheck,
     Heart,
     CalendarPlus,
   };
 
-  const colorClasses = {
+  // Map string color names to Tailwind CSS gradient classes
+  const colorClasses: Record<TravelTipColor, string> = {
     blue: "from-blue-400 to-blue-500",
     green: "from-green-400 to-green-500",
     red: "from-red-400 to-red-500",
     purple: "from-purple-400 to-purple-500",
   };
 
-  const bgColorClasses = {
+  // Map string color names to Tailwind CSS background classes for card
+  const bgColorClasses: Record<TravelTipColor, string> = {
     blue: "bg-blue-50 dark:bg-gray-800",
     green: "bg-green-50 dark:bg-gray-800",
     red: "bg-red-50 dark:bg-gray-800",
@@ -40,12 +43,10 @@ const TravelTips: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {travelTips.map((tip, index) => {
-            const IconComponent =
-              iconComponents[tip.icon as keyof typeof iconComponents];
-            const colorClass =
-              colorClasses[tip.color as keyof typeof colorClasses];
-            const bgColorClass =
-              bgColorClasses[tip.color as keyof typeof bgColorClasses];
+            // Directly use the typed properties
+            const IconComponent = iconComponents[tip.icon];
+            const gradientColorClass = colorClasses[tip.color];
+            const backgroundColorClass = bgColorClasses[tip.color];
 
             return (
               <div
@@ -54,13 +55,13 @@ const TravelTips: React.FC = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div
-                  className={`${bgColorClass} rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 relative overflow-hidden dark:shadow-xl dark:hover:shadow-2xl dark:shadow-gray-950/50`}
+                  className={`${backgroundColorClass} rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 relative overflow-hidden dark:shadow-xl dark:hover:shadow-2xl dark:shadow-gray-950/50`}
                 >
                   {/* Decorative background element */}
                   <div className="absolute -top-8 -right-8 w-32 h-32 bg-white/30 rounded-full transform group-hover:scale-110 transition-transform duration-700 dark:bg-gray-700/30" />
 
                   <div
-                    className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br ${colorClass} flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300 relative z-10`}
+                    className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br ${gradientColorClass} flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300 relative z-10`}
                   >
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>

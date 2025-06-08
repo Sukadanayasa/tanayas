@@ -1,13 +1,8 @@
 import React from 'react';
 import { MessageCircleCode, Compass, PhoneCall } from 'lucide-react';
-// import { useLanguage } from '../hooks/useLanguage'; // This hook is not defined in the provided codebase
-// import { translations } from '../data/translations'; // This file is not defined in the provided codebase
 
 const About: React.FC = () => {
-  // const { currentLanguage } = useLanguage(); // Commented out as useLanguage and translations are not defined
-  // const t = translations[currentLanguage]; // Commented out
-
-  // Placeholder for translations if the above are not available
+  // Placeholder for translations - using hardcoded strings as no translation hook/data is provided
   const t = {
     aboutUsTitle: "Why Choose Tanayas?",
     aboutUsDescription: "At Tanayas, we believe planning your island adventure should be as relaxing as the trip itself. We cut through the noise to give you clear, reliable fastboat information and personalized support.",

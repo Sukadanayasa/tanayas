@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, MessageCircle, Sun, Moon } from "lucide-react";
+import useScrollToSection from "../hooks/useScrollToSection"; // Import the new hook
 
 interface HeaderProps {
   theme: 'light' | 'dark';
@@ -9,6 +10,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const scrollToSection = useScrollToSection(); // Use the custom hook
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -16,12 +18,10 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsMenuOpen(false);
-    }
+  // Function to handle navigation and close mobile menu
+  const handleNavigationClick = (sectionId: string) => {
+    scrollToSection(sectionId);
+    setIsMenuOpen(false); // Close mobile menu after navigation
   };
 
   return (
@@ -65,7 +65,7 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
                 ].map((item) => (
                   <button
                     key={item.section}
-                    onClick={() => scrollToSection(item.section)}
+                    onClick={() => handleNavigationClick(item.section)}
                     className="px-4 py-2 rounded-full text-gray-700 hover:bg-blue-50 hover:text-blue-700 font-medium transition-all duration-200 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-blue-400"
                   >
                     {item.label}
@@ -135,7 +135,7 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
             ].map((item) => (
               <button
                 key={item.section}
-                onClick={() => scrollToSection(item.section)}
+                onClick={() => handleNavigationClick(item.section)}
                 className="block w-full text-left px-4 py-3 rounded-lg text-lg font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-700 transition-all duration-200 dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:text-blue-400"
               >
                 {item.label}
