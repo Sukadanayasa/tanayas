@@ -93,40 +93,38 @@ const Header: React.FC = () => {
         </div>
       </header>
 
-      {/* Mobile Menu Overlay */}
-      {isMenuOpen && (
-        <>
-          <div
-            className="fixed inset-0 bg-black/40 z-40 lg:hidden transition-opacity duration-500" // Changed duration to 500ms
-            onClick={() => setIsMenuOpen(false)}
-            style={{ backdropFilter: "blur(2px)" }}
-          />
-          <div
-            className={`fixed top-[64px] left-0 right-0 bg-white z-40 lg:hidden shadow-lg transition-opacity duration-500 ease-in-out ${ // Changed duration to 500ms
-              isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
-            }`}
-          >
-            <div className="p-6">
-              <nav className="space-y-4">
-                {[
-                  { label: "Get Info Now", section: "contact" },
-                  { label: "Destinations", section: "destinations" },
-                  { label: "How It Works", section: "about" },
-                  { label: "FAQ", section: "faq" },
-                ].map((item) => (
-                  <button
-                    key={item.section}
-                    onClick={() => scrollToSection(item.section)}
-                    className="block w-full text-left px-4 py-3 rounded-lg text-lg font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-700 transition-all duration-200"
-                  >
-                    {item.label}
-                  </button>
-                ))}
-              </nav>
-            </div>
-          </div>
-        </>
-      )}
+      {/* Mobile Menu Overlay (always rendered for transitions) */}
+      <div
+        className={`fixed inset-0 bg-black/40 z-40 lg:hidden transition-opacity duration-500 ${
+          isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+        }`}
+        onClick={() => setIsMenuOpen(false)}
+        style={{ backdropFilter: "blur(2px)" }}
+      />
+      <div
+        className={`fixed top-[64px] left-0 right-0 bg-white z-40 lg:hidden shadow-lg transition-opacity duration-500 ease-in-out ${
+          isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+        }`}
+      >
+        <div className="p-6">
+          <nav className="space-y-4">
+            {[
+              { label: "Get Info Now", section: "contact" },
+              { label: "Destinations", section: "destinations" },
+              { label: "How It Works", section: "about" },
+              { label: "FAQ", section: "faq" },
+            ].map((item) => (
+              <button
+                key={item.section}
+                onClick={() => scrollToSection(item.section)}
+                className="block w-full text-left px-4 py-3 rounded-lg text-lg font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-700 transition-all duration-200"
+              >
+                {item.label}
+              </button>
+            ))}
+          </nav>
+        </div>
+      </div>
     </>
   );
 };
