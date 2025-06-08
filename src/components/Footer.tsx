@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
               <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center">
                 <MessageCircle className="w-5 h-5 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-white">BaliFastboat</h3>
+              <h3 className="text-2xl font-bold text-white">Tanayas</h3>
             </div>
             <p className="text-gray-400 leading-relaxed">
               Your trusted source for real-time fastboat schedules, local travel
@@ -104,7 +104,7 @@ const Footer: React.FC = () => {
 
         {/* Copyright */}
         <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-500">
-          <p>&copy; 2025 BaliFastboat. All rights reserved.</p>
+          <p>&copy; 2024 Tanayas. All rights reserved.</p>
         </div>
       </div>
     </footer>

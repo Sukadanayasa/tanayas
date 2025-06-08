@@ -45,7 +45,7 @@ const Header: React.FC = () => {
                 <MessageCircle className="w-5 h-5 text-white" />
               </div>
               <span className="text-2xl font-bold bg-gradient-to-r from-blue-700 to-blue-900 bg-clip-text text-transparent">
-                BaliFastboat
+                Tanayas
               </span>
             </div>
 
@@ -96,14 +96,14 @@ const Header: React.FC = () => {
       {/* Mobile Menu Overlay (always rendered for transitions) */}
       <div
         className={`fixed inset-0 bg-black/40 z-40 lg:hidden transition-opacity duration-500 ${
-          isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none' // Removed 'visible'/'invisible'
+          isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
         onClick={() => setIsMenuOpen(false)}
         style={{ backdropFilter: "blur(2px)" }}
       />
       <div
         className={`fixed top-[64px] left-0 right-0 bg-white z-40 lg:hidden shadow-lg transition-opacity duration-500 ease-in-out ${
-          isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none' // Removed 'visible'/'invisible'
+          isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
       >
         <div className="p-6">
