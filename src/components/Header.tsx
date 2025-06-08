@@ -19,18 +19,26 @@ const Header: React.FC = () => {
     }
   };
 
+  const navItems = [
+    { label: "Get Info Now", section: "contact" },
+    { label: "Destinations", section: "destinations" },
+    { label: "How It Works", section: "how-it-works" }, // Updated ID
+    { label: "About Us", section: "about-us" }, // New item
+    { label: "FAQ", section: "faq" },
+  ];
+
   return (
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${
           isScrolled
             ? "bg-white/90 backdrop-blur-md shadow-sm border-blue-100"
-            : "bg-white border-gray-100" // Changed for better separation
+            : "bg-white border-gray-100"
         }`}
         style={{
           boxShadow: isScrolled
             ? "0 2px 16px 0 rgba(30, 64, 175, 0.06)"
-            : "0 1px 8px 0 rgba(0,0,0,0.03)", // Added subtle shadow for non-scrolled state
+            : "0 1px 8px 0 rgba(0,0,0,0.03)",
         }}
       >
         <div className="container mx-auto px-4 py-3">
@@ -50,17 +58,12 @@ const Header: React.FC = () => {
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-4">
-              {[
-                { label: "Get Info Now", section: "contact" },
-                { label: "Destinations", section: "destinations" },
-                { label: "How It Works", section: "about" },
-                { label: "FAQ", section: "faq" },
-              ].map((item) => (
+            <nav className="hidden md:flex items-center space-x-2 lg:space-x-4"> {/* Changed to md:flex and added responsive spacing */}
+              {navItems.map((item) => (
                 <button
                   key={item.section}
                   onClick={() => scrollToSection(item.section)}
-                  className="px-4 py-2 rounded-full text-gray-700 hover:bg-blue-50 hover:text-blue-700 font-medium transition-all duration-200"
+                  className="px-3 py-2 rounded-full text-gray-700 hover:bg-blue-50 hover:text-blue-700 font-medium transition-all duration-200 text-sm lg:text-base" {/* Adjusted padding and text size */}
                 >
                   {item.label}
                 </button>
@@ -70,7 +73,7 @@ const Header: React.FC = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden p-2 text-gray-600 hover:text-blue-700 transition-colors duration-200 relative z-50"
+              className="md:hidden p-2 text-gray-600 hover:text-blue-700 transition-colors duration-200 relative z-50" // Changed to md:hidden
               aria-label="Toggle menu"
             >
               {/* Animated Hamburger to X */}
@@ -95,25 +98,20 @@ const Header: React.FC = () => {
 
       {/* Mobile Menu Overlay (always rendered for transitions) */}
       <div
-        className={`fixed inset-0 bg-black/40 z-40 lg:hidden transition-opacity duration-500 ${
+        className={`fixed inset-0 bg-black/40 z-40 md:hidden transition-opacity duration-500 ${ // Changed to md:hidden
           isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
         onClick={() => setIsMenuOpen(false)}
         style={{ backdropFilter: "blur(2px)" }}
       />
       <div
-        className={`fixed top-[64px] left-0 right-0 bg-white z-40 lg:hidden shadow-lg transition-opacity duration-500 ease-in-out ${
+        className={`fixed top-[64px] left-0 right-0 bg-white z-40 md:hidden shadow-lg transition-opacity duration-500 ease-in-out ${ // Changed to md:hidden
           isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
       >
         <div className="p-6">
           <nav className="space-y-4">
-            {[
-              { label: "Get Info Now", section: "contact" },
-              { label: "Destinations", section: "destinations" },
-              { label: "How It Works", section: "about" },
-              { label: "FAQ", section: "faq" },
-            ].map((item) => (
+            {navItems.map((item) => (
               <button
                 key={item.section}
                 onClick={() => scrollToSection(item.section)}

@@ -29,7 +29,7 @@ const steps = [
 const HowItWorks: React.FC = () => {
   return (
     <section
-      id="about"
+      id="how-it-works"
       className="py-16 bg-gradient-to-br from-cyan-50 to-blue-100"
       aria-labelledby="how-it-works-title"
     >
