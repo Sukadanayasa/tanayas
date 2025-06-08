@@ -96,14 +96,14 @@ const Header: React.FC = () => {
       {/* Mobile Menu Overlay (always rendered for transitions) */}
       <div
         className={`fixed inset-0 bg-black/40 z-40 lg:hidden transition-opacity duration-500 ${
-          isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+          isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none' // Removed 'visible'/'invisible'
         }`}
         onClick={() => setIsMenuOpen(false)}
         style={{ backdropFilter: "blur(2px)" }}
       />
       <div
         className={`fixed top-[64px] left-0 right-0 bg-white z-40 lg:hidden shadow-lg transition-opacity duration-500 ease-in-out ${
-          isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+          isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none' // Removed 'visible'/'invisible'
         }`}
       >
         <div className="p-6">
