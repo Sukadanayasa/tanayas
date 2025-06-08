@@ -4,13 +4,13 @@ import Hero from './components/Hero';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 
 // Lazy load components for faster initial page load
-const Destinations = lazy(() => import('./components/Destinations'));
-const HowItWorks = lazy(() => import('./components/HowItWorks'));
-const Testimonials = lazy(() => import('./components/Testimonials'));
-const FAQ = lazy(() => import('./components/FAQ'));
-const TravelTips = lazy(() => import('./components/TravelTips'));
-const Contact = lazy(() => import('./components/Contact'));
-const Footer = lazy(() => import('./components/Footer'));
+const Destinations = lazy(() => import('./components/Destinations').then(module => ({ default: module.default })));
+const HowItWorks = lazy(() => import('./components/HowItWorks').then(module => ({ default: module.default })));
+const Testimonials = lazy(() => import('./components/Testimonials').then(module => ({ default: module.default })));
+const FAQ = lazy(() => import('./components/FAQ').then(module => ({ default: module.default })));
+const TravelTips = lazy(() => import('./components/TravelTips').then(module => ({ default: module.default })));
+const Contact = lazy(() => import('./components/Contact').then(module => ({ default: module.default })));
+const Footer = lazy(() => import('./components/Footer').then(module => ({ default: module.default })));
 
 function App() {
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
