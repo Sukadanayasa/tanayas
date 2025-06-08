@@ -97,12 +97,12 @@ const Header: React.FC = () => {
       {isMenuOpen && (
         <>
           <div
-            className="fixed inset-0 bg-black/40 z-40 lg:hidden transition-opacity duration-300"
+            className="fixed inset-0 bg-black/40 z-40 lg:hidden transition-opacity duration-500" // Changed duration to 500ms
             onClick={() => setIsMenuOpen(false)}
             style={{ backdropFilter: "blur(2px)" }}
           />
           <div
-            className={`fixed top-[64px] left-0 right-0 bg-white z-40 lg:hidden shadow-lg transition-opacity duration-300 ease-in-out ${
+            className={`fixed top-[64px] left-0 right-0 bg-white z-40 lg:hidden shadow-lg transition-opacity duration-500 ease-in-out ${ // Changed duration to 500ms
               isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
             }`}
           >
