@@ -1,16 +1,14 @@
-import React, { useEffect, useState, lazy, Suspense } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Destinations from './components/Destinations';
+import HowItWorks from './components/HowItWorks';
+import Testimonials from './components/Testimonials';
+import FAQ from './components/FAQ';
+import TravelTips from './components/TravelTips';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
-
-// Lazy load components for faster initial page load
-const Destinations = lazy(() => import('./components/Destinations').then(module => ({ default: module.default })));
-const HowItWorks = lazy(() => import('./components/HowItWorks').then(module => ({ default: module.default })));
-const Testimonials = lazy(() => import('./components/Testimonials').then(module => ({ default: module.default })));
-const FAQ = lazy(() => import('./components/FAQ').then(module => ({ default: module.default })));
-const TravelTips = lazy(() => import('./components/TravelTips').then(module => ({ default: module.default })));
-const Contact = lazy(() => import('./components/Contact').then(module => ({ default: module.default })));
-const Footer = lazy(() => import('./components/Footer').then(module => ({ default: module.default })));
 
 function App() {
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
@@ -69,18 +67,14 @@ function App() {
       <Header theme={theme} toggleTheme={toggleTheme} />
       <main>
         <Hero />
-        <Suspense fallback={null}>
-          <Destinations />
-          <HowItWorks />
-          <Testimonials />
-          <FAQ />
-          <TravelTips />
-          <Contact />
-        </Suspense>
+        <Destinations />
+        <HowItWorks />
+        <Testimonials />
+        <FAQ />
+        <TravelTips />
+        <Contact />
       </main>
-      <Suspense fallback={null}>
-        <Footer />
-      </Suspense>
+      <Footer />
       <FloatingWhatsApp />
     </div>
   );

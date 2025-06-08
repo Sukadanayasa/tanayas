@@ -1,7 +1,7 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { MessageCircle } from 'lucide-react';
 
-const FloatingWhatsApp: React.FC = memo(() => {
+const FloatingWhatsApp: React.FC = () => {
   const whatsappUrl = "https://wa.me/6281234567890?text=Hello%20BaliFastboat,%20I%20have%20a%20question%20about%20fastboat%20information.";
 
   return (
@@ -18,6 +18,6 @@ const FloatingWhatsApp: React.FC = memo(() => {
       <div className="absolute inset-0 rounded-full bg-green-500 animate-ping opacity-30" />
     </a>
   );
-});
+};
 
 export default FloatingWhatsApp;
