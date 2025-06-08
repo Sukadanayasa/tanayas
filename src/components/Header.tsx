@@ -33,7 +33,7 @@ const Header: React.FC = () => {
             : "0 1px 8px 0 rgba(0,0,0,0.03)", // Added subtle shadow for non-scrolled state
         }}
       >
-        <div className="container mx-auto px-4 py-3">
+        <div className="w-full px-4 py-3"> {/* Removed container mx-auto */}
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div
