@@ -29,7 +29,7 @@ const About: React.FC = () => {
   ];
 
   return (
-    <section id="about-us" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-blue-900 mb-6">
@@ -52,7 +52,7 @@ const About: React.FC = () => {
               >
                 <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 relative overflow-hidden">
                   {/* Decorative background element */}
-                  <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-100 rounded-full opacity-30 transform group-hover:scale-110 transition-transform duration-700" />
+                  <div className="absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-full opacity-30 transform group-hover:scale-110 transition-transform duration-700" />
                   
                   <div className={`w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br ${feature.color} flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300 relative z-10`}>
                     <IconComponent className="w-10 h-10 text-white" />
