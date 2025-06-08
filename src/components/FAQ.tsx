@@ -1,4 +1,5 @@
 import React from "react";
+import { HelpCircle } from "lucide-react"; // Imported HelpCircle icon
 import { faqItems } from "../data/content";
 
 const FAQ: React.FC = () => {
@@ -24,13 +25,16 @@ const FAQ: React.FC = () => {
             {faqItems.map((item, index) => (
               <div
                 key={item.id}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden p-6"
+                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden p-6 border border-transparent hover:border-blue-200" // Added hover border
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <h3 className="text-lg font-semibold text-blue-800 mb-3">
-                  {item.question}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">{item.answer}</p>
+                <div className="flex items-start mb-3">
+                  <HelpCircle className="w-6 h-6 text-blue-500 mr-3 flex-shrink-0" /> {/* Added icon */}
+                  <h3 className="text-xl font-bold text-blue-800 leading-snug"> {/* Improved typography */}
+                    {item.question}
+                  </h3>
+                </div>
+                <p className="text-gray-700 leading-relaxed pl-9">{item.answer}</p> {/* Adjusted padding */}
               </div>
             ))}
           </div>

@@ -25,12 +25,12 @@ const Header: React.FC = () => {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${
           isScrolled
             ? "bg-white/90 backdrop-blur-md shadow-sm border-blue-100"
-            : "bg-white/70 backdrop-blur border-transparent"
+            : "bg-white border-gray-100" // Changed for better separation
         }`}
         style={{
           boxShadow: isScrolled
             ? "0 2px 16px 0 rgba(30, 64, 175, 0.06)"
-            : "none",
+            : "0 1px 8px 0 rgba(0,0,0,0.03)", // Added subtle shadow for non-scrolled state
         }}
       >
         <div className="container mx-auto px-4 py-3">
@@ -70,10 +70,24 @@ const Header: React.FC = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden p-2 text-gray-600 hover:text-blue-700 transition-colors duration-200"
+              className="lg:hidden p-2 text-gray-600 hover:text-blue-700 transition-colors duration-200 relative z-50"
               aria-label="Toggle menu"
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {/* Animated Hamburger to X */}
+              <div className="relative w-6 h-6">
+                <Menu
+                  size={24}
+                  className={`absolute inset-0 transition-all duration-300 ease-out ${
+                    isMenuOpen ? 'opacity-0 rotate-90' : 'opacity-100 rotate-0'
+                  }`}
+                />
+                <X
+                  size={24}
+                  className={`absolute inset-0 transition-all duration-300 ease-out ${
+                    isMenuOpen ? 'opacity-100 rotate-0' : 'opacity-0 -rotate-90'
+                  }`}
+                />
+              </div>
             </button>
           </div>
         </div>
@@ -87,8 +101,12 @@ const Header: React.FC = () => {
             onClick={() => setIsMenuOpen(false)}
             style={{ backdropFilter: "blur(2px)" }}
           />
-          <div className="fixed top-0 right-0 bottom-0 w-72 max-w-[80vw] bg-white z-50 lg:hidden shadow-lg transition-transform duration-300 ease-in-out animate-slide-in">
-            <div className="p-6 pt-20">
+          <div
+            className={`fixed top-[64px] left-0 right-0 bg-white z-40 lg:hidden shadow-lg transition-all duration-300 ease-in-out overflow-hidden ${
+              isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 pointer-events-none'
+            }`}
+          >
+            <div className="p-6">
               <nav className="space-y-4">
                 {[
                   { label: "Get Info Now", section: "contact" },
@@ -109,17 +127,6 @@ const Header: React.FC = () => {
           </div>
         </>
       )}
-      <style>
-        {`
-          @keyframes slide-in {
-            from { transform: translateX(100%); }
-            to { transform: translateX(0); }
-          }
-          .animate-slide-in {
-            animation: slide-in 0.3s cubic-bezier(0.4,0,0.2,1);
-          }
-        `}
-      </style>
     </>
   );
 };
