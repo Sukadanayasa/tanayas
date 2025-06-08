@@ -1,13 +1,16 @@
-import React from 'react';
-import { Facebook, Instagram, Twitter, MessageCircle } from 'lucide-react';
+import React from "react";
+import { Facebook, Instagram, Twitter, MessageCircle } from "lucide-react";
 
 const Footer: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <footer id="footer" className="bg-gradient-to-br from-gray-900 to-gray-800 text-gray-300">
+    <footer
+      id="footer"
+      className="bg-gradient-to-br from-gray-900 to-gray-800 text-gray-300"
+    >
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Company Info */}
@@ -19,39 +22,39 @@ const Footer: React.FC = () => {
               <h3 className="text-2xl font-bold text-white">BaliFastboat</h3>
             </div>
             <p className="text-gray-400 leading-relaxed">
-              Your trusted source for reliable fastboat information across Bali and surrounding islands. 
-              Making island hopping simple since 2020.
+              Your trusted source for real-time fastboat schedules, local travel
+              tips, and honest advice for Bali, Nusa Penida, the Gilis, and
+              Lombok. Making island hopping simple, safe, and unforgettable
+              since 2020.
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-6">
-            <h3 className="text-lg font-semibold text-white">
-              Quick Links
-            </h3>
+            <h3 className="text-lg font-semibold text-white">Quick Links</h3>
             <ul className="space-y-3">
               <li>
                 <button
-                  onClick={() => scrollToSection('destinations')}
+                  onClick={() => scrollToSection("destinations")}
                   className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
                 >
-                  Popular Destinations
+                  Explore Destinations
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection('faq')}
+                  onClick={() => scrollToSection("faq")}
                   className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
                 >
-                  FAQ
+                  FAQs &amp; Travel Tips
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection('contact')}
+                  onClick={() => scrollToSection("contact")}
                   className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
                 >
-                  Contact Us
+                  Contact Local Experts
                 </button>
               </li>
               <li>
@@ -67,9 +70,7 @@ const Footer: React.FC = () => {
 
           {/* Social Media */}
           <div className="space-y-6">
-            <h3 className="text-lg font-semibold text-white">
-              Follow Us
-            </h3>
+            <h3 className="text-lg font-semibold text-white">Stay Connected</h3>
             <div className="flex space-x-4">
               <a
                 href="#"
@@ -93,14 +94,17 @@ const Footer: React.FC = () => {
                 <Twitter className="w-5 h-5" />
               </a>
             </div>
+            <div className="pt-2">
+              <a href="#" className="text-blue-400 hover:underline text-sm">
+                Join our WhatsApp for instant updates
+              </a>
+            </div>
           </div>
         </div>
 
         {/* Copyright */}
         <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-500">
-          <p>
-            &copy; 2025 BaliFastboat. All rights reserved.
-          </p>
+          <p>&copy; 2025 BaliFastboat. All rights reserved.</p>
         </div>
       </div>
     </footer>
