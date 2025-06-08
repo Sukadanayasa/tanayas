@@ -49,18 +49,6 @@ body {
   animation: fadeInUp 0.6s ease-out forwards;
 }
 
-/* Gradient background animation for Hero section */
-@keyframes gradient-move {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.animate-gradient-move {
-  background-size: 200% 200%;
-  animation: gradient-move 15s ease infinite;
-}
-
 /* Focus states for accessibility */
 button:focus,
 a:focus,
