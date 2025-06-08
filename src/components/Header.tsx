@@ -102,8 +102,8 @@ const Header: React.FC = () => {
             style={{ backdropFilter: "blur(2px)" }}
           />
           <div
-            className={`fixed top-[64px] left-0 right-0 bg-white z-40 lg:hidden shadow-lg transition-all duration-300 ease-in-out overflow-hidden ${
-              isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 pointer-events-none'
+            className={`fixed top-[64px] left-0 right-0 bg-white z-40 lg:hidden shadow-lg transition-opacity duration-300 ease-in-out ${
+              isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
             }`}
           >
             <div className="p-6">
