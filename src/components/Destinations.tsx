@@ -10,15 +10,15 @@ const Destinations: React.FC = () => {
   return (
     <section
       id="destinations"
-      className="py-20 bg-gradient-to-br from-blue-50 to-cyan-50"
+      className="py-20 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-gray-900 dark:to-gray-950"
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-blue-900 mb-4">
+          <h2 className="text-4xl font-bold text-blue-900 mb-4 dark:text-white">
             Explore Bali’s Top Islands
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto rounded-full mb-6" />
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto rounded-full mb-6 dark:from-blue-400 dark:to-cyan-400" />
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto dark:text-gray-400">
             From dramatic cliffs to hidden beaches, discover the best of Bali,
             Nusa Penida, the Gilis, and Lombok with local insights and real
             traveler tips.
@@ -29,7 +29,7 @@ const Destinations: React.FC = () => {
           {destinations.map((destination, index) => (
             <div
               key={destination.id}
-              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2"
+              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2 dark:bg-gray-800 dark:shadow-xl dark:hover:shadow-2xl dark:shadow-gray-950/50"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="relative overflow-hidden">
@@ -43,16 +43,16 @@ const Destinations: React.FC = () => {
               </div>
 
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-800 mb-3 group-hover:text-blue-700 transition-colors duration-300">
+                <h3 className="text-2xl font-bold text-gray-800 mb-3 group-hover:text-blue-700 transition-colors duration-300 dark:text-white dark:group-hover:text-blue-400">
                   {destination.title}
                 </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-gray-600 mb-6 leading-relaxed dark:text-gray-300">
                   {destination.description}
                 </p>
 
                 <button
                   onClick={scrollToContact}
-                  className="group/btn inline-flex items-center space-x-2 text-blue-600 hover:text-blue-800 font-semibold transition-all duration-300"
+                  className="group/btn inline-flex items-center space-x-2 text-blue-600 hover:text-blue-800 font-semibold transition-all duration-300 dark:text-blue-400 dark:hover:text-blue-500"
                 >
                   <span>Learn More &amp; Get Schedules</span>
                   <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />

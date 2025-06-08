@@ -11,7 +11,8 @@
 body {
   font-family: "Inter", sans-serif;
   line-height: 1.6;
-  color: #334155;
+  /* Use Tailwind classes for color to support dark mode */
+  @apply text-gray-700 dark:text-gray-300;
   overflow-x: hidden;
 }
 
@@ -22,15 +23,18 @@ body {
 
 ::-webkit-scrollbar-track {
   background: #f1f5f9;
+  @apply dark:bg-gray-800;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #3b82f6;
   border-radius: 4px;
+  @apply dark:bg-blue-600;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: #2563eb;
+  @apply dark:bg-blue-700;
 }
 
 /* Animation classes */
@@ -55,6 +59,7 @@ a:focus,
 select:focus {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
+  @apply dark:outline-blue-500;
 }
 
 /* Smooth transitions for all interactive elements */

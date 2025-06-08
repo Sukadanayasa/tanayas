@@ -30,19 +30,19 @@ const HowItWorks: React.FC = () => {
   return (
     <section
       id="about"
-      className="py-16 bg-gradient-to-br from-cyan-50 to-blue-100"
+      className="py-16 bg-gradient-to-br from-cyan-50 to-blue-100 dark:from-gray-900 dark:to-gray-950"
       aria-labelledby="how-it-works-title"
     >
       <div className="container mx-auto px-4">
         <header className="text-center mb-12">
           <h2
             id="how-it-works-title"
-            className="text-3xl font-bold text-blue-900 mb-3"
+            className="text-3xl font-bold text-blue-900 mb-3 dark:text-white"
           >
             How It Works
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-cyan-600 to-blue-600 mx-auto rounded-full mb-4" />
-          <p className="text-base text-gray-600 max-w-2xl mx-auto">
+          <div className="w-20 h-1 bg-gradient-to-r from-cyan-600 to-blue-600 mx-auto rounded-full mb-4 dark:from-cyan-400 dark:to-blue-400" />
+          <p className="text-base text-gray-600 max-w-2xl mx-auto dark:text-gray-400">
             Getting reliable fastboat information shouldn't be complicated.
             Here's how we make it simple.
           </p>
@@ -57,7 +57,7 @@ const HowItWorks: React.FC = () => {
             return (
               <li
                 key={step.title}
-                className="group text-center relative bg-white rounded-2xl p-6 shadow hover:shadow-lg transition-all duration-300 overflow-hidden"
+                className="group text-center relative bg-white rounded-2xl p-6 shadow hover:shadow-lg transition-all duration-300 overflow-hidden dark:bg-gray-800 dark:shadow-xl dark:hover:shadow-2xl dark:shadow-gray-950/50"
                 itemProp="step"
                 itemScope
                 itemType="https://schema.org/HowToStep"
@@ -73,12 +73,12 @@ const HowItWorks: React.FC = () => {
                   />
                 </div>
                 <h3
-                  className="text-lg font-semibold text-gray-800 mb-2"
+                  className="text-lg font-semibold text-gray-800 mb-2 dark:text-white"
                   itemProp="name"
                 >
                   {step.title}
                 </h3>
-                <p className="text-gray-600 text-sm" itemProp="description">
+                <p className="text-gray-600 text-sm dark:text-gray-300" itemProp="description">
                   {step.description}
                 </p>
               </li>

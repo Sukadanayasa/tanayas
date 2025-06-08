@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
   return (
     <footer
       id="footer"
-      className="bg-gradient-to-br from-gray-900 to-gray-800 text-gray-300"
+      className="bg-gradient-to-br from-gray-900 to-gray-800 text-gray-300 dark:from-black dark:to-gray-950 dark:text-gray-400"
     >
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -31,12 +31,12 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div className="space-y-6">
-            <h3 className="text-lg font-semibold text-white">Quick Links</h3>
+            <h3 className="text-lg font-semibold text-white dark:text-gray-200">Quick Links</h3>
             <ul className="space-y-3">
               <li>
                 <button
                   onClick={() => scrollToSection("destinations")}
-                  className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
+                  className="text-gray-400 hover:text-blue-400 transition-colors duration-200 dark:hover:text-blue-500"
                 >
                   Explore Destinations
                 </button>
@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
               <li>
                 <button
                   onClick={() => scrollToSection("faq")}
-                  className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
+                  className="text-gray-400 hover:text-blue-400 transition-colors duration-200 dark:hover:text-blue-500"
                 >
                   FAQs &amp; Travel Tips
                 </button>
@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
               <li>
                 <button
                   onClick={() => scrollToSection("contact")}
-                  className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
+                  className="text-gray-400 hover:text-blue-400 transition-colors duration-200 dark:hover:text-blue-500"
                 >
                   Contact Local Experts
                 </button>
@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
+                  className="text-gray-400 hover:text-blue-400 transition-colors duration-200 dark:hover:text-blue-500"
                 >
                   Privacy Policy
                 </a>
@@ -70,32 +70,32 @@ const Footer: React.FC = () => {
 
           {/* Social Media */}
           <div className="space-y-6">
-            <h3 className="text-lg font-semibold text-white">Stay Connected</h3>
+            <h3 className="text-lg font-semibold text-white dark:text-gray-200">Stay Connected</h3>
             <div className="flex space-x-4">
               <a
                 href="#"
-                className="w-10 h-10 bg-gray-700 hover:bg-blue-600 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110"
+                className="w-10 h-10 bg-gray-700 hover:bg-blue-600 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 dark:bg-gray-800 dark:hover:bg-blue-700"
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-gray-700 hover:bg-blue-600 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110"
+                className="w-10 h-10 bg-gray-700 hover:bg-blue-600 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 dark:bg-gray-800 dark:hover:bg-blue-700"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-gray-700 hover:bg-blue-600 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110"
+                className="w-10 h-10 bg-gray-700 hover:bg-blue-600 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 dark:bg-gray-800 dark:hover:bg-blue-700"
                 aria-label="Twitter"
               >
                 <Twitter className="w-5 h-5" />
               </a>
             </div>
             <div className="pt-2">
-              <a href="#" className="text-blue-400 hover:underline text-sm">
+              <a href="#" className="text-blue-400 hover:underline text-sm dark:text-blue-500">
                 Join our WhatsApp for instant updates
               </a>
             </div>
@@ -103,7 +103,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-500">
+        <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-500 dark:border-gray-800 dark:text-gray-600">
           <p>&copy; 2024 Tanayas. All rights reserved.</p>
         </div>
       </div>
