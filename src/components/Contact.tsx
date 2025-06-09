@@ -15,7 +15,7 @@ const Contact: React.FC = () => {
       {/* Decorative background elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white rounded-full transform -translate-x-1/2 -translate-y-1/2 dark:bg-gray-700" />
-        <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-cyan-300 rounded-full transform translate-x-1/2 -translate-y-1/2 dark:bg-cyan-600" />
+        <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-cyan-300 rounded-full transform translate-x-1/2 translate-y-1/2 dark:bg-cyan-600" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -43,7 +43,7 @@ const Contact: React.FC = () => {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center space-x-3 bg-white text-blue-700 px-10 py-5 rounded-full font-semibold text-lg shadow-2xl hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300 ease-out w-full md:w-auto justify-center dark:bg-gray-700 dark:text-white dark:hover:shadow-gray-600/25"
+            className="group inline-flex items-center space-x-3 bg-green-500 text-white px-10 py-5 rounded-full font-semibold text-lg shadow-2xl hover:shadow-green-500/25 transform hover:scale-105 transition-all duration-300 ease-out w-full md:w-auto justify-center dark:bg-green-600 dark:hover:shadow-green-600/25"
           >
             {/* WhatsApp SVG Icon */}
             <span className="w-6 h-6 block group-hover:scale-110 transition-transform duration-300">
@@ -62,7 +62,7 @@ const Contact: React.FC = () => {
 
           <a
             href={emailUrl}
-            className="group inline-flex items-center space-x-3 bg-white text-blue-700 px-10 py-5 rounded-full font-semibold text-lg shadow-2xl hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300 ease-out w-full md:w-auto justify-center dark:bg-gray-700 dark:text-white dark:hover:shadow-gray-600/25"
+            className="group inline-flex items-center space-x-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-10 py-5 rounded-full font-semibold text-lg shadow-2xl hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300 ease-out w-full md:w-auto justify-center dark:from-blue-700 dark:to-blue-800 dark:hover:from-blue-800 dark:hover:to-blue-900 dark:shadow-lg dark:hover:shadow-blue-700/25"
           >
             <Mail className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
             <span>Send Email</span>
