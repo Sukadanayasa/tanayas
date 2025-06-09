@@ -29,12 +29,18 @@ const FAQ: React.FC = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-start mb-3">
-                  <HelpCircle className="w-6 h-6 text-blue-500 mr-3 flex-shrink-0 dark:text-blue-400" /> {/* Added icon */}
-                  <h3 className="text-xl font-bold text-blue-800 leading-snug dark:text-white"> {/* Improved typography */}
+                  <HelpCircle className="w-6 h-6 text-blue-500 mr-3 flex-shrink-0 dark:text-blue-400" />{" "}
+                  {/* Added icon */}
+                  <h3 className="text-xl font-bold text-blue-800 leading-snug dark:text-white">
+                    {" "}
+                    {/* Improved typography */}
                     {item.question}
                   </h3>
                 </div>
-                <p className="text-gray-700 leading-relaxed pl-9 dark:text-gray-300">{item.answer}</p> {/* Adjusted padding */}
+                <p className="text-gray-700 leading-relaxed pl-9 dark:text-gray-300">
+                  {item.answer}
+                </p>{" "}
+                {/* Adjusted padding */}
               </div>
             ))}
           </div>
