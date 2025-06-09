@@ -39,7 +39,8 @@ const Testimonials: React.FC = () => {
                   <h3 className="font-bold text-gray-800 text-lg dark:text-white">
                     {testimonial.name}
                   </h3>
-                  <div className="flex space-x-1" aria-label="5 star rating">
+                  <div className="flex space-x-1">
+                    <span className="sr-only">5 out of 5 stars</span> {/* Visually hidden text for screen readers */}
                     {[...Array(5)].map((_, i) => (
                       <svg
                         key={i}
