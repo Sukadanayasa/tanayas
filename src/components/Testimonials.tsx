@@ -36,9 +36,9 @@ const Testimonials: React.FC = () => {
                   loading="lazy"
                 />
                 <div className="ml-4">
-                  <h4 className="font-bold text-gray-800 text-lg dark:text-white">
+                  <h3 className="font-bold text-gray-800 text-lg dark:text-white">
                     {testimonial.name}
-                  </h4>
+                  </h3>
                   <div className="flex space-x-1" aria-label="5 star rating">
                     {[...Array(5)].map((_, i) => (
                       <svg
