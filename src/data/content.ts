@@ -102,7 +102,7 @@ export const travelTips: TravelTip[] = [
     id: "3",
     title: "Stay Comfortable",
     description:
-      "Take motion sickness tablets if needed and stay hydrated. Ask us for the best seats on the boat!",
+      "Take motion sickness tablets if needed and stay hydrated. Ask us for the best seats on the boat and any other tips to make your journey smooth!", // Extended description
     icon: "Heart",
     color: "red",
   },
