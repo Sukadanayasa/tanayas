@@ -11,7 +11,7 @@ const FloatingWhatsApp: React.FC = () => {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-full flex items-center justify-center shadow-2xl hover:shadow-cyan-500/25 transform hover:scale-110 transition-all duration-300 ease-out group dark:from-cyan-600 dark:to-blue-700 dark:hover:from-cyan-700 dark:hover:to-blue-800 dark:shadow-lg dark:hover:shadow-cyan-700/25"
+      className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-2xl hover:shadow-green-500/25 transform hover:scale-110 transition-all duration-300 ease-out group dark:bg-green-600 dark:hover:bg-green-700 dark:shadow-lg dark:hover:shadow-green-700/25"
       aria-label="Chat on WhatsApp"
     >
       {/* WhatsApp SVG Icon */}
