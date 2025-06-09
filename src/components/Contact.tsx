@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, Clock } from "lucide-react"; // Removed MessageCircle as it's replaced by SVG
+import { Mail, Clock } from "lucide-react";
 
 const Contact: React.FC = () => {
   const whatsappUrl =
@@ -43,7 +43,7 @@ const Contact: React.FC = () => {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center space-x-3 bg-white text-blue-700 px-10 py-5 rounded-full font-semibold text-lg shadow-2xl hover:shadow-white/25 transform hover:scale-105 transition-all duration-300 ease-out w-full md:w-auto justify-center dark:bg-gray-700 dark:text-white dark:hover:shadow-gray-600/25"
+            className="group inline-flex items-center space-x-3 bg-green-500 text-white px-10 py-5 rounded-full font-semibold text-lg shadow-2xl hover:shadow-green-500/25 transform hover:scale-105 transition-all duration-300 ease-out w-full md:w-auto justify-center dark:bg-green-600 dark:hover:shadow-green-600/25"
           >
             {/* WhatsApp SVG Icon */}
             <span className="w-6 h-6 block group-hover:scale-110 transition-transform duration-300">
