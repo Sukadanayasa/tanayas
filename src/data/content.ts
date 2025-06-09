@@ -86,7 +86,7 @@ export const travelTips: TravelTip[] = [
     id: "1",
     title: "Book Smart",
     description:
-      "Choose morning departures for calmer seas and smoother rides. We’ll help you pick the best time for your journey.",
+      "Booking morning departures often leads to calmer seas and smoother rides. Plan your journey for the best experience.",
     icon: "Clock",
     color: "blue",
   },
@@ -94,7 +94,7 @@ export const travelTips: TravelTip[] = [
     id: "2",
     title: "Pack Right",
     description:
-      "Bring a waterproof bag, sunscreen, and light layers. We’ll send you a complete packing checklist for your trip.",
+      "Bring a waterproof bag, sunscreen, and light layers. Essential items for a comfortable and prepared island hopping adventure.",
     icon: "PackageCheck",
     color: "green",
   },
@@ -102,7 +102,7 @@ export const travelTips: TravelTip[] = [
     id: "3",
     title: "Stay Comfortable",
     description:
-      "Take motion sickness tablets if needed and stay hydrated. Ask us for the best seats on the boat!",
+      "Consider motion sickness tablets if needed and stay hydrated. Choosing a seat near the back or center can help with stability.",
     icon: "Heart",
     color: "red",
   },
@@ -110,7 +110,7 @@ export const travelTips: TravelTip[] = [
     id: "4",
     title: "Plan Ahead",
     description:
-      "Peak season fills up fast. Contact us early for the best schedules and prices, especially in July and August.",
+      "Fastboat tickets sell out quickly during peak season (July-August). Plan and book your trip well in advance to secure your spot.",
     icon: "CalendarPlus",
     color: "purple",
   },
