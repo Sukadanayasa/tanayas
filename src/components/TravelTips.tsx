@@ -72,7 +72,7 @@ const TravelTips: React.FC = () => {
                   <p className="text-gray-600 leading-relaxed text-sm relative z-10 dark:text-gray-300">
                     {tip.description}
                   </p>
-                  <div className="mt-4 text-xs text-blue-400 font-semibold uppercase tracking-wide dark:text-blue-500">
+                  <div className="mt-4 text-xs text-blue-700 font-semibold uppercase tracking-wide dark:text-blue-300">
                     Pro Tip
                   </div>
                 </div>
