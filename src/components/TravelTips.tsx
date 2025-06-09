@@ -51,11 +51,11 @@ const TravelTips: React.FC = () => {
             return (
               <div
                 key={tip.id}
-                className="group text-center"
+                className="group text-center h-full" // Added h-full here
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div
-                  className={`${backgroundColorClass} rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 relative overflow-hidden dark:shadow-xl dark:hover:shadow-2xl dark:shadow-gray-950/50`}
+                  className={`${backgroundColorClass} rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 relative overflow-hidden dark:shadow-xl dark:hover:shadow-2xl dark:shadow-gray-950/50 h-full flex flex-col`} // Added h-full and flex flex-col
                 >
                   {/* Decorative background element */}
                   <div className="absolute -top-8 -right-8 w-32 h-32 bg-white/30 rounded-full transform group-hover:scale-110 transition-transform duration-700 dark:bg-gray-700/30" />
@@ -69,7 +69,7 @@ const TravelTips: React.FC = () => {
                   <h3 className="text-xl font-bold text-gray-800 mb-3 relative z-10 dark:text-white">
                     {tip.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed text-sm relative z-10 dark:text-gray-300">
+                  <p className="text-gray-600 leading-relaxed text-sm relative z-10 dark:text-gray-300 flex-grow"> {/* Added flex-grow */}
                     {tip.description}
                   </p>
                   <div className="mt-4 text-xs text-blue-700 font-semibold uppercase tracking-wide dark:text-blue-300">
