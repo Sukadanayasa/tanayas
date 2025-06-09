@@ -2,7 +2,7 @@ import React from "react";
 import { HelpCircle } from "lucide-react"; // Imported HelpCircle icon
 import { faqItems } from "../data/content";
 
-const FAQ: React.FC = () => {
+const FaqSection: React.FC = () => {
   return (
     <section
       id="faq"
@@ -25,21 +25,20 @@ const FAQ: React.FC = () => {
             {faqItems.map((item, index) => (
               <div
                 key={item.id}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden p-6 border border-transparent hover:border-blue-200 dark:bg-gray-800 dark:shadow-xl dark:hover:shadow-2xl dark:shadow-gray-950/50 dark:border-gray-700 dark:hover:border-blue-700" // Added hover border
+                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden p-6 border border-transparent hover:border-blue-200 dark:bg-gray-800 dark:shadow-xl dark:hover:shadow-2xl dark:shadow-gray-950/50 dark:border-gray-700 dark:hover:border-blue-700"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-start mb-3">
-                  <HelpCircle className="w-6 h-6 text-blue-500 mr-3 flex-shrink-0 dark:text-blue-400" />{" "}
+                  <HelpCircle className="w-6 h-6 text-blue-500 mr-3 flex-shrink-0 dark:text-blue-400" />
                   {/* Added icon */}
                   <h3 className="text-xl font-bold text-blue-800 leading-snug dark:text-white">
-                    {" "}
                     {/* Improved typography */}
                     {item.question}
                   </h3>
                 </div>
                 <p className="text-gray-700 leading-relaxed pl-9 dark:text-gray-300">
                   {item.answer}
-                </p>{" "}
+                </p>
                 {/* Adjusted padding */}
               </div>
             ))}
@@ -50,4 +49,4 @@ const FAQ: React.FC = () => {
   );
 };
 
-export default FAQ;
+export default FaqSection;

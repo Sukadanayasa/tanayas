@@ -1,36 +1,38 @@
-import React, { useEffect, useState } from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Destinations from './components/Destinations';
-import HowItWorks from './components/HowItWorks';
-import Testimonials from './components/Testimonials';
-import FAQ from './components/FAQ';
-import TravelTips from './components/TravelTips';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import FloatingWhatsApp from './components/FloatingWhatsApp';
+import { useEffect, useState } from "react";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Destinations from "./components/Destinations";
+import HowItWorks from "./components/HowItWorks";
+import Testimonials from "./components/Testimonials";
+import FaqSection from "./components/FaqSection";
+import TravelTips from "./components/TravelTips";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import FloatingWhatsApp from "./components/FloatingWhatsApp";
 
 function App() {
-  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+  const [theme, setTheme] = useState<"light" | "dark">(() => {
     // Check local storage first
-    const savedTheme = localStorage.getItem('theme');
+    const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
-      return savedTheme as 'light' | 'dark';
+      return savedTheme as "light" | "dark";
     }
     // Then check system preference
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
   });
 
   useEffect(() => {
     // Apply the theme class to the html element
-    document.documentElement.classList.remove('light', 'dark');
+    document.documentElement.classList.remove("light", "dark");
     document.documentElement.classList.add(theme);
     // Save theme preference to local storage
-    localStorage.setItem('theme', theme);
+    localStorage.setItem("theme", theme);
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
 
   useEffect(() => {
@@ -38,8 +40,8 @@ function App() {
     const images = document.querySelectorAll('img[loading="lazy"]');
     images.forEach((img) => {
       if (img instanceof HTMLImageElement) {
-        img.onload = () => img.classList.add('loaded');
-        if (img.complete) img.classList.add('loaded');
+        img.onload = () => img.classList.add("loaded");
+        if (img.complete) img.classList.add("loaded");
       }
     });
 
@@ -48,7 +50,7 @@ function App() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('animate-fade-in-up');
+            entry.target.classList.add("animate-fade-in-up");
           }
         });
       },
@@ -56,7 +58,7 @@ function App() {
     );
 
     // Observe all sections for animation
-    const sections = document.querySelectorAll('section');
+    const sections = document.querySelectorAll("section");
     sections.forEach((section) => observer.observe(section));
 
     return () => observer.disconnect();
@@ -70,7 +72,7 @@ function App() {
         <Destinations />
         <HowItWorks />
         <Testimonials />
-        <FAQ />
+        <FaqSection />
         <TravelTips />
         <Contact />
       </main>
