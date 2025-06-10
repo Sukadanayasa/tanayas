@@ -27,7 +27,7 @@ const FloatingWhatsApp: React.FC = () => {
         </svg>
       </span>
       {/* Pulse animation ring */}
-      <div className="absolute inset-0 rounded-full bg-cyan-500 animate-ping opacity-30 dark:bg-cyan-600" />
+      <div className="absolute inset-0 rounded-full bg-tanayas-500 animate-ping opacity-30 dark:bg-tanayas-600" />
     </a>
   );
 };

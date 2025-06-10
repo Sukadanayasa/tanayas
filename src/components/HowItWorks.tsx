@@ -8,21 +8,21 @@ const steps = [
     title: "Tell Us Your Plans",
     description:
       "Message us your travel dates, destinations, and group size. Takes 30 seconds.",
-    color: "from-blue-500 to-blue-600",
+    color: "from-tanayas-600 to-tanayas-700",
   },
   {
     icon: Search,
     title: "We Find the Best Options",
     description:
       "Get real-time schedules, prices, and route recommendations from our local experts.",
-    color: "from-cyan-500 to-cyan-600",
+    color: "from-tanayas-500 to-tanayas-600",
   },
   {
     icon: CheckCircle,
     title: "Travel with Confidence",
     description:
       "Armed with insider knowledge, enjoy stress-free island hopping across Bali.",
-    color: "from-teal-500 to-teal-600",
+    color: "from-tanayas-400 to-tanayas-500",
   },
 ];
 
@@ -30,18 +30,18 @@ const HowItWorks: React.FC = () => {
   return (
     <section
       id="about"
-      className="py-16 bg-gradient-to-br from-cyan-50 to-blue-100 dark:from-gray-900 dark:to-gray-950"
+      className="py-16 bg-gradient-to-br from-tanayas-50 to-tanayas-100 dark:from-gray-900 dark:to-gray-950"
       aria-labelledby="how-it-works-title"
     >
       <div className="container mx-auto px-4">
         <header className="text-center mb-12">
           <h2
             id="how-it-works-title"
-            className="text-3xl font-bold text-blue-900 mb-3 dark:text-white"
+            className="text-3xl font-bold text-tanayas-950 mb-3 dark:text-white"
           >
             How It Works
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-cyan-600 to-blue-600 mx-auto rounded-full mb-4 dark:from-cyan-400 dark:to-blue-400" />
+          <div className="w-20 h-1 bg-gradient-to-r from-tanayas-700 to-tanayas-600 mx-auto rounded-full mb-4 dark:from-tanayas-400 dark:to-tanayas-400" />
           <p className="text-base text-gray-600 max-w-2xl mx-auto dark:text-gray-400">
             Getting reliable fastboat information shouldn't be complicated.
             Here's how we make it simple.
