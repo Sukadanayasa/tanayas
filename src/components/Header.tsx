@@ -120,8 +120,8 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
         style={{ backdropFilter: "blur(2px)" }}
       />
       <div
-        className={`fixed top-[64px] left-0 right-0 bg-white z-40 lg:hidden shadow-lg transition-opacity duration-500 ease-in-out dark:bg-gray-900 ${
-          isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        className={`fixed top-[64px] left-0 right-0 bg-white z-40 lg:hidden shadow-lg transition-transform duration-300 ease-out dark:bg-gray-900 ${
+          isMenuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
         <div className="p-6">
