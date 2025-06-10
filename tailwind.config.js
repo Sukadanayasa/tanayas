@@ -19,6 +19,9 @@ export default {
           950: '#0F4B56', // The base color #0F4B56
         },
       },
+      maxWidth: {
+        'page-max': '1480px', // Custom max-width for the page
+      }
     },
   },
   plugins: [],
