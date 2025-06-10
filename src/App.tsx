@@ -20,7 +20,7 @@ function App() {
       className={`min-h-screen bg-white dark:bg-gray-950 transition-colors duration-500`}
     >
       <Header theme={theme} toggleTheme={toggleTheme} />
-      <main className="max-w-page-max mx-auto"> {/* Added max-w-page-max and mx-auto here */}
+      <main> {/* Removed max-w-page-max and mx-auto from here */}
         <Hero />
         <Destinations />
         <HowItWorks />
