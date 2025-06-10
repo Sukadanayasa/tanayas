@@ -33,9 +33,9 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
             : "bg-white dark:bg-gray-950"
         }`}
       >
-        <div className="w-full px-4 py-3 max-w-page-max mx-auto">
+        <div className="w-full px-4 py-3 max-w-page-max mx-auto border-b border-gray-200 dark:border-gray-800">
           {" "}
-          {/* Added max-w-page-max and mx-auto here */}
+          {/* Added border-b here */}
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div
@@ -125,17 +125,23 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
         }`}
       >
         <div className="p-6">
-          <nav className="space-y-4">
+          <nav className="space-y-0">
+            {" "}
+            {/* Changed space-y-4 to space-y-0 to control spacing with borders */}
             {[
               { label: "Get Info Now", section: "contact" },
               { label: "Destinations", section: "destinations" },
               { label: "How It Works", section: "about" },
               { label: "FAQ", section: "faq" },
-            ].map((item) => (
+            ].map((item, index, array) => (
               <button
                 key={item.section}
                 onClick={() => handleNavigationClick(item.section)}
-                className="block w-full text-left px-4 py-3 rounded-lg text-lg font-medium text-gray-800 hover:bg-tanayas-50 hover:text-tanayas-800 transition-all duration-200 dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:text-tanayas-400"
+                className={`block w-full text-left px-4 py-3 rounded-lg text-lg font-medium text-gray-800 hover:bg-tanayas-50 hover:text-tanayas-800 transition-all duration-200 dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:text-tanayas-400 ${
+                  index < array.length - 1
+                    ? "border-b border-gray-100 dark:border-gray-700"
+                    : ""
+                }`}
               >
                 {item.label}
               </button>
