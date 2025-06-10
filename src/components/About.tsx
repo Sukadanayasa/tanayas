@@ -19,19 +19,19 @@ const About: React.FC = () => {
       icon: MessageCircleCode,
       title: t.personalizedServiceTitle,
       description: t.personalizedServiceDesc,
-      color: 'from-blue-500 to-blue-600'
+      color: 'from-tanayas-600 to-tanayas-700'
     },
     {
       icon: Compass,
       title: t.expertAdviceTitle,
       description: t.expertAdviceDesc,
-      color: 'from-cyan-500 to-cyan-600'
+      color: 'from-tanayas-500 to-tanayas-600'
     },
     {
       icon: PhoneCall,
       title: t.easyCommunicationTitle,
       description: t.easyCommunicationDesc,
-      color: 'from-teal-500 to-teal-600'
+      color: 'from-tanayas-400 to-tanayas-500'
     }
   ];
 
@@ -39,10 +39,10 @@ const About: React.FC = () => {
     <section id="about" className="py-20 bg-white dark:bg-gray-950">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-blue-900 mb-6 dark:text-white">
+          <h2 className="text-4xl font-bold text-tanayas-950 mb-6 dark:text-white">
             {t.aboutUsTitle}
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto rounded-full mb-8 dark:from-blue-400 dark:to-cyan-400" />
+          <div className="w-24 h-1 bg-gradient-to-r from-tanayas-700 to-tanayas-600 mx-auto rounded-full mb-8 dark:from-tanayas-500 dark:to-tanayas-400" />
           <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed dark:text-gray-400">
             {t.aboutUsDescription}
           </p>
@@ -57,9 +57,11 @@ const About: React.FC = () => {
                 className="group text-center"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 relative overflow-hidden dark:from-gray-800 dark:to-gray-850 dark:shadow-xl dark:hover:shadow-2xl dark:shadow-gray-950/50">
+                <div
+                  className="bg-gradient-to-br from-gray-50 to-tanayas-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 relative overflow-hidden dark:from-gray-800 dark:to-gray-850 dark:shadow-xl dark:hover:shadow-2xl dark:shadow-gray-950/50"
+                >
                   {/* Decorative background element */}
-                  <div className="absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-full opacity-30 transform group-hover:scale-110 transition-transform duration-700 dark:from-blue-800 dark:to-cyan-800 dark:opacity-20" />
+                  <div className="absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br from-tanayas-200 to-tanayas-300 rounded-full opacity-30 transform group-hover:scale-110 transition-transform duration-700 dark:from-tanayas-800 dark:to-tanayas-700 dark:opacity-20" />
                   
                   <div className={`w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br ${feature.color} flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300 relative z-10`}>
                     <IconComponent className="w-10 h-10 text-white" />
