@@ -33,7 +33,7 @@ const HowItWorks: React.FC = () => {
       className="py-16 bg-gradient-to-br from-tanayas-50 to-tanayas-100 dark:from-gray-900 dark:to-gray-950"
       aria-labelledby="how-it-works-title"
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 max-w-page-max">
         <header className="text-center mb-12">
           <h2
             id="how-it-works-title"

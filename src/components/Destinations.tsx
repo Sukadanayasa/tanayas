@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight } => "lucide-react";
 import { destinations } from "../data/content";
 import useScrollToSection from "../hooks/useScrollToSection"; // Import the new hook
 
@@ -11,7 +11,7 @@ const Destinations: React.FC = () => {
       id="destinations"
       className="py-20 bg-gradient-to-br from-tanayas-50 to-tanayas-100 dark:from-gray-900 dark:to-gray-950"
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 max-w-page-max">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-tanayas-950 mb-4 dark:text-white">
             Explore Bali’s Top Islands

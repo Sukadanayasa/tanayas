@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-tanayas-950/70 via-tanayas-900/60 to-tanayas-800/70 dark:from-gray-950/70 dark:via-gray-900/60 dark:to-gray-800/70" />
       {/* Tagline */}
-      <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
+      <div className="relative z-10 text-center px-4 max-w-page-max mx-auto">
         <p className="text-base sm:text-lg text-tanayas-300 font-semibold tracking-wide mb-2 dark:text-tanayas-400">
           Island Hopping Made Effortless
         </p>

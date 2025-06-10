@@ -18,7 +18,7 @@ const Contact: React.FC = () => {
         <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-tanayas-400 rounded-full transform translate-x-1/2 translate-y-1/2 dark:bg-tanayas-600" />
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-10 max-w-page-max">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Ready to Plan Your Island Adventure?

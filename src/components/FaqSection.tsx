@@ -8,7 +8,7 @@ const FaqSection: React.FC = () => {
       id="faq"
       className="py-20 bg-gradient-to-br from-tanayas-100 to-tanayas-200 dark:from-gray-900 dark:to-gray-950"
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 max-w-page-max">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-tanayas-950 mb-4 dark:text-white">
             Your Questions, Answered
