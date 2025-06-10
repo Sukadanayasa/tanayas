@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight } => "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { destinations } from "../data/content";
 import useScrollToSection from "../hooks/useScrollToSection"; // Import the new hook
 
