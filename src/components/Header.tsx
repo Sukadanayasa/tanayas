@@ -3,7 +3,7 @@ import { Menu, X, MessageCircle, Sun, Moon } from "lucide-react";
 import useScrollToSection from "../hooks/useScrollToSection"; // Import the new hook
 
 interface HeaderProps {
-  theme: 'light' | 'dark';
+  theme: "light" | "dark";
   toggleTheme: () => void;
 }
 
@@ -33,13 +33,13 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
             : "bg-white dark:bg-gray-950"
         }`}
       >
-        <div className="w-full px-4 py-3 max-w-page-max mx-auto"> {/* Added max-w-page-max and mx-auto here */}
+        <div className="w-full px-4 py-3 max-w-page-max mx-auto">
+          {" "}
+          {/* Added max-w-page-max and mx-auto here */}
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div
-              className={`flex items-center space-x-3 transition-transform duration-300 ${
-                isScrolled ? "scale-95 opacity-90" : "scale-100 opacity-100"
-              }`}
+              className={`flex items-center space-x-3 transition-transform duration-300`}
             >
               <div className="w-10 h-10 bg-gradient-to-br from-tanayas-700 to-tanayas-900 rounded-full flex items-center justify-center shadow">
                 <MessageCircle className="w-5 h-5 text-white" />
@@ -74,7 +74,7 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
                 className="p-2 text-gray-600 hover:text-tanayas-800 transition-colors duration-200 rounded-full dark:text-gray-300 dark:hover:text-tanayas-400"
                 aria-label="Toggle theme"
               >
-                {theme === 'light' ? (
+                {theme === "light" ? (
                   <Moon size={24} className="w-6 h-6" />
                 ) : (
                   <Sun size={24} className="w-6 h-6" />
@@ -91,13 +91,17 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
                   <Menu
                     size={24}
                     className={`absolute inset-0 transition-all duration-300 ease-out ${
-                      isMenuOpen ? 'opacity-0 rotate-90' : 'opacity-100 rotate-0'
+                      isMenuOpen
+                        ? "opacity-0 rotate-90"
+                        : "opacity-100 rotate-0"
                     }`}
                   />
                   <X
                     size={24}
                     className={`absolute inset-0 transition-all duration-300 ease-out ${
-                      isMenuOpen ? 'opacity-100 rotate-0' : 'opacity-0 -rotate-90'
+                      isMenuOpen
+                        ? "opacity-100 rotate-0"
+                        : "opacity-0 -rotate-90"
                     }`}
                   />
                 </div>
@@ -110,14 +114,14 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
       {/* Mobile Menu Overlay (always rendered for transitions) */}
       <div
         className={`fixed inset-0 bg-black/40 z-40 lg:hidden transition-opacity duration-500 ${
-          isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+          isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         onClick={() => setIsMenuOpen(false)}
         style={{ backdropFilter: "blur(2px)" }}
       />
       <div
         className={`fixed top-[64px] left-0 right-0 bg-white z-40 lg:hidden shadow-lg transition-opacity duration-500 ease-in-out dark:bg-gray-900 ${
-          isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+          isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
         <div className="p-6">
