@@ -71,7 +71,7 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
               {/* Theme Toggle Button */}
               <button
                 onClick={toggleTheme}
-                className="p-2 text-gray-600 hover:text-tanayas-800 transition-colors duration-200 rounded-full dark:text-gray-300 dark:hover:text-tanayas-400"
+                className="p-2 text-gray-600 hover:text-tanayas-800 transition-colors duration-200 rounded-full border border-tanayas-500 dark:border-tanayas-700 dark:text-gray-300 dark:hover:text-tanayas-400"
                 aria-label="Toggle theme"
               >
                 {theme === "light" ? (
