@@ -27,18 +27,13 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-white/90 backdrop-blur-md shadow-sm border-tanayas-200 dark:bg-gray-900/90 dark:border-gray-700"
-            : "bg-white border-gray-100 dark:bg-gray-950 dark:border-gray-800"
+            ? "bg-white/90 backdrop-blur-md shadow-sm dark:bg-gray-900/90"
+            : "bg-white dark:bg-gray-950"
         }`}
-        style={{
-          boxShadow: isScrolled
-            ? "0 2px 16px 0 rgba(30, 64, 175, 0.06)"
-            : "0 1px 8px 0 rgba(0,0,0,0.03)",
-        }}
       >
-        <div className="w-full px-4 py-3">
+        <div className="w-full px-4 py-3 max-w-page-max mx-auto"> {/* Added max-w-page-max and mx-auto here */}
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div
