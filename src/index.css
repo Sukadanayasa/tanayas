@@ -59,7 +59,7 @@ body {
   font-family: "Inter", sans-serif;
   line-height: 1.6;
   /* Use Tailwind classes for color to support dark mode */
-  @apply text-gray-700 dark:text-gray-300;
+  @apply text-gray-700 dark:text-gray-300; /* Keep these for general text, will be overridden by specific component styles */
   overflow-x: hidden;
 }
 
@@ -70,18 +70,18 @@ body {
 
 ::-webkit-scrollbar-track {
   background: #f1f5f9;
-  @apply dark:bg-gray-800;
+  @apply dark:bg-black; /* Changed to black for dark mode */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3b82f6;
+  background: #F59E0B; /* Gold-500 */
   border-radius: 4px;
-  @apply dark:bg-blue-600;
+  @apply dark:bg-gold-600; /* Darker gold for dark mode */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2563eb;
-  @apply dark:bg-blue-700;
+  background: #D97706; /* Gold-600 */
+  @apply dark:bg-gold-700; /* Even darker gold for dark mode hover */
 }
 
 /* Animation classes */
@@ -104,9 +104,9 @@ body {
 button:focus,
 a:focus,
 select:focus {
-  outline: 2px solid #3b82f6;
+  outline: 2px solid #F59E0B; /* Gold-500 */
   outline-offset: 2px;
-  @apply dark:outline-blue-500;
+  @apply dark:outline-gold-500;
 }
 
 /* Smooth transitions for all interactive elements */

@@ -3,13 +3,13 @@ import { testimonials } from "../data/content";
 
 const Testimonials: React.FC = () => {
   return (
-    <section className="py-20 bg-white dark:bg-gray-950">
+    <section className="py-20 bg-white dark:bg-black">
       <div className="container mx-auto px-4 max-w-page-max">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-tanayas-950 mb-4 dark:text-white">
+          <h2 className="text-4xl font-bold text-black mb-4 dark:text-white">
             What Travelers Say About Us
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-tanayas-700 to-tanayas-600 mx-auto rounded-full mb-6 dark:from-tanayas-400 dark:to-tanayas-400" />
+          <div className="w-24 h-1 bg-gradient-to-r from-gold-700 to-gold-600 mx-auto rounded-full mb-6 dark:from-gold-400 dark:to-gold-400" />
           <p className="text-lg text-gray-600 max-w-2xl mx-auto dark:text-gray-400">
             Real stories from travelers who made their Bali island adventures
             seamless with our help and local knowledge.
@@ -20,11 +20,11 @@ const Testimonials: React.FC = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.id}
-              className="group bg-gradient-to-br from-tanayas-50 to-tanayas-100 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 relative overflow-hidden dark:from-gray-800 dark:to-gray-850 dark:shadow-xl dark:hover:shadow-2xl dark:shadow-gray-950/50"
+              className="group bg-gradient-to-br from-white to-gold-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 relative overflow-hidden dark:from-gray-800 dark:to-gray-850 dark:shadow-xl dark:hover:shadow-2xl dark:shadow-gray-950/50"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               {/* Quote decoration */}
-              <div className="absolute top-4 right-4 text-6xl text-tanayas-200 font-serif opacity-50 dark:text-tanayas-800">
+              <div className="absolute top-4 right-4 text-6xl text-gold-200 font-serif opacity-50 dark:text-gold-800">
                 "
               </div>
 

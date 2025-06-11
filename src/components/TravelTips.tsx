@@ -13,7 +13,7 @@ const TravelTips: React.FC = () => {
 
   // Map string color names to Tailwind CSS gradient classes
   const colorClasses: Record<TravelTipColor, string> = {
-    blue: "from-tanayas-500 to-tanayas-600", // Mapped to tanayas
+    blue: "from-gold-500 to-gold-600", // Mapped to gold
     green: "from-green-400 to-green-500",
     red: "from-red-400 to-red-500",
     purple: "from-purple-400 to-purple-500",
@@ -21,20 +21,20 @@ const TravelTips: React.FC = () => {
 
   // Map string color names to Tailwind CSS background classes for card
   const bgColorClasses: Record<TravelTipColor, string> = {
-    blue: "bg-tanayas-50 dark:bg-gray-800", // Mapped to tanayas
+    blue: "bg-gold-50 dark:bg-gray-800", // Mapped to gold
     green: "bg-green-50 dark:bg-gray-800",
     red: "bg-red-50 dark:bg-gray-800",
     purple: "bg-purple-50 dark:bg-gray-800",
   };
 
   return (
-    <section className="py-20 bg-white dark:bg-gray-950">
+    <section className="py-20 bg-white dark:bg-black">
       <div className="container mx-auto px-4 max-w-page-max">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-tanayas-950 mb-4 dark:text-white">
+          <h2 className="text-4xl font-bold text-black mb-4 dark:text-white">
             Pro Tips for Island Hopping
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-tanayas-700 to-tanayas-600 mx-auto rounded-full mb-6 dark:from-tanayas-400 dark:to-tanayas-400" />
+          <div className="w-24 h-1 bg-gradient-to-r from-gold-700 to-gold-600 mx-auto rounded-full mb-6 dark:from-gold-400 dark:to-gold-400" />
           <p className="text-lg text-gray-600 max-w-2xl mx-auto dark:text-gray-400">
             Get the most out of your fastboat journey with these local,
             expert-backed travel tips.
@@ -72,7 +72,7 @@ const TravelTips: React.FC = () => {
                   <p className="text-gray-600 leading-relaxed text-sm relative z-10 dark:text-gray-300 flex-grow"> {/* Added flex-grow */}
                     {tip.description}
                   </p>
-                  <div className="mt-4 text-xs text-tanayas-800 font-semibold uppercase tracking-wide dark:text-tanayas-300">
+                  <div className="mt-4 text-xs text-gold-800 font-semibold uppercase tracking-wide dark:text-gold-300">
                     Pro Tip
                   </div>
                 </div>

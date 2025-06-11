@@ -29,8 +29,8 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-white/90 backdrop-blur-md shadow-sm dark:bg-gray-900/90"
-            : "bg-white dark:bg-gray-950"
+            ? "bg-white/90 backdrop-blur-md shadow-sm dark:bg-black/90"
+            : "bg-white dark:bg-black"
         }`}
       >
         <div className="w-full px-4 py-3 max-w-page-max mx-auto border-b border-gray-200 dark:border-gray-800">
@@ -41,10 +41,10 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
             <div
               className={`flex items-center space-x-3 transition-transform duration-300`}
             >
-              <div className="w-10 h-10 bg-gradient-to-br from-tanayas-700 to-tanayas-900 rounded-full flex items-center justify-center shadow">
+              <div className="w-10 h-10 bg-gradient-to-br from-gold-700 to-gold-900 rounded-full flex items-center justify-center shadow">
                 <MessageCircle className="w-5 h-5 text-white" />
               </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-tanayas-950 via-tanayas-500 to-tanayas-950 bg-clip-text text-transparent dark:from-tanayas-500 dark:via-tanayas-100 dark:to-tanayas-500">
+              <span className="text-2xl font-bold bg-gradient-to-r from-black via-gold-500 to-black bg-clip-text text-transparent dark:from-gold-500 dark:via-gold-100 dark:to-gold-500">
                 Tanayas
               </span>
             </div>
@@ -61,7 +61,7 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
                   <button
                     key={item.section}
                     onClick={() => handleNavigationClick(item.section)}
-                    className="px-4 py-2 rounded-full text-gray-700 hover:bg-tanayas-50 hover:text-tanayas-800 font-medium transition-all duration-200 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-tanayas-400"
+                    className="px-4 py-2 rounded-full text-gray-700 hover:bg-gold-50 hover:text-gold-800 font-medium transition-all duration-200 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-gold-400"
                   >
                     {item.label}
                   </button>
@@ -71,7 +71,7 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
               {/* Theme Toggle Button */}
               <button
                 onClick={toggleTheme}
-                className="p-2 text-gray-600 hover:text-tanayas-800 transition-colors duration-200 rounded-full border border-tanayas-500 dark:border-tanayas-700 dark:text-gray-300 dark:hover:text-tanayas-400"
+                className="p-2 text-gray-600 hover:text-gold-800 transition-colors duration-200 rounded-full border border-gold-500 dark:border-gold-700 dark:text-gray-300 dark:hover:text-gold-400"
                 aria-label="Toggle theme"
               >
                 {theme === "light" ? (
@@ -84,7 +84,7 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="lg:hidden p-2 text-gray-600 hover:text-tanayas-800 transition-colors duration-200 relative z-50 border border-tanayas-500 rounded-full dark:border-tanayas-700 dark:text-gray-300 dark:hover:text-tanayas-400"
+                className="lg:hidden p-2 text-gray-600 hover:text-gold-800 transition-colors duration-200 relative z-50 border border-gold-500 rounded-full dark:border-gold-700 dark:text-gray-300 dark:hover:text-gold-400"
                 aria-label="Toggle menu"
               >
                 <div className="relative w-6 h-6">
@@ -120,7 +120,7 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
         style={{ backdropFilter: "blur(2px)" }}
       />
       <div
-        className={`fixed top-[64px] left-0 right-0 bg-white z-40 lg:hidden shadow-lg transition-transform duration-300 ease-out dark:bg-gray-900 ${
+        className={`fixed top-[64px] left-0 right-0 bg-white z-40 lg:hidden shadow-lg transition-transform duration-300 ease-out dark:bg-black ${
           isMenuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
@@ -137,7 +137,7 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
               <button
                 key={item.section}
                 onClick={() => handleNavigationClick(item.section)}
-                className={`block w-full text-left px-4 py-3 rounded-lg text-lg font-medium text-gray-800 hover:bg-tanayas-50 hover:text-tanayas-800 transition-all duration-200 dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:text-tanayas-400 ${
+                className={`block w-full text-left px-4 py-3 rounded-lg text-lg font-medium text-gray-800 hover:bg-gold-50 hover:text-gold-800 transition-all duration-200 dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:text-gold-400 ${
                   index < array.length - 1
                     ? "border-b border-gray-100 dark:border-gray-700"
                     : ""

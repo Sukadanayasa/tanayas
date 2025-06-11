@@ -5,19 +5,21 @@ export default {
   theme: {
     extend: {
       colors: {
-        tanayas: {
-          50: '#E0F7FA',
-          100: '#B2EBF2',
-          200: '#80DEEA',
-          300: '#4DD0E1',
-          400: '#26C6DA',
-          500: '#00BCD4',
-          600: '#00ACC1',
-          700: '#0097A7',
-          800: '#00838F',
-          900: '#006064',
-          950: '#0F4B56', // The base color #0F4B56
+        gold: {
+          50: '#FFFBEB',
+          100: '#FEF3C7',
+          200: '#FDE68A',
+          300: '#FCD34D',
+          400: '#FBBF24',
+          500: '#F59E0B',
+          600: '#D97706',
+          700: '#B45309',
+          800: '#92400E',
+          900: '#78350F',
+          950: '#451A03',
         },
+        black: '#000000',
+        white: '#FFFFFF',
       },
       maxWidth: {
         'page-max': '1480px', // Custom max-width for the page

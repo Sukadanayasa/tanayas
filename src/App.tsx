@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div
-      className={`min-h-screen bg-white dark:bg-gray-950 transition-colors duration-500`}
+      className={`min-h-screen bg-white dark:bg-black transition-colors duration-500`}
     >
       <Header theme={theme} toggleTheme={toggleTheme} />
       <main> {/* Removed max-w-page-max and mx-auto from here */}

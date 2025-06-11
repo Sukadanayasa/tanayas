@@ -9,14 +9,14 @@ const Destinations: React.FC = () => {
   return (
     <section
       id="destinations"
-      className="py-20 bg-gradient-to-br from-tanayas-50 to-tanayas-100 dark:from-gray-900 dark:to-gray-950"
+      className="py-20 bg-gradient-to-br from-white to-gold-50 dark:from-black dark:to-gray-950"
     >
       <div className="container mx-auto px-4 max-w-page-max">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-tanayas-950 mb-4 dark:text-white">
+          <h2 className="text-4xl font-bold text-black mb-4 dark:text-white">
             Explore Bali’s Top Islands
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-tanayas-700 to-tanayas-600 mx-auto rounded-full mb-6 dark:from-tanayas-500 dark:to-tanayas-400" />
+          <div className="w-24 h-1 bg-gradient-to-r from-gold-700 to-gold-600 mx-auto rounded-full mb-6 dark:from-gold-500 dark:to-gold-400" />
           <p className="text-lg text-gray-600 max-w-2xl mx-auto dark:text-gray-400">
             From dramatic cliffs to hidden beaches, discover the best of Bali,
             Nusa Penida, the Gilis, and Lombok with local insights and real
@@ -42,7 +42,7 @@ const Destinations: React.FC = () => {
               </div>
 
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-800 mb-3 group-hover:text-tanayas-800 transition-colors duration-300 dark:text-white dark:group-hover:text-tanayas-400">
+                <h3 className="text-2xl font-bold text-gray-800 mb-3 group-hover:text-gold-800 transition-colors duration-300 dark:text-white dark:group-hover:text-gold-400">
                   {destination.title}
                 </h3>
                 <p className="text-gray-600 mb-6 leading-relaxed dark:text-gray-300">
@@ -51,7 +51,7 @@ const Destinations: React.FC = () => {
 
                 <button
                   onClick={() => scrollToSection("contact")} // Use the hook function
-                  className="group/btn inline-flex items-center space-x-2 text-tanayas-700 hover:text-tanayas-900 font-semibold transition-all duration-300 dark:text-tanayas-400 dark:hover:text-tanayas-500"
+                  className="group/btn inline-flex items-center space-x-2 text-gold-700 hover:text-gold-900 font-semibold transition-all duration-300 dark:text-gold-400 dark:hover:text-gold-500"
                 >
                   <span>Learn More &amp; Get Schedules</span>
                   <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />

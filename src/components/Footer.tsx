@@ -15,10 +15,10 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-tanayas-700 to-tanayas-900 rounded-full flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-br from-gold-700 to-gold-900 rounded-full flex items-center justify-center">
                 <MessageCircle className="w-5 h-5 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-tanayas-100">Tanayas</h3>
+              <h3 className="text-2xl font-bold text-gold-100">Tanayas</h3>
             </div>
             <p className="text-gray-400 leading-relaxed">
               Your trusted source for real-time fastboat schedules, local travel
@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
               <li>
                 <button
                   onClick={() => scrollToSection("destinations")} // Use the hook function
-                  className="text-gray-400 hover:text-tanayas-400 transition-colors duration-200 dark:hover:text-tanayas-500"
+                  className="text-gray-400 hover:text-gold-400 transition-colors duration-200 dark:hover:text-gold-500"
                 >
                   Explore Destinations
                 </button>
@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
               <li>
                 <button
                   onClick={() => scrollToSection("faq")} // Use the hook function
-                  className="text-gray-400 hover:text-tanayas-400 transition-colors duration-200 dark:hover:text-tanayas-500"
+                  className="text-gray-400 hover:text-gold-400 transition-colors duration-200 dark:hover:text-gold-500"
                 >
                   FAQs &amp; Travel Tips
                 </button>
@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
               <li>
                 <button
                   onClick={() => scrollToSection("contact")} // Use the hook function
-                  className="text-gray-400 hover:text-tanayas-400 transition-colors duration-200 dark:hover:text-tanayas-500"
+                  className="text-gray-400 hover:text-gold-400 transition-colors duration-200 dark:hover:text-gold-500"
                 >
                   Contact Local Experts
                 </button>
@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-tanayas-400 transition-colors duration-200 dark:hover:text-tanayas-500"
+                  className="text-gray-400 hover:text-gold-400 transition-colors duration-200 dark:hover:text-gold-500"
                 >
                   Privacy Policy
                 </a>
@@ -73,28 +73,28 @@ const Footer: React.FC = () => {
             <div className="flex space-x-4">
               <a
                 href="#"
-                className="w-10 h-10 bg-gray-700 hover:bg-tanayas-700 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 dark:bg-gray-800 dark:hover:bg-tanayas-800"
+                className="w-10 h-10 bg-gray-700 hover:bg-gold-700 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 dark:bg-gray-800 dark:hover:bg-gold-800"
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-gray-700 hover:bg-tanayas-700 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 dark:bg-gray-800 dark:hover:bg-tanayas-800"
+                className="w-10 h-10 bg-gray-700 hover:bg-gold-700 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 dark:bg-gray-800 dark:hover:bg-gold-800"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-gray-700 hover:bg-tanayas-700 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 dark:bg-gray-800 dark:hover:bg-tanayas-800"
+                className="w-10 h-10 bg-gray-700 hover:bg-gold-700 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 dark:bg-gray-800 dark:hover:bg-gold-800"
                 aria-label="Twitter"
               >
                 <Twitter className="w-5 h-5" />
               </a>
             </div>
             <div className="pt-2">
-              <a href="#" className="text-tanayas-400 hover:underline text-sm dark:text-tanayas-500">
+              <a href="#" className="text-gold-400 hover:underline text-sm dark:text-gold-500">
                 Join our WhatsApp for instant updates
               </a>
             </div>

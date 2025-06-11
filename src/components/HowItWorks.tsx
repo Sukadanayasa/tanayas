@@ -8,21 +8,21 @@ const steps = [
     title: "Tell Us Your Plans",
     description:
       "Message us your travel dates, destinations, and group size. Takes 30 seconds.",
-    color: "from-tanayas-600 to-tanayas-700",
+    color: "from-gold-600 to-gold-700",
   },
   {
     icon: Search,
     title: "We Find the Best Options",
     description:
       "Get real-time schedules, prices, and route recommendations from our local experts.",
-    color: "from-tanayas-500 to-tanayas-600",
+    color: "from-gold-500 to-gold-600",
   },
   {
     icon: CheckCircle,
     title: "Travel with Confidence",
     description:
       "Armed with insider knowledge, enjoy stress-free island hopping across Bali.",
-    color: "from-tanayas-400 to-tanayas-500",
+    color: "from-gold-400 to-gold-500",
   },
 ];
 
@@ -30,18 +30,18 @@ const HowItWorks: React.FC = () => {
   return (
     <section
       id="about"
-      className="py-16 bg-gradient-to-br from-tanayas-50 to-tanayas-100 dark:from-gray-900 dark:to-gray-950"
+      className="py-16 bg-gradient-to-br from-white to-gold-50 dark:from-black dark:to-gray-950"
       aria-labelledby="how-it-works-title"
     >
       <div className="container mx-auto px-4 max-w-page-max">
         <header className="text-center mb-12">
           <h2
             id="how-it-works-title"
-            className="text-3xl font-bold text-tanayas-950 mb-3 dark:text-white"
+            className="text-3xl font-bold text-black mb-3 dark:text-white"
           >
             How It Works
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-tanayas-700 to-tanayas-600 mx-auto rounded-full mb-4 dark:from-tanayas-400 dark:to-tanayas-400" />
+          <div className="w-20 h-1 bg-gradient-to-r from-gold-700 to-gold-600 mx-auto rounded-full mb-4 dark:from-gold-400 dark:to-gold-400" />
           <p className="text-base text-gray-600 max-w-2xl mx-auto dark:text-gray-400">
             Getting reliable fastboat information shouldn't be complicated.
             Here's how we make it simple.
