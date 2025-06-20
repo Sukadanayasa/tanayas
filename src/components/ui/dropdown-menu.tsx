@@ -8,7 +8,7 @@ const DropdownMenu = DropdownMenuPrimitive.Root
 
 const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger
 
-const DropropdownMenuGroup = DropdownMenuPrimitive.Group
+const DropdownMenuGroup = DropdownMenuPrimitive.Group // Corrected typo here
 
 const DropdownMenuPortal = DropdownMenuPrimitive.Portal
 
@@ -223,7 +223,7 @@ export {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuShortcut,
-  DropopropdownMenuGroup as DropdownMenuGroup,
+  DropdownMenuGroup, // Corrected export name
   DropdownMenuPortal,
   DropdownMenuSub,
   DropdownMenuSubContent,
