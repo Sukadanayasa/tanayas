@@ -68,18 +68,6 @@ const Header: React.FC = () => {
                 >
                   Services
                 </Link>
-                <button
-                  onClick={() => handleNavigationClick("about")}
-                  className="px-4 py-2 rounded-full text-gray-700 hover:bg-gold-50 hover:text-gold-800 font-medium transition-all duration-200"
-                >
-                  How It Works
-                </button>
-                <button
-                  onClick={() => handleNavigationClick("faq")}
-                  className="px-4 py-2 rounded-full text-gray-700 hover:bg-gold-50 hover:text-gold-800 font-medium transition-all duration-200"
-                >
-                  FAQ
-                </button>
               </nav>
 
               {/* Mobile Menu Button */}
@@ -127,12 +115,12 @@ const Header: React.FC = () => {
       >
         <div className="p-6">
           <nav className="space-y-0">
+            {" "}
+            {/* Changed space-y-4 to space-y-0 to control spacing with borders */}
             {[
               { label: "Get Info Now", section: "contact", type: "scroll" },
               { label: "Destinations", section: "/destinations", type: "link" },
               { label: "Services", section: "/services", type: "link" }, // New mobile link for Services
-              { label: "How It Works", section: "about", type: "scroll" },
-              { label: "FAQ", section: "faq", type: "scroll" },
             ].map((item, index, array) => (
               item.type === "link" ? (
                 <Link
