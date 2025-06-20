@@ -11,6 +11,7 @@ import FloatingWhatsApp from "./components/FloatingWhatsApp";
 import About from "./components/About";
 import DestinationDetailPage from "./pages/DestinationDetailPage";
 import ServiceDetailPage from "./pages/ServiceDetailPage";
+import ScrollToTop from "./components/ScrollToTop"; // Import the new component
 
 function App() {
   useTheme();
@@ -20,6 +21,7 @@ function App() {
     <div
       className={`min-h-screen bg-white transition-colors duration-500`}
     >
+      <ScrollToTop /> {/* Add ScrollToTop here */}
       <Header />
       <main>
         <Routes>
