@@ -13,18 +13,18 @@ const TravelTips: React.FC = () => {
 
   // Map string color names to Tailwind CSS gradient classes
   const colorClasses: Record<TravelTipColor, string> = {
-    blue: "from-gold-500 to-gold-600", // Mapped to gold
-    green: "from-green-400 to-green-500",
-    red: "from-red-400 to-red-500",
-    purple: "from-purple-400 to-purple-500",
+    blue: "from-gold-500 to-gold-600",
+    green: "from-gold-600 to-gold-700", // Changed to gold
+    red: "from-gold-700 to-gold-800",   // Changed to gold
+    purple: "from-gold-800 to-gold-900", // Changed to gold
   };
 
   // Map string color names to Tailwind CSS background classes for card
   const bgColorClasses: Record<TravelTipColor, string> = {
-    blue: "bg-gold-50 dark:bg-gray-800", // Mapped to gold
-    green: "bg-green-50 dark:bg-gray-800",
-    red: "bg-red-50 dark:bg-gray-800",
-    purple: "bg-purple-50 dark:bg-gray-800",
+    blue: "bg-gold-50 dark:bg-gray-800",
+    green: "bg-gold-100 dark:bg-gray-800", // Changed to gold
+    red: "bg-gold-200 dark:bg-gray-800",   // Changed to gold
+    purple: "bg-gold-300 dark:bg-gray-800", // Changed to gold
   };
 
   return (

@@ -8,9 +8,9 @@ const Hero: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-20">
       {/* Animated Background (waves/gradient) */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-950 via-purple-950 to-gold-700 animate-gradient-move dark:from-blue-950 dark:via-purple-950 dark:to-gold-700" />
+      <div className="absolute inset-0 bg-gradient-to-br from-gold-950 via-gold-900 to-gold-800 animate-gradient-move dark:from-gold-950 dark:via-gold-900 dark:to-gold-800" />
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-800/70 via-purple-800/60 to-gold-600/70 dark:from-blue-800/70 dark:via-purple-800/60 dark:to-gold-600/70" />
+      <div className="absolute inset-0 bg-gradient-to-br from-gold-900/70 via-gold-800/60 to-gold-700/70 dark:from-gold-900/70 dark:via-gold-800/60 dark:to-gold-700/70" />
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         {/* Logo and Tanayas Text */}

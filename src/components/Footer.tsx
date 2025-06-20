@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
   return (
     <footer
       id="footer"
-      className="bg-gradient-to-br from-gray-900 to-gray-800 text-gray-300 dark:from-black dark:to-gray-950 dark:text-gray-400"
+      className="bg-gradient-to-br from-gold-950 to-gold-900 text-gray-300 dark:from-gold-950 dark:to-gold-900 dark:text-gray-400"
     >
       <div className="container mx-auto px-4 py-16 max-w-page-max">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">

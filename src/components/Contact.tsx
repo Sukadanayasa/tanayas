@@ -10,7 +10,7 @@ const Contact: React.FC = () => {
   return (
     <section
       id="contact"
-      className="py-20 bg-gradient-to-br from-black via-black to-black text-white relative overflow-hidden dark:from-black dark:via-black dark:to-black"
+      className="py-20 bg-gradient-to-br from-gold-950 via-gold-900 to-gold-800 text-white relative overflow-hidden dark:from-gold-950 dark:via-gold-900 dark:to-gold-800"
     >
       {/* Decorative background elements */}
       <div className="absolute inset-0 opacity-10">
