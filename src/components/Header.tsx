@@ -29,19 +29,21 @@ const Header: React.FC = () => {
       >
         <div className="w-full px-4 py-3 max-w-page-max mx-auto border-b border-gray-200">
           <div className="flex items-center justify-between">
-            {/* Logo */}
-            <div
-              className={`flex items-center space-x-3 transition-transform duration-300`}
+            {/* Logo and Brand Name - now clickable */}
+            <button
+              onClick={() => handleNavigationClick("hero")} // Scroll to the hero section
+              className={`flex items-center space-x-3 transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-gold-500 rounded-md p-1 -ml-1`} // Added focus styles and padding
+              aria-label="Go to homepage"
             >
               <img
                 src="/tanayas-logo.svg"
                 alt="Tanayas Logo"
-                className="h-9 w-auto" // Increased size
+                className="h-9 w-auto"
               />
-              <span className="text-xl font-bold text-gold-500"> {/* Decreased size */}
+              <span className="text-xl font-bold text-gold-500">
                 TANAYAS
               </span>
-            </div>
+            </button>
 
             <div className="flex items-center space-x-4">
               {/* Desktop Navigation */}
