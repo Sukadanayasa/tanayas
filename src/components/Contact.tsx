@@ -10,23 +10,23 @@ const Contact: React.FC = () => {
   return (
     <section
       id="contact"
-      className="py-20 bg-black text-white relative overflow-hidden" // Changed background and default text color
+      className="py-20 bg-gradient-to-br from-white to-gold-50 dark:from-black dark:to-gray-950" // Light gradient background
     >
-      <div className="container mx-auto px-4 relative z-10 max-w-page-max">
-        <div className="text-center max-w-4xl mx-auto"> {/* Removed the white card wrapper */}
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gold-400"> {/* Changed title color */}
+      <div className="container mx-auto px-4 max-w-page-max">
+        <div className="text-center max-w-4xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black dark:text-white"> {/* Adjusted title color */}
             Ready to Plan Your Island Adventure?
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8"> {/* Changed text color */}
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8 dark:text-gray-300"> {/* Adjusted text color */}
             Get instant access to real-time fastboat schedules, the best routes,
             and honest local advice. No spam, no pressure—just expert help when
             you need it.
           </p>
 
           {/* Response time indicator */}
-          <div className="inline-flex items-center space-x-2 bg-gray-800 rounded-full px-4 py-2 mb-8 text-gray-300"> {/* Adjusted background and text color */}
-            <Clock className="w-4 h-4 text-gold-400" /> {/* Adjusted icon color */}
-            <span className="text-sm">
+          <div className="inline-flex items-center space-x-2 bg-gold-100/50 backdrop-blur-sm rounded-full px-4 py-2 mb-8 dark:bg-gray-800"> {/* Adjusted background and text color */}
+            <Clock className="w-4 h-4 text-gold-700 dark:text-gold-400" /> {/* Adjusted icon color */}
+            <span className="text-sm text-gold-700 dark:text-gray-300"> {/* Adjusted text color */}
               Usually respond within 5 minutes
             </span>
           </div>
@@ -63,7 +63,7 @@ const Contact: React.FC = () => {
           </div>
 
           <div className="text-center mt-8">
-            <p className="text-gold-400 text-sm"> {/* Adjusted text color */}
+            <p className="text-gold-700 text-sm dark:text-gold-400"> {/* Adjusted text color */}
               Free service • No spam • Trusted by 10,000+ travelers
             </p>
           </div>
