@@ -29,20 +29,20 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Subtitle */}
-        <p className="text-2xl sm:text-3xl lg:text-4xl text-gold-400 font-semibold mb-4">
+        <p className="text-3xl sm:text-4xl lg:text-5xl text-gold-400 font-semibold mb-4">
           Fast Boat & Activities Organizer
         </p>
 
         {/* Trusted Partner */}
-        <p className="text-xl sm:text-2xl text-gold-200 mb-6 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-2xl sm:text-3xl text-gold-200 mb-6 max-w-2xl mx-auto leading-relaxed">
           Your trusted partner since 2007.
         </p>
 
         {/* Main Description */}
-        <p className="text-xl sm:text-2xl text-white mb-4 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-2xl sm:text-3xl text-white mb-4 max-w-3xl mx-auto leading-relaxed">
           We offer unforgettable fast boat adventures and exciting activities to Bali, Nusa Penida, Gili Islands, and Lombok.
         </p>
-        <p className="text-xl sm:text-2xl text-white mb-8 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-2xl sm:text-3xl text-white mb-8 max-w-3xl mx-auto leading-relaxed">
           Enjoy personalized service and direct booking via WhatsApp for instant confirmation.
         </p>
 
