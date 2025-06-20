@@ -39,7 +39,7 @@ const Header: React.FC = () => {
                 className="h-8 w-auto" // Adjusted size for better alignment with text
               />
               <span className="text-2xl font-bold bg-gradient-to-r from-black via-gold-500 to-black bg-clip-text text-transparent">
-                Tanayas
+                TANAYAS
               </span>
             </div>
 
