@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react"; // Keep ArrowRight for now, though it will be removed from the button itself
 import useScrollToSection from "../hooks/useScrollToSection";
 
 const Hero: React.FC = () => {
@@ -44,13 +44,12 @@ const Hero: React.FC = () => {
           Enjoy personalized service and direct booking via WhatsApp for instant confirmation.
         </p>
 
-        {/* WhatsApp Button */}
+        {/* Explore Destinations Button */}
         <button
-          onClick={() => scrollToSection("contact")}
-          className="group inline-flex items-center space-x-3 bg-green-500 hover:bg-green-600 text-white px-12 py-6 rounded-full font-bold text-xl shadow-2xl hover:shadow-green-500/25 transform hover:scale-105 transition-all duration-300 ease-out dark:bg-green-600 dark:hover:bg-green-700 dark:shadow-lg dark:hover:shadow-green-700/25"
+          onClick={() => scrollToSection('destinations')}
+          className="bg-gradient-to-r from-gold-400 to-gold-600 hover:from-gold-500 hover:to-gold-700 text-white px-8 py-3 rounded-full font-semibold text-lg transition-all transform hover:scale-105 shadow-lg mt-6"
         >
-          <span>Book via WhatsApp</span>
-          <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
+          Explore Destinations
         </button>
       </div>
     </section>
