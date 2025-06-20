@@ -1,16 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X, MessageCircle, Sun, Moon } from "lucide-react";
-import useScrollToSection from "../hooks/useScrollToSection"; // Import the new hook
+import { Menu, X, MessageCircle } from "lucide-react"; // Removed Sun, Moon
+import useScrollToSection from "../hooks/useScrollToSection";
 
-interface HeaderProps {
-  theme: "light" | "dark";
-  toggleTheme: () => void;
-}
-
-const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
+// Removed HeaderProps interface as theme and toggleTheme are no longer props
+const Header: React.FC = () => { // Removed HeaderProps from here
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const scrollToSection = useScrollToSection(); // Use the custom hook
+  const scrollToSection = useScrollToSection();
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -18,10 +14,9 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Function to handle navigation and close mobile menu
   const handleNavigationClick = (sectionId: string) => {
     scrollToSection(sectionId);
-    setIsMenuOpen(false); // Close mobile menu after navigation
+    setIsMenuOpen(false);
   };
 
   return (
@@ -29,13 +24,11 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-white/90 backdrop-blur-md shadow-sm dark:bg-black/90"
-            : "bg-white dark:bg-black"
+            ? "bg-white/90 backdrop-blur-md shadow-sm" // Fixed to light mode colors
+            : "bg-white" // Fixed to light mode colors
         }`}
       >
-        <div className="w-full px-4 py-3 max-w-page-max mx-auto border-b border-gray-200 dark:border-gray-800">
-          {" "}
-          {/* Added border-b here */}
+        <div className="w-full px-4 py-3 max-w-page-max mx-auto border-b border-gray-200">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div
@@ -44,7 +37,7 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
               <div className="w-10 h-10 bg-gradient-to-br from-gold-700 to-gold-900 rounded-full flex items-center justify-center shadow">
                 <MessageCircle className="w-5 h-5 text-white" />
               </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-black via-gold-500 to-black bg-clip-text text-transparent dark:from-gold-500 dark:via-gold-100 dark:to-gold-500">
+              <span className="text-2xl font-bold bg-gradient-to-r from-black via-gold-500 to-black bg-clip-text text-transparent">
                 Tanayas
               </span>
             </div>
@@ -61,30 +54,19 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
                   <button
                     key={item.section}
                     onClick={() => handleNavigationClick(item.section)}
-                    className="px-4 py-2 rounded-full text-gray-700 hover:bg-gold-50 hover:text-gold-800 font-medium transition-all duration-200 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-gold-400"
+                    className="px-4 py-2 rounded-full text-gray-700 hover:bg-gold-50 hover:text-gold-800 font-medium transition-all duration-200"
                   >
                     {item.label}
                   </button>
                 ))}
               </nav>
 
-              {/* Theme Toggle Button */}
-              <button
-                onClick={toggleTheme}
-                className="p-2 text-gray-600 hover:text-gold-800 transition-colors duration-200 rounded-full border border-gold-500 dark:border-gold-700 dark:text-gray-300 dark:hover:text-gold-400"
-                aria-label="Toggle theme"
-              >
-                {theme === "light" ? (
-                  <Moon size={24} className="w-6 h-6" />
-                ) : (
-                  <Sun size={24} className="w-6 h-6" />
-                )}
-              </button>
+              {/* Removed Theme Toggle Button */}
 
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="lg:hidden p-2 text-gray-600 hover:text-gold-800 transition-colors duration-200 relative z-50 border border-gold-500 rounded-full dark:border-gold-700 dark:text-gray-300 dark:hover:text-gold-400"
+                className="lg:hidden p-2 text-gray-600 hover:text-gold-800 transition-colors duration-200 relative z-50 border border-gold-500 rounded-full"
                 aria-label="Toggle menu"
               >
                 <div className="relative w-6 h-6">
@@ -120,7 +102,7 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
         style={{ backdropFilter: "blur(2px)" }}
       />
       <div
-        className={`fixed top-[64px] left-0 right-0 bg-white z-40 lg:hidden shadow-lg transition-transform duration-300 ease-out dark:bg-black ${
+        className={`fixed top-[64px] left-0 right-0 bg-white z-40 lg:hidden shadow-lg transition-transform duration-300 ease-out ${
           isMenuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
@@ -137,9 +119,9 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
               <button
                 key={item.section}
                 onClick={() => handleNavigationClick(item.section)}
-                className={`block w-full text-left px-4 py-3 rounded-lg text-lg font-medium text-gray-800 hover:bg-gold-50 hover:text-gold-800 transition-all duration-200 dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:text-gold-400 ${
+                className={`block w-full text-left px-4 py-3 rounded-lg text-lg font-medium text-gray-800 hover:bg-gold-50 hover:text-gold-800 transition-all duration-200 ${
                   index < array.length - 1
-                    ? "border-b border-gray-100 dark:border-gray-700"
+                    ? "border-b border-gray-100" // Fixed to light mode colors
                     : ""
                 }`}
               >

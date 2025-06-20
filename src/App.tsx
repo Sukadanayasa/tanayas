@@ -12,15 +12,17 @@ import Footer from "./components/Footer";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
 
 function App() {
-  const { theme, toggleTheme } = useTheme();
+  // We still call useTheme to ensure the 'light' class is applied to html
+  // but we no longer need the theme state or toggleTheme function directly here
+  useTheme();
   usePageAnimations();
 
   return (
     <div
-      className={`min-h-screen bg-white dark:bg-black transition-colors duration-500`}
+      className={`min-h-screen bg-white transition-colors duration-500`} // Fixed to light mode background
     >
-      <Header theme={theme} toggleTheme={toggleTheme} />
-      <main> {/* Removed max-w-page-max and mx-auto from here */}
+      <Header /> {/* No theme or toggleTheme props needed */}
+      <main>
         <Hero />
         <Destinations />
         <HowItWorks />
