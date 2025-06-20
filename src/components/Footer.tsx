@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
                 alt="Tanayas Logo"
                 className="h-9 w-auto"
               />
-              <h3 className="text-2xl font-bold text-gold-500">Tanayas</h3>
+              <h3 className="text-2xl font-bold text-gold-500">TANAYAS</h3>
             </div>
             <p className="text-gray-400 leading-relaxed">
               Your trusted source for real-time fastboat schedules, local travel
