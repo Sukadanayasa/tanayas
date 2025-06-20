@@ -1,5 +1,5 @@
 import React from "react";
-import { Facebook, Instagram, Twitter } => "lucide-react";
+import { Facebook, Instagram, Twitter } from "lucide-react";
 import { Link } from "react-router-dom";
 import useScrollToSection from "../hooks/useScrollToSection";
 
@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
           {/* Quick Links */}
           <div className="space-y-6">
             <h3 className="text-lg font-semibold text-gray-100">Quick Links</h3>
-            <ul className="space-y-3">
+            <ul className="space-y-3}>
               <li>
                 <button
                   onClick={() => scrollToSection("destinations")}
