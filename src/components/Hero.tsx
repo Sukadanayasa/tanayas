@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight } => "lucide-react";
 import useScrollToSection from "../hooks/useScrollToSection";
 
 const Hero: React.FC = () => {
@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
             alt="Tanayas Logo"
             className="h-24 w-auto sm:h-32"
           />
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-tight">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold bg-gradient-to-r from-black via-gold-500 to-black bg-clip-text text-transparent leading-tight">
             TANAYAS
           </h1>
         </div>
