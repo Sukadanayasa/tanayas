@@ -15,12 +15,10 @@ const Contact: React.FC = () => {
       <div className="container mx-auto px-4 max-w-page-max">
         <div className="text-center max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black dark:text-white"> {/* Adjusted title color */}
-            Ready to Plan Your Island Adventure?
+            Ready for Your Seamless Island Escape?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8 dark:text-gray-300"> {/* Adjusted text color */}
-            Get instant access to real-time fastboat schedules, the best routes,
-            and honest local advice. No spam, no pressure—just expert help when
-            you need it.
+            Connect with our local experts for real-time fastboat schedules, personalized routes, and insider tips. We make island hopping effortless and unforgettable.
           </p>
 
           {/* Response time indicator */}
@@ -64,7 +62,7 @@ const Contact: React.FC = () => {
 
           <div className="text-center mt-8">
             <p className="text-gold-700 text-sm dark:text-gold-400"> {/* Adjusted text color */}
-              Free service • No spam • Trusted by 10,000+ travelers
+              Free, personalized service • No hidden fees • Trusted by thousands of travelers
             </p>
           </div>
         </div>
