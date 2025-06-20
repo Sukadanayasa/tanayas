@@ -10,34 +10,25 @@ const Contact: React.FC = () => {
   return (
     <section
       id="contact"
-      className="py-20 bg-gradient-to-br from-gold-50 via-gold-100 to-gold-200 relative overflow-hidden"
+      className="py-20 bg-black text-white relative overflow-hidden" // Changed background and default text color
     >
-      {/* Decorative background elements */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gold-200 rounded-full transform -translate-x-1/2 -translate-y-1/2" />
-        <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-gold-300 rounded-full transform translate-x-1/2 -translate-y-1/2" />
-      </div>
-
       <div className="container mx-auto px-4 relative z-10 max-w-page-max">
-        {/* New wrapper div for the main content */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black">
-              Ready to Plan Your Island Adventure?
-            </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed mb-8">
-              Get instant access to real-time fastboat schedules, the best routes,
-              and honest local advice. No spam, no pressure—just expert help when
-              you need it.
-            </p>
+        <div className="text-center max-w-4xl mx-auto"> {/* Removed the white card wrapper */}
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gold-400"> {/* Changed title color */}
+            Ready to Plan Your Island Adventure?
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8"> {/* Changed text color */}
+            Get instant access to real-time fastboat schedules, the best routes,
+            and honest local advice. No spam, no pressure—just expert help when
+            you need it.
+          </p>
 
-            {/* Response time indicator */}
-            <div className="inline-flex items-center space-x-2 bg-gold-100/50 backdrop-blur-sm rounded-full px-4 py-2 mb-8">
-              <Clock className="w-4 h-4 text-gold-700" />
-              <span className="text-sm text-gold-700">
-                Usually respond within 5 minutes
-              </span>
-            </div>
+          {/* Response time indicator */}
+          <div className="inline-flex items-center space-x-2 bg-gray-800 rounded-full px-4 py-2 mb-8 text-gray-300"> {/* Adjusted background and text color */}
+            <Clock className="w-4 h-4 text-gold-400" /> {/* Adjusted icon color */}
+            <span className="text-sm">
+              Usually respond within 5 minutes
+            </span>
           </div>
 
           <div className="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-8 max-w-4xl mx-auto">
@@ -72,7 +63,7 @@ const Contact: React.FC = () => {
           </div>
 
           <div className="text-center mt-8">
-            <p className="text-gold-700 text-sm">
+            <p className="text-gold-400 text-sm"> {/* Adjusted text color */}
               Free service • No spam • Trusted by 10,000+ travelers
             </p>
           </div>

@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
   return (
     <footer
       id="footer"
-      className="bg-gray-900 text-gray-300" // Changed background to gray-900
+      className="bg-gray-900 text-gray-300"
     >
       <div className="container mx-auto px-4 py-16 max-w-page-max">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
                 alt="Tanayas Logo"
                 className="h-9 w-auto"
               />
-              <h3 className="text-2xl font-bold text-gray-100">Tanayas</h3> {/* Changed text color */}
+              <h3 className="text-2xl font-bold text-gray-100">Tanayas</h3>
             </div>
             <p className="text-gray-400 leading-relaxed">
               Your trusted source for real-time fastboat schedules, local travel
@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div className="space-y-6">
-            <h3 className="text-lg font-semibold text-gray-100">Quick Links</h3> {/* Changed text color */}
+            <h3 className="text-lg font-semibold text-gray-100">Quick Links</h3>
             <ul className="space-y-3">
               <li>
                 <button
@@ -80,7 +80,7 @@ const Footer: React.FC = () => {
 
           {/* Social Media */}
           <div className="space-y-6">
-            <h3 className="text-lg font-semibold text-gray-100">Stay Connected</h3> {/* Changed text color */}
+            <h3 className="text-lg font-semibold text-gray-100">Stay Connected</h3>
             <div className="flex space-x-4">
               <a
                 href="#"
