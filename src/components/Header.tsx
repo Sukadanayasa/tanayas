@@ -38,7 +38,7 @@ const Header: React.FC = () => {
                 alt="Tanayas Logo"
                 className="h-8 w-auto" // Adjusted size for better alignment with text
               />
-              <span className="text-2xl font-bold bg-gradient-to-r from-black via-gold-500 to-black bg-clip-text text-transparent">
+              <span className="text-2xl font-bold bg-gradient-to-r from-black via-gold-400 to-black bg-clip-text text-transparent">
                 TANAYAS
               </span>
             </div>
