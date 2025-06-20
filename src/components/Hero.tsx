@@ -39,8 +39,10 @@ const Hero: React.FC = () => {
         </p>
 
         {/* Main Description */}
-        <p className="text-xl sm:text-2xl text-white mb-8 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-xl sm:text-2xl text-white mb-4 max-w-3xl mx-auto leading-relaxed">
           We offer unforgettable fast boat adventures and exciting activities to Bali, Nusa Penida, Gili Islands, and Lombok.
+        </p>
+        <p className="text-xl sm:text-2xl text-white mb-8 max-w-3xl mx-auto leading-relaxed">
           Enjoy personalized service and direct booking via WhatsApp for instant confirmation.
         </p>
 
