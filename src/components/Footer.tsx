@@ -1,5 +1,5 @@
 import React from "react";
-import { Facebook, Instagram, Twitter } from "lucide-react";
+import { Facebook, Instagram, Twitter } => "lucide-react";
 import { Link } from "react-router-dom";
 import useScrollToSection from "../hooks/useScrollToSection";
 
@@ -105,8 +105,8 @@ const Footer: React.FC = () => {
               </a>
             </div>
             <div className="pt-2">
-              <a href="#" className="nav-link-underline text-gold-400 hover:underline text-sm">
-                Join our WhatsApp for instant updates
+              <a href="#" className="nav-link-underline text-gold-400 transition-colors text-sm">
+                Message us on WhatsApp for instant help
               </a>
             </div>
           </div>
