@@ -1,16 +1,18 @@
 import { useTheme } from "./hooks/useTheme";
 import { usePageAnimations } from "./hooks/usePageAnimations";
-import { Routes, Route } from "react-router-dom"; // Import Routes and Route
+import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Destinations from "./components/Destinations";
-import Services from "./components/Services"; // Import the new Services component
+import Services from "./components/Services";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
-import About from "./components/About"; // Ensure About is imported if it's a section on the main page
-import DestinationDetailPage from "./pages/DestinationDetailPage"; // Import detail page
-import ServiceDetailPage from "./pages/ServiceDetailPage"; // Import detail page
+import About from "./components/About";
+import DestinationDetailPage from "./pages/DestinationDetailPage";
+import ServiceDetailPage from "./pages/ServiceDetailPage";
+import AboutPage from "./pages/AboutPage"; // Import the new AboutPage
+import ContactPage from "./pages/ContactPage"; // Import the new ContactPage
 
 function App() {
   useTheme();
@@ -27,17 +29,15 @@ function App() {
             <>
               <Hero />
               <Destinations />
-              <Services /> {/* Add the Services component to the homepage */}
-              <About /> {/* Assuming About is also on the homepage */}
+              <Services />
+              <About />
               <Contact />
             </>
           } />
           <Route path="/destinations/:id" element={<DestinationDetailPage />} />
           <Route path="/services/:id" element={<ServiceDetailPage />} />
-          {/* Add routes for other sections if they become full pages, otherwise they remain scroll-to sections on the homepage */}
-          <Route path="/contact" element={<Contact />} /> {/* Example: if contact becomes a standalone page */}
-          <Route path="/about" element={<About />} /> {/* Example: if about becomes a standalone page */}
-          {/* You can add more specific routes here if needed */}
+          <Route path="/about" element={<AboutPage />} /> {/* New route for About page */}
+          <Route path="/contact" element={<ContactPage />} /> {/* New route for Contact page */}
         </Routes>
       </main>
       <Footer />

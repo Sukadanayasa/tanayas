@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X, MessageCircle } from "lucide-react";
-import { Link } from "react-router-dom"; // Import Link
+import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 import useScrollToSection from "../hooks/useScrollToSection";
 
 const Header: React.FC = () => {
@@ -24,15 +24,15 @@ const Header: React.FC = () => {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-white/90 backdrop-blur-md shadow-sm"
-            : "bg-white"
+            ? "bg-white/90 backdrop-blur-md shadow-sm dark:bg-black/90 dark:shadow-lg"
+            : "bg-white dark:bg-black"
         }`}
       >
-        <div className="w-full px-4 py-3 max-w-page-max mx-auto border-b border-gray-200">
+        <div className="w-full px-4 py-3 max-w-page-max mx-auto border-b border-gray-100 dark:border-gray-800">
           <div className="flex items-center justify-between">
-            {/* Logo and Brand Name - now clickable */}
+            {/* Logo and Brand Name */}
             <Link
-              to="/" // Link to homepage
+              to="/"
               className={`flex items-center space-x-3 transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-gold-500 rounded-md p-1 -ml-1`}
               aria-label="Go to homepage"
             >
@@ -48,19 +48,30 @@ const Header: React.FC = () => {
 
             <div className="flex items-center space-x-4">
               {/* Desktop Navigation */}
-              <nav className="hidden lg:flex items-center space-x-4">
-                {/* Use Link for full pages, button with scrollToSection for in-page sections */}
+              <nav className="hidden lg:flex items-center space-x-6">
                 <Link
                   to="/destinations"
-                  className="px-4 py-2 rounded-full text-gray-700 hover:bg-gold-50 hover:text-gold-800 font-medium transition-all duration-200"
+                  className="text-gray-700 hover:text-gold-700 font-medium transition-colors duration-200 dark:text-gray-300 dark:hover:text-gold-400"
                 >
                   Destinations
                 </Link>
                 <Link
-                  to="/services" // New link for Services page
-                  className="px-4 py-2 rounded-full text-gray-700 hover:bg-gold-50 hover:text-gold-800 font-medium transition-all duration-200"
+                  to="/services"
+                  className="text-gray-700 hover:text-gold-700 font-medium transition-colors duration-200 dark:text-gray-300 dark:hover:text-gold-400"
                 >
                   Services
+                </Link>
+                <Link
+                  to="/about"
+                  className="text-gray-700 hover:text-gold-700 font-medium transition-colors duration-200 dark:text-gray-300 dark:hover:text-gold-400"
+                >
+                  About Us
+                </Link>
+                <Link
+                  to="/contact"
+                  className="text-gray-700 hover:text-gold-700 font-medium transition-colors duration-200 dark:text-gray-300 dark:hover:text-gold-400"
+                >
+                  Contact
                 </Link>
               </nav>
 
@@ -94,7 +105,7 @@ const Header: React.FC = () => {
         </div>
       </header>
 
-      {/* Mobile Menu Overlay (always rendered for transitions) */}
+      {/* Mobile Menu Overlay */}
       <div
         className={`fixed inset-0 bg-black/40 z-40 lg:hidden transition-opacity duration-500 ${
           isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
@@ -103,40 +114,28 @@ const Header: React.FC = () => {
         style={{ backdropFilter: "blur(2px)" }}
       />
       <div
-        className={`fixed top-[64px] left-0 right-0 bg-white z-40 lg:hidden shadow-lg transition-transform duration-300 ease-out ${
+        className={`fixed top-[64px] left-0 right-0 bg-white z-40 lg:hidden shadow-lg transition-transform duration-300 ease-out dark:bg-gray-900 ${
           isMenuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
         <div className="p-6">
           <nav className="space-y-0">
-            {" "}
-            {/* Changed space-y-4 to space-y-0 to control spacing with borders */}
             {[
-              { label: "Destinations", section: "/destinations", type: "link" },
-              { label: "Services", section: "/services", type: "link" }, // New mobile link for Services
+              { label: "Destinations", path: "/destinations" },
+              { label: "Services", path: "/services" },
+              { label: "About Us", path: "/about" },
+              { label: "Contact", path: "/contact" },
             ].map((item, index, array) => (
-              item.type === "link" ? (
                 <Link
-                  key={item.section}
-                  to={item.section}
-                  onClick={() => setIsMenuOpen(false)} // Close menu on link click
-                  className={`block w-full text-left px-4 py-3 rounded-lg text-lg font-medium text-gray-800 hover:bg-gold-50 hover:text-gold-800 transition-all duration-200 ${
-                    index < array.length - 1 ? "border-b border-gray-100" : ""
+                  key={item.path}
+                  to={item.path}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`block w-full text-left px-4 py-3 rounded-lg text-lg font-medium text-gray-800 hover:bg-gold-50 hover:text-gold-800 transition-all duration-200 dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:text-gold-400 ${
+                    index < array.length - 1 ? "border-b border-gray-100 dark:border-gray-700" : ""
                   }`}
                 >
                   {item.label}
                 </Link>
-              ) : (
-                <button
-                  key={item.section}
-                  onClick={() => handleNavigationClick(item.section)}
-                  className={`block w-full text-left px-4 py-3 rounded-lg text-lg font-medium text-gray-800 hover:bg-gold-50 hover:text-gold-800 transition-all duration-200 ${
-                    index < array.length - 1 ? "border-b border-gray-100" : ""
-                  }`}
-                >
-                  {item.label}
-                </button>
-              )
             ))}
           </nav>
         </div>

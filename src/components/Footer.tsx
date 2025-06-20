@@ -1,6 +1,6 @@
 import React from "react";
 import { Facebook, Instagram, Twitter, MessageCircle } from "lucide-react";
-import { Link } from "react-router-dom"; // Import Link
+import { Link } from "react-router-dom";
 import useScrollToSection from "../hooks/useScrollToSection";
 
 const Footer: React.FC = () => {
@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               <li>
                 <Link
-                  to="/destinations" // Use Link for Destinations page
+                  to="/destinations"
                   className="text-gray-400 hover:text-gold-400 transition-colors duration-200 dark:hover:text-gold-500"
                 >
                   Explore Destinations
@@ -43,27 +43,35 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
-                  to="/services" // New Link for Services page
+                  to="/services"
                   className="text-gray-400 hover:text-gold-400 transition-colors duration-200 dark:hover:text-gold-500"
                 >
                   Our Services
                 </Link>
               </li>
               <li>
+                <Link
+                  to="/about"
+                  className="text-gray-400 hover:text-gold-400 transition-colors duration-200 dark:hover:text-gold-500"
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
                 <button
-                  onClick={() => scrollToSection("faq")} // Keep as scroll for now
+                  onClick={() => scrollToSection("faq")}
                   className="text-gray-400 hover:text-gold-400 transition-colors duration-200 dark:hover:text-gold-500"
                 >
                   FAQs &amp; Travel Tips
                 </button>
               </li>
               <li>
-                <button
-                  onClick={() => scrollToSection("contact")} // Keep as scroll for now
+                <Link
+                  to="/contact"
                   className="text-gray-400 hover:text-gold-400 transition-colors duration-200 dark:hover:text-gold-500"
                 >
                   Contact Local Experts
-                </button>
+                </Link>
               </li>
               <li>
                 <a
