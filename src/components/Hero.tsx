@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
           <img
             src="/tanayas-logo.svg"
             alt="Tanayas Logo"
-            className="h-24 w-auto sm:h-32"
+            className="h-28 w-auto sm:h-36 lg:h-44"
           />
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-gold-500 leading-tight">
             TANAYAS
