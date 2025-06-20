@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
             alt="Tanayas Logo"
             className="h-24 w-auto sm:h-32"
           />
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold bg-gradient-to-r from-black via-gold-200 to-black bg-clip-text text-transparent leading-tight">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-gold-500 leading-tight">
             TANAYAS
           </h1>
         </div>
