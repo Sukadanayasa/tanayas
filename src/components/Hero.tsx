@@ -7,10 +7,15 @@ const Hero: React.FC = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-20">
-      {/* Animated Background (waves/gradient) */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gold-950 via-gold-900 to-gold-800 animate-gradient-move dark:from-gold-950 dark:via-gold-900 dark:to-gold-800" />
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gold-900/70 via-gold-800/60 to-gold-700/70 dark:from-gold-900/70 dark:via-gold-800/60 dark:to-gold-700/70" />
+      {/* Background Image */}
+      <img
+        src="https://images.pexels.com/photos/1078981/pexels-photo-1078981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        alt="Fast boat on turquoise water approaching a tropical island"
+        className="absolute inset-0 w-full h-full object-cover"
+        loading="lazy"
+      />
+      {/* Overlay for text readability, adjusted to be more gold-toned */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gold-900/70 via-gold-800/60 to-gold-700/70" />
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         {/* Logo and Tanayas Text */}
@@ -50,7 +55,6 @@ const Hero: React.FC = () => {
           <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
         </button>
       </div>
-      {/* Removed Scroll Indicator */}
     </section>
   );
 };
