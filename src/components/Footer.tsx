@@ -106,7 +106,7 @@ const Footer: React.FC = () => {
             </div>
             <div className="pt-2">
               <a href="#" className="nav-link-underline text-gold-400 transition-colors text-sm">
-                Message us on WhatsApp for instant inquiry
+                WhatsApp us for immediate assistance
               </a>
             </div>
           </div>
