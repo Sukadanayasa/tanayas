@@ -50,8 +50,8 @@ export const services: Service[] = [
   },
   {
     id: "private-charter",
-    title: "Private Fastboat Charter",
-    description: "Enjoy the ultimate flexibility with a private fastboat charter, tailored to your schedule and preferences.",
+    title: "Private Charter",
+    description: "Experience ultimate flexibility with a private charter, tailored to your group's schedule and preferences for island transfers or tours.",
     image: "https://images.pexels.com/photos/1004600/pexels-photo-1004600.jpeg?auto=compress&cs=tinysrgb&w=800", // Placeholder
     alt: "Private fastboat on the ocean",
     icon: "Ship", // Placeholder for Lucide icon name
