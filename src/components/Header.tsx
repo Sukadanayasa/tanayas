@@ -38,7 +38,7 @@ const Header: React.FC = () => {
             {/* Logo and Brand Name */}
             <Link
               to="/"
-              className={`flex items-center space-x-3 transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-gold-500 rounded-md p-1 -ml-1`}
+              className={`flex items-center space-x-3 transition-transform duration-300 focus:outline-none focus:ring-0 rounded-md p-1 -ml-1`}
               aria-label="Go to homepage"
             >
               <img
@@ -56,25 +56,25 @@ const Header: React.FC = () => {
               <nav className="hidden lg:flex items-center space-x-6">
                 <button
                   onClick={() => handleNavigationClick("destinations")}
-                  className="text-gray-700 hover:text-gold-700 font-medium transition-colors duration-200 dark:text-gray-300 dark:hover:text-gold-400"
+                  className="nav-link-underline text-gray-700 hover:text-gold-700 font-medium transition-colors duration-200 dark:text-gray-300 dark:hover:text-gold-400"
                 >
                   Destinations
                 </button>
                 <button
                   onClick={() => handleNavigationClick("services")}
-                  className="text-gray-700 hover:text-gold-700 font-medium transition-colors duration-200 dark:text-gray-300 dark:hover:text-gold-400"
+                  className="nav-link-underline text-gray-700 hover:text-gold-700 font-medium transition-colors duration-200 dark:text-gray-300 dark:hover:text-gold-400"
                 >
                   Services
                 </button>
                 <button
                   onClick={() => handleNavigationClick("about")}
-                  className="text-gray-700 hover:text-gold-700 font-medium transition-colors duration-200 dark:text-gray-300 dark:hover:text-gold-400"
+                  className="nav-link-underline text-gray-700 hover:text-gold-700 font-medium transition-colors duration-200 dark:text-gray-300 dark:hover:text-gold-400"
                 >
                   About Us
                 </button>
                 <button
                   onClick={() => handleNavigationClick("contact")}
-                  className="text-gray-700 hover:text-gold-700 font-medium transition-colors duration-200 dark:text-gray-300 dark:hover:text-gold-400"
+                  className="nav-link-underline text-gray-700 hover:text-gold-700 font-medium transition-colors duration-200 dark:text-gray-300 dark:hover:text-gold-400"
                 >
                   Contact
                 </button>
@@ -134,7 +134,7 @@ const Header: React.FC = () => {
                 <button
                   key={item.sectionId}
                   onClick={() => handleNavigationClick(item.sectionId)}
-                  className={`block w-full text-left px-4 py-3 rounded-lg text-lg font-medium text-gray-800 hover:bg-gold-50 hover:text-gold-800 transition-all duration-200 dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:text-gold-400 ${
+                  className={`nav-link-underline block w-full text-left px-4 py-3 rounded-lg text-lg font-medium text-gray-800 hover:bg-gold-50 hover:text-gold-800 transition-all duration-200 dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:text-gold-400 ${
                     index < array.length - 1 ? "border-b border-gray-100 dark:border-gray-700" : ""
                   }`}
                 >

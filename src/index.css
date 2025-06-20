@@ -101,21 +101,34 @@ body {
 }
 
 /* Focus states for accessibility */
+/* Remove default outline for all interactive elements */
 button:focus,
 a:focus,
 select:focus {
-  outline: none; /* Remove default outline */
-  /* Light mode focus: a 2px solid gold-500 ring with a 4px gold-200 glow */
-  box-shadow: 0 0 0 2px #F59E0B, 0 0 0 4px #FDE68A; /* gold-500 and gold-200 */
-  transition: box-shadow 0.2s ease-in-out; /* Smooth transition for focus */
+  outline: none;
 }
 
-/* Dark mode adjustments for focus */
-.dark button:focus,
-.dark a:focus,
-.dark select:focus {
-  /* Dark mode focus: a 2px solid gold-400 ring with a 4px gold-700 glow */
-  box-shadow: 0 0 0 2px #FBBF24, 0 0 0 4px #B45309; /* gold-400 and gold-700 */
+/* Animated underline for navigation links/buttons */
+.nav-link-underline {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 2px; /* Space for the underline */
+}
+
+.nav-link-underline::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: currentColor; /* Use the text color of the link */
+  transition: width 0.3s ease-out;
+}
+
+.nav-link-underline:hover::after,
+.nav-link-underline:focus::after {
+  width: 100%;
 }
 
 /* Smooth transitions for all interactive elements */

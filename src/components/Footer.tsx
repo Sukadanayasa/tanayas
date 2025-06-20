@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
               <li>
                 <button
                   onClick={() => scrollToSection("destinations")}
-                  className="text-gray-400 hover:text-gold-400 transition-colors duration-200 dark:hover:text-gold-500"
+                  className="nav-link-underline text-gray-400 hover:text-gold-400 transition-colors duration-200 dark:hover:text-gold-500"
                 >
                   Explore Destinations
                 </button>
@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
               <li>
                 <button
                   onClick={() => scrollToSection("services")}
-                  className="text-gray-400 hover:text-gold-400 transition-colors duration-200 dark:hover:text-gold-500"
+                  className="nav-link-underline text-gray-400 hover:text-gold-400 transition-colors duration-200 dark:hover:text-gold-500"
                 >
                   Our Services
                 </button>
@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
               <li>
                 <button
                   onClick={() => scrollToSection("about")}
-                  className="text-gray-400 hover:text-gold-400 transition-colors duration-200 dark:hover:text-gold-500"
+                  className="nav-link-underline text-gray-400 hover:text-gold-400 transition-colors duration-200 dark:hover:text-gold-500"
                 >
                   About Us
                 </button>
@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
               <li>
                 <button
                   onClick={() => scrollToSection("faq")}
-                  className="text-gray-400 hover:text-gold-400 transition-colors duration-200 dark:hover:text-gold-500"
+                  className="nav-link-underline text-gray-400 hover:text-gold-400 transition-colors duration-200 dark:hover:text-gold-500"
                 >
                   FAQs &amp; Travel Tips
                 </button>
@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
               <li>
                 <button
                   onClick={() => scrollToSection("contact")}
-                  className="text-gray-400 hover:text-gold-400 transition-colors duration-200 dark:hover:text-gold-500"
+                  className="nav-link-underline text-gray-400 hover:text-gold-400 transition-colors duration-200 dark:hover:text-gold-500"
                 >
                   Contact Local Experts
                 </button>
@@ -76,7 +76,7 @@ const Footer: React.FC = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-gold-400 transition-colors duration-200 dark:hover:text-gold-500"
+                  className="nav-link-underline text-gray-400 hover:text-gold-400 transition-colors duration-200 dark:hover:text-gold-500"
                 >
                   Privacy Policy
                 </a>
@@ -111,7 +111,7 @@ const Footer: React.FC = () => {
               </a>
             </div>
             <div className="pt-2">
-              <a href="#" className="text-gold-400 hover:underline text-sm dark:text-gold-500">
+              <a href="#" className="nav-link-underline text-gold-400 hover:underline text-sm dark:text-gold-500">
                 Join our WhatsApp for instant updates
               </a>
             </div>
