@@ -36,9 +36,9 @@ const Header: React.FC = () => {
               <img
                 src="/tanayas-logo.svg"
                 alt="Tanayas Logo"
-                className="h-8 w-auto" // Adjusted size for better alignment with text
+                className="h-9 w-auto" // Increased size
               />
-              <span className="text-2xl font-bold text-gold-500">
+              <span className="text-xl font-bold text-gold-500"> {/* Decreased size */}
                 TANAYAS
               </span>
             </div>
