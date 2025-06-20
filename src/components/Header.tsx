@@ -50,12 +50,6 @@ const Header: React.FC = () => {
               {/* Desktop Navigation */}
               <nav className="hidden lg:flex items-center space-x-4">
                 {/* Use Link for full pages, button with scrollToSection for in-page sections */}
-                <button
-                  onClick={() => handleNavigationClick("contact")}
-                  className="px-4 py-2 rounded-full text-gray-700 hover:bg-gold-50 hover:text-gold-800 font-medium transition-all duration-200"
-                >
-                  Get Info Now
-                </button>
                 <Link
                   to="/destinations"
                   className="px-4 py-2 rounded-full text-gray-700 hover:bg-gold-50 hover:text-gold-800 font-medium transition-all duration-200"
@@ -118,7 +112,6 @@ const Header: React.FC = () => {
             {" "}
             {/* Changed space-y-4 to space-y-0 to control spacing with borders */}
             {[
-              { label: "Get Info Now", section: "contact", type: "scroll" },
               { label: "Destinations", section: "/destinations", type: "link" },
               { label: "Services", section: "/services", type: "link" }, // New mobile link for Services
             ].map((item, index, array) => (
