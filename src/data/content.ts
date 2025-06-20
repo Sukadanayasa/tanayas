@@ -1,9 +1,9 @@
 import type { Destination, Testimonial, FAQItem, TravelTip } from "../types";
 
-export const services: Destination[] = [
+export const destinations: Destination[] = [
   {
     id: "nusa-penida",
-    title: "Nusa Penida Fast Boat",
+    title: "Nusa Penida",
     description:
       "Discover dramatic cliffs, hidden beaches, and the iconic Kelingking Beach. Nusa Penida is Bali’s must-see island escape for adventure and breathtaking views.",
     image:
@@ -12,7 +12,7 @@ export const services: Destination[] = [
   },
   {
     id: "gili-islands",
-    title: "Gili Islands Fast Boat",
+    title: "Gili Islands",
     description:
       "Experience paradise on the Gilis—three car-free islands with white sand beaches, crystal-clear water, and world-class snorkeling with sea turtles.",
     image:
@@ -21,48 +21,12 @@ export const services: Destination[] = [
   },
   {
     id: "lombok",
-    title: "Lombok Fast Boat",
+    title: "Lombok",
     description:
       "Unwind on untouched beaches, explore the majestic Mount Rinjani, and discover the unique culture of Lombok’s traditional Sasak villages.",
     image:
       "https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=800",
     alt: "Lombok coastline with mountains and pristine beaches.",
-  },
-  {
-    id: "lembongan",
-    title: "Nusa Lembongan Fast Boat",
-    description:
-      "Just a short ride from Bali, Nusa Lembongan offers stunning beaches, vibrant marine life, and a laid-back island vibe perfect for a quick getaway.",
-    image:
-      "https://images.pexels.com/photos/1004600/pexels-photo-1004600.jpeg?auto=compress&cs=tinysrgb&w=800",
-    alt: "Nusa Lembongan beach with boats and clear water.",
-  },
-  {
-    id: "activities",
-    title: "Island Activities & Tours",
-    description:
-      "Enhance your island experience with curated activities like snorkeling, diving, island tours, and cultural excursions. We connect you with the best local guides.",
-    image:
-      "https://images.pexels.com/photos/38238/maldives-ocean-island-beach-38238.jpeg?auto=compress&cs=tinysrgb&w=800",
-    alt: "People snorkeling in clear blue water.",
-  },
-  {
-    id: "private-charter",
-    title: "Private Boat Charter",
-    description:
-      "Enjoy the ultimate flexibility with a private fast boat charter. Customize your itinerary, explore secluded spots, and travel at your own pace.",
-    image:
-      "https://images.pexels.com/photos/1575930/pexels-photo-1575930.jpeg?auto=compress&cs=tinysrgb&w=800",
-    alt: "Luxury private boat on calm waters.",
-  },
-  {
-    id: "customized-route",
-    title: "Customized Route Planning",
-    description:
-      "Have a unique island-hopping dream? We'll help you plan and book a customized fast boat route to any combination of islands, ensuring a seamless journey.",
-    image:
-      "https://images.pexels.com/photos/163864/thailand-krabi-longtail-boat-sea-163864.jpeg?auto=compress&cs=tinysrgb&w=800",
-    alt: "Longtail boat on a beach with a map overlay, symbolizing custom routes.",
   },
 ];
 

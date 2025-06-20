@@ -50,7 +50,7 @@ const Header: React.FC = () => {
               <nav className="hidden lg:flex items-center space-x-4">
                 {[
                   { label: "Get Info Now", section: "contact" },
-                  { label: "Our Services", section: "services" }, // Updated label and section ID
+                  { label: "Destinations", section: "destinations" },
                   { label: "How It Works", section: "about" },
                   { label: "FAQ", section: "faq" },
                 ].map((item) => (
@@ -113,7 +113,7 @@ const Header: React.FC = () => {
             {/* Changed space-y-4 to space-y-0 to control spacing with borders */}
             {[
               { label: "Get Info Now", section: "contact" },
-              { label: "Our Services", section: "services" }, // Updated label and section ID
+              { label: "Destinations", section: "destinations" },
               { label: "How It Works", section: "about" },
               { label: "FAQ", section: "faq" },
             ].map((item, index, array) => (

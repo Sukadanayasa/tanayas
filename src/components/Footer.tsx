@@ -1,9 +1,9 @@
 import React from "react";
 import { Facebook, Instagram, Twitter, MessageCircle } from "lucide-react";
-import useScrollToSection from "../hooks/useScrollToSection";
+import useScrollToSection from "../hooks/useScrollToSection"; // Import the new hook
 
 const Footer: React.FC = () => {
-  const scrollToSection = useScrollToSection();
+  const scrollToSection = useScrollToSection(); // Use the custom hook
 
   return (
     <footer
@@ -34,15 +34,15 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               <li>
                 <button
-                  onClick={() => scrollToSection("services")} // Updated section ID
+                  onClick={() => scrollToSection("destinations")} // Use the hook function
                   className="text-gray-400 hover:text-gold-400 transition-colors duration-200 dark:hover:text-gold-500"
                 >
-                  Our Services {/* Updated label */}
+                  Explore Destinations
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection("faq")}
+                  onClick={() => scrollToSection("faq")} // Use the hook function
                   className="text-gray-400 hover:text-gold-400 transition-colors duration-200 dark:hover:text-gold-500"
                 >
                   FAQs &amp; Travel Tips
@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection("contact")}
+                  onClick={() => scrollToSection("contact")} // Use the hook function
                   className="text-gray-400 hover:text-gold-400 transition-colors duration-200 dark:hover:text-gold-500"
                 >
                   Contact Local Experts
