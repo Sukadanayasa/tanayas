@@ -15,7 +15,12 @@ const Header: React.FC = () => {
   }, []);
 
   const handleNavigationClick = (sectionId: string) => {
-    scrollToSection(sectionId);
+    // Ensure we are on the homepage before scrolling
+    if (window.location.pathname !== "/") {
+      window.location.href = `/#${sectionId}`; // Navigate to homepage and then scroll
+    } else {
+      scrollToSection(sectionId);
+    }
     setIsMenuOpen(false);
   };
 
@@ -49,30 +54,30 @@ const Header: React.FC = () => {
             <div className="flex items-center space-x-4">
               {/* Desktop Navigation */}
               <nav className="hidden lg:flex items-center space-x-6">
-                <Link
-                  to="/destinations"
+                <button
+                  onClick={() => handleNavigationClick("destinations")}
                   className="text-gray-700 hover:text-gold-700 font-medium transition-colors duration-200 dark:text-gray-300 dark:hover:text-gold-400"
                 >
                   Destinations
-                </Link>
-                <Link
-                  to="/services"
+                </button>
+                <button
+                  onClick={() => handleNavigationClick("services")}
                   className="text-gray-700 hover:text-gold-700 font-medium transition-colors duration-200 dark:text-gray-300 dark:hover:text-gold-400"
                 >
                   Services
-                </Link>
-                <Link
-                  to="/about"
+                </button>
+                <button
+                  onClick={() => handleNavigationClick("about")}
                   className="text-gray-700 hover:text-gold-700 font-medium transition-colors duration-200 dark:text-gray-300 dark:hover:text-gold-400"
                 >
                   About Us
-                </Link>
-                <Link
-                  to="/contact"
+                </button>
+                <button
+                  onClick={() => handleNavigationClick("contact")}
                   className="text-gray-700 hover:text-gold-700 font-medium transition-colors duration-200 dark:text-gray-300 dark:hover:text-gold-400"
                 >
                   Contact
-                </Link>
+                </button>
               </nav>
 
               {/* Mobile Menu Button */}
@@ -121,21 +126,20 @@ const Header: React.FC = () => {
         <div className="p-6">
           <nav className="space-y-0">
             {[
-              { label: "Destinations", path: "/destinations" },
-              { label: "Services", path: "/services" },
-              { label: "About Us", path: "/about" },
-              { label: "Contact", path: "/contact" },
+              { label: "Destinations", sectionId: "destinations" },
+              { label: "Services", sectionId: "services" },
+              { label: "About Us", sectionId: "about" },
+              { label: "Contact", sectionId: "contact" },
             ].map((item, index, array) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  onClick={() => setIsMenuOpen(false)}
+                <button
+                  key={item.sectionId}
+                  onClick={() => handleNavigationClick(item.sectionId)}
                   className={`block w-full text-left px-4 py-3 rounded-lg text-lg font-medium text-gray-800 hover:bg-gold-50 hover:text-gold-800 transition-all duration-200 dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:text-gold-400 ${
                     index < array.length - 1 ? "border-b border-gray-100 dark:border-gray-700" : ""
                   }`}
                 >
                   {item.label}
-                </Link>
+                </button>
             ))}
           </nav>
         </div>

@@ -11,8 +11,6 @@ import FloatingWhatsApp from "./components/FloatingWhatsApp";
 import About from "./components/About";
 import DestinationDetailPage from "./pages/DestinationDetailPage";
 import ServiceDetailPage from "./pages/ServiceDetailPage";
-import AboutPage from "./pages/AboutPage"; // Import the new AboutPage
-import ContactPage from "./pages/ContactPage"; // Import the new ContactPage
 
 function App() {
   useTheme();
@@ -36,8 +34,6 @@ function App() {
           } />
           <Route path="/destinations/:id" element={<DestinationDetailPage />} />
           <Route path="/services/:id" element={<ServiceDetailPage />} />
-          <Route path="/about" element={<AboutPage />} /> {/* New route for About page */}
-          <Route path="/contact" element={<ContactPage />} /> {/* New route for Contact page */}
         </Routes>
       </main>
       <Footer />

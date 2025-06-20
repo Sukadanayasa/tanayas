@@ -34,28 +34,28 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold text-white dark:text-gray-200">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <Link
-                  to="/destinations"
+                <button
+                  onClick={() => scrollToSection("destinations")}
                   className="text-gray-400 hover:text-gold-400 transition-colors duration-200 dark:hover:text-gold-500"
                 >
                   Explore Destinations
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
-                  to="/services"
+                <button
+                  onClick={() => scrollToSection("services")}
                   className="text-gray-400 hover:text-gold-400 transition-colors duration-200 dark:hover:text-gold-500"
                 >
                   Our Services
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
-                  to="/about"
+                <button
+                  onClick={() => scrollToSection("about")}
                   className="text-gray-400 hover:text-gold-400 transition-colors duration-200 dark:hover:text-gold-500"
                 >
                   About Us
-                </Link>
+                </button>
               </li>
               <li>
                 <button
@@ -66,12 +66,12 @@ const Footer: React.FC = () => {
                 </button>
               </li>
               <li>
-                <Link
-                  to="/contact"
+                <button
+                  onClick={() => scrollToSection("contact")}
                   className="text-gray-400 hover:text-gold-400 transition-colors duration-200 dark:hover:text-gold-500"
                 >
                   Contact Local Experts
-                </Link>
+                </button>
               </li>
               <li>
                 <a
