@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         {/* Logo and Tanayas Text */}
-        <div className="flex items-center justify-center space-x-4 mb-6">
+        <div className="flex flex-col items-center justify-center space-y-4 mb-6"> {/* Changed to flex-col and space-y */}
           <img
             src="/tanayas-logo.svg"
             alt="Tanayas Logo"
