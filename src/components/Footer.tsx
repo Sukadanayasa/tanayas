@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
   return (
     <footer
       id="footer"
-      className="bg-black text-gray-300"
+      className="bg-gray-900 text-gray-300" // Changed background to gray-900
     >
       <div className="container mx-auto px-4 py-16 max-w-page-max">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
                 alt="Tanayas Logo"
                 className="h-9 w-auto"
               />
-              <h3 className="text-2xl font-bold text-white">Tanayas</h3>
+              <h3 className="text-2xl font-bold text-gray-100">Tanayas</h3> {/* Changed text color */}
             </div>
             <p className="text-gray-400 leading-relaxed">
               Your trusted source for real-time fastboat schedules, local travel
@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div className="space-y-6">
-            <h3 className="text-lg font-semibold text-white">Quick Links</h3>
+            <h3 className="text-lg font-semibold text-gray-100">Quick Links</h3> {/* Changed text color */}
             <ul className="space-y-3">
               <li>
                 <button
@@ -80,7 +80,7 @@ const Footer: React.FC = () => {
 
           {/* Social Media */}
           <div className="space-y-6">
-            <h3 className="text-lg font-semibold text-white">Stay Connected</h3>
+            <h3 className="text-lg font-semibold text-gray-100">Stay Connected</h3> {/* Changed text color */}
             <div className="flex space-x-4">
               <a
                 href="#"
@@ -113,7 +113,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+        <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-500">
           <p>&copy; 2024 Tanayas. All rights reserved.</p>
         </div>
       </div>
