@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X, MessageCircle } from "lucide-react"; // Removed Sun, Moon
+import { Menu, X } from "lucide-react"; // Removed MessageCircle
 import useScrollToSection from "../hooks/useScrollToSection";
 
-// Removed HeaderProps interface as theme and toggleTheme are no longer props
-const Header: React.FC = () => { // Removed HeaderProps from here
+const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const scrollToSection = useScrollToSection();
@@ -24,8 +23,8 @@ const Header: React.FC = () => { // Removed HeaderProps from here
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-white/90 backdrop-blur-md shadow-sm" // Fixed to light mode colors
-            : "bg-white" // Fixed to light mode colors
+            ? "bg-white/90 backdrop-blur-md shadow-sm"
+            : "bg-white"
         }`}
       >
         <div className="w-full px-4 py-3 max-w-page-max mx-auto border-b border-gray-200">
@@ -34,12 +33,11 @@ const Header: React.FC = () => { // Removed HeaderProps from here
             <div
               className={`flex items-center space-x-3 transition-transform duration-300`}
             >
-              <div className="w-10 h-10 bg-gradient-to-br from-gold-700 to-gold-900 rounded-full flex items-center justify-center shadow">
-                <MessageCircle className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-black via-gold-500 to-black bg-clip-text text-transparent">
-                Tanayas
-              </span>
+              <img
+                src="/tanayas-logo.svg"
+                alt="Tanayas Logo"
+                className="h-10 w-auto" // Adjust size as needed
+              />
             </div>
 
             <div className="flex items-center space-x-4">
@@ -60,8 +58,6 @@ const Header: React.FC = () => { // Removed HeaderProps from here
                   </button>
                 ))}
               </nav>
-
-              {/* Removed Theme Toggle Button */}
 
               {/* Mobile Menu Button */}
               <button
@@ -121,7 +117,7 @@ const Header: React.FC = () => { // Removed HeaderProps from here
                 onClick={() => handleNavigationClick(item.section)}
                 className={`block w-full text-left px-4 py-3 rounded-lg text-lg font-medium text-gray-800 hover:bg-gold-50 hover:text-gold-800 transition-all duration-200 ${
                   index < array.length - 1
-                    ? "border-b border-gray-100" // Fixed to light mode colors
+                    ? "border-b border-gray-100"
                     : ""
                 }`}
               >
