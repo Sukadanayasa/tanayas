@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight } from "lucide-react"; // Keep ArrowRight for now, though it will be removed from the button itself
+import { ArrowRight } from "lucide-react";
 import useScrollToSection from "../hooks/useScrollToSection";
 
 const Hero: React.FC = () => {
@@ -29,17 +29,17 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Subtitle */}
-        <p className="text-xl sm:text-2xl lg:text-3xl text-gold-400 font-semibold mb-4">
+        <p className="text-2xl sm:text-3xl lg:text-4xl text-gold-400 font-semibold mb-4">
           Fast Boat & Activities Organizer
         </p>
 
         {/* Trusted Partner */}
-        <p className="text-lg sm:text-xl text-gold-200 mb-6 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-xl sm:text-2xl text-gold-200 mb-6 max-w-2xl mx-auto leading-relaxed">
           Your trusted partner since 2007.
         </p>
 
         {/* Main Description */}
-        <p className="text-lg sm:text-xl text-white mb-8 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-xl sm:text-2xl text-white mb-8 max-w-3xl mx-auto leading-relaxed">
           We offer unforgettable fast boat adventures and exciting activities to Bali, Nusa Penida, Gili Islands, and Lombok.
           Enjoy personalized service and direct booking via WhatsApp for instant confirmation.
         </p>
@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
         {/* Explore Destinations Button */}
         <button
           onClick={() => scrollToSection('destinations')}
-          className="bg-gradient-to-r from-gold-400 to-gold-600 hover:from-gold-500 hover:to-gold-700 text-white px-8 py-3 rounded-full font-semibold text-lg transition-all transform hover:scale-105 shadow-lg mt-6"
+          className="bg-gradient-to-r from-gold-400 to-gold-600 hover:from-gold-500 hover:to-gold-700 text-white px-8 py-3 rounded-full font-semibold text-xl transition-all transform hover:scale-105 shadow-lg mt-6"
         >
           Explore Destinations
         </button>
