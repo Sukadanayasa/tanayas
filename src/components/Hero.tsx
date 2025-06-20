@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
 import useScrollToSection from "../hooks/useScrollToSection";
 
 const Hero: React.FC = () => {
   const scrollToSection = useScrollToSection();
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = "https://images.pexels.com/photos/1078981/pexels-photo-1078981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
+    img.onload = () => {
+      setImageLoaded(true);
+    };
+    // If image is already cached, onload might not fire, so check complete state
+    if (img.complete) {
+      setImageLoaded(true);
+    }
+  }, []);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-20">
@@ -11,8 +24,9 @@ const Hero: React.FC = () => {
       <img
         src="https://images.pexels.com/photos/1078981/pexels-photo-1078981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
         alt="Fast boat on turquoise water approaching a tropical island"
-        className="absolute inset-0 w-full h-full object-cover"
-        loading="lazy"
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+          imageLoaded ? "opacity-100" : "opacity-0"
+        }`}
       />
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">

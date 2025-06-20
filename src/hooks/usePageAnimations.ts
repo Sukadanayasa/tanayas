@@ -2,15 +2,6 @@ import { useEffect } from "react";
 
 export function usePageAnimations() {
   useEffect(() => {
-    // Add loaded class to images once they're loaded for smooth fade-in
-    const images = document.querySelectorAll('img[loading="lazy"]');
-    images.forEach((img) => {
-      if (img instanceof HTMLImageElement) {
-        img.onload = () => img.classList.add("loaded");
-        if (img.complete) img.classList.add("loaded");
-      }
-    });
-
     // Add intersection observer for animation triggers
     const observer = new IntersectionObserver(
       (entries) => {
