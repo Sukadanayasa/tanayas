@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-20">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden py-20">
       {/* Background Image */}
       <img
         src="https://images.pexels.com/photos/1078981/pexels-photo-1078981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"

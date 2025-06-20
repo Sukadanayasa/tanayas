@@ -42,11 +42,11 @@ const Header: React.FC = () => {
       >
         <div className="w-full px-4 py-3 max-w-page-max mx-auto border-b border-gray-100 dark:border-gray-800">
           <div className="flex items-center justify-between">
-            {/* Logo and Brand Name */}
-            <Link
-              to="/"
+            {/* Logo and Brand Name - now a button to scroll to hero */}
+            <button
+              onClick={() => handleNavigationClick("hero")} // Call handleNavigationClick for hero section
               className={`flex items-center space-x-3 transition-transform duration-300 focus:outline-none focus:ring-0 rounded-md p-1 -ml-1`}
-              aria-label="Go to homepage"
+              aria-label="Go to homepage and scroll to top"
             >
               <img
                 src="/tanayas-logo.svg"
@@ -56,7 +56,7 @@ const Header: React.FC = () => {
               <span className="text-xl font-bold text-gold-500">
                 TANAYAS
               </span>
-            </Link>
+            </button>
 
             <div className="flex items-center space-x-4">
               {/* Desktop Navigation */}
