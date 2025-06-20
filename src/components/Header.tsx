@@ -65,7 +65,7 @@ const Header: React.FC = () => {
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="lg:hidden p-2 text-gray-600 hover:text-gold-800 transition-colors duration-200 relative z-50 border border-gold-500 rounded-full"
+                className="lg:hidden p-2 text-gray-600 hover:text-gold-800 transition-colors duration-200 relative z-50 border border-gold-700 rounded-full dark:border-gold-500"
                 aria-label="Toggle menu"
               >
                 <div className="relative w-6 h-6">
