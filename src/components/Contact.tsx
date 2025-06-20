@@ -10,12 +10,12 @@ const Contact: React.FC = () => {
   return (
     <section
       id="contact"
-      className="py-20 bg-gradient-to-br from-gold-950 via-gold-900 to-gold-800 text-white relative overflow-hidden dark:from-gold-950 dark:via-gold-900 dark:to-gold-800"
+      className="py-20 bg-gradient-to-br from-gold-50 via-gold-100 to-gold-200 text-black relative overflow-hidden"
     >
       {/* Decorative background elements */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white rounded-full transform -translate-x-1/2 -translate-y-1/2 dark:bg-gray-700" />
-        <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-gold-400 rounded-full transform translate-x-1/2 translate-y-1/2 dark:bg-gold-600" />
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gold-200 rounded-full transform -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-gold-300 rounded-full transform translate-x-1/2 translate-y-1/2" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10 max-w-page-max">
@@ -23,16 +23,16 @@ const Contact: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Ready to Plan Your Island Adventure?
           </h2>
-          <p className="text-xl text-gold-200 max-w-3xl mx-auto leading-relaxed mb-8 dark:text-gray-300">
+          <p className="text-xl text-gold-700 max-w-3xl mx-auto leading-relaxed mb-8">
             Get instant access to real-time fastboat schedules, the best routes,
             and honest local advice. No spam, no pressure—just expert help when
             you need it.
           </p>
 
           {/* Response time indicator */}
-          <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-8 dark:bg-gray-700/20">
-            <Clock className="w-4 h-4 text-gold-400 dark:text-gold-400" />
-            <span className="text-sm text-gold-200 dark:text-gold-300">
+          <div className="inline-flex items-center space-x-2 bg-gold-100/50 backdrop-blur-sm rounded-full px-4 py-2 mb-8">
+            <Clock className="w-4 h-4 text-gold-700" />
+            <span className="text-sm text-gold-700">
               Usually respond within 5 minutes
             </span>
           </div>
@@ -43,7 +43,7 @@ const Contact: React.FC = () => {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center space-x-3 bg-green-500 text-white px-10 py-5 rounded-full font-semibold text-lg shadow-2xl hover:shadow-green-500/25 transform hover:scale-105 transition-all duration-300 ease-out w-full md:w-auto justify-center dark:bg-green-600 dark:hover:shadow-green-600/25"
+            className="group inline-flex items-center space-x-3 bg-green-500 text-white px-10 py-5 rounded-full font-semibold text-lg shadow-2xl hover:shadow-green-500/25 transform hover:scale-105 transition-all duration-300 ease-out w-full md:w-auto justify-center"
           >
             {/* WhatsApp SVG Icon */}
             <span className="w-6 h-6 block group-hover:scale-110 transition-transform duration-300">
@@ -62,7 +62,7 @@ const Contact: React.FC = () => {
 
           <a
             href={emailUrl}
-            className="group inline-flex items-center space-x-3 bg-gradient-to-r from-gold-700 to-gold-800 hover:from-gold-800 hover:to-gold-900 text-white px-10 py-5 rounded-full font-semibold text-lg shadow-2xl hover:shadow-gold-500/25 transform hover:scale-105 transition-all duration-300 ease-out w-full md:w-auto justify-center dark:from-gold-700 dark:to-gold-800 dark:hover:from-gold-800 dark:hover:to-gold-900 dark:shadow-lg dark:hover:shadow-gold-700/25"
+            className="group inline-flex items-center space-x-3 bg-gradient-to-r from-gold-700 to-gold-800 hover:from-gold-800 hover:to-gold-900 text-white px-10 py-5 rounded-full font-semibold text-lg shadow-2xl hover:shadow-gold-500/25 transform hover:scale-105 transition-all duration-300 ease-out w-full md:w-auto justify-center"
           >
             <Mail className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
             <span>Send Email</span>
@@ -70,7 +70,7 @@ const Contact: React.FC = () => {
         </div>
 
         <div className="text-center mt-8">
-          <p className="text-gold-200 text-sm dark:text-gold-300">
+          <p className="text-gold-700 text-sm">
             Free service • No spam • Trusted by 10,000+ travelers
           </p>
         </div>
