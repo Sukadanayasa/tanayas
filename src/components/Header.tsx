@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react"; // Removed MessageCircle
+import { Menu, X, MessageCircle } from "lucide-react";
 import useScrollToSection from "../hooks/useScrollToSection";
 
 const Header: React.FC = () => {
@@ -36,8 +36,11 @@ const Header: React.FC = () => {
               <img
                 src="/tanayas-logo.svg"
                 alt="Tanayas Logo"
-                className="h-10 w-auto" // Adjust size as needed
+                className="h-8 w-auto" // Adjusted size for better alignment with text
               />
+              <span className="text-2xl font-bold bg-gradient-to-r from-black via-gold-500 to-black bg-clip-text text-transparent">
+                Tanayas
+              </span>
             </div>
 
             <div className="flex items-center space-x-4">
