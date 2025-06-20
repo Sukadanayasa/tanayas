@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom"; // Import Link
 import useScrollToSection from "../hooks/useScrollToSection";
 
 const Header: React.FC = () => {
@@ -30,9 +31,9 @@ const Header: React.FC = () => {
         <div className="w-full px-4 py-3 max-w-page-max mx-auto border-b border-gray-200">
           <div className="flex items-center justify-between">
             {/* Logo and Brand Name - now clickable */}
-            <button
-              onClick={() => handleNavigationClick("hero")} // Scroll to the hero section
-              className={`flex items-center space-x-3 transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-gold-500 rounded-md p-1 -ml-1`} // Added focus styles and padding
+            <Link
+              to="/" // Link to homepage
+              className={`flex items-center space-x-3 transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-gold-500 rounded-md p-1 -ml-1`}
               aria-label="Go to homepage"
             >
               <img
@@ -43,25 +44,42 @@ const Header: React.FC = () => {
               <span className="text-xl font-bold text-gold-500">
                 TANAYAS
               </span>
-            </button>
+            </Link>
 
             <div className="flex items-center space-x-4">
               {/* Desktop Navigation */}
               <nav className="hidden lg:flex items-center space-x-4">
-                {[
-                  { label: "Get Info Now", section: "contact" },
-                  { label: "Destinations", section: "destinations" },
-                  { label: "How It Works", section: "about" },
-                  { label: "FAQ", section: "faq" },
-                ].map((item) => (
-                  <button
-                    key={item.section}
-                    onClick={() => handleNavigationClick(item.section)}
-                    className="px-4 py-2 rounded-full text-gray-700 hover:bg-gold-50 hover:text-gold-800 font-medium transition-all duration-200"
-                  >
-                    {item.label}
-                  </button>
-                ))}
+                {/* Use Link for full pages, button with scrollToSection for in-page sections */}
+                <button
+                  onClick={() => handleNavigationClick("contact")}
+                  className="px-4 py-2 rounded-full text-gray-700 hover:bg-gold-50 hover:text-gold-800 font-medium transition-all duration-200"
+                >
+                  Get Info Now
+                </button>
+                <Link
+                  to="/destinations"
+                  className="px-4 py-2 rounded-full text-gray-700 hover:bg-gold-50 hover:text-gold-800 font-medium transition-all duration-200"
+                >
+                  Destinations
+                </Link>
+                <Link
+                  to="/services" // New link for Services page
+                  className="px-4 py-2 rounded-full text-gray-700 hover:bg-gold-50 hover:text-gold-800 font-medium transition-all duration-200"
+                >
+                  Services
+                </Link>
+                <button
+                  onClick={() => handleNavigationClick("about")}
+                  className="px-4 py-2 rounded-full text-gray-700 hover:bg-gold-50 hover:text-gold-800 font-medium transition-all duration-200"
+                >
+                  How It Works
+                </button>
+                <button
+                  onClick={() => handleNavigationClick("faq")}
+                  className="px-4 py-2 rounded-full text-gray-700 hover:bg-gold-50 hover:text-gold-800 font-medium transition-all duration-200"
+                >
+                  FAQ
+                </button>
               </nav>
 
               {/* Mobile Menu Button */}
@@ -109,25 +127,35 @@ const Header: React.FC = () => {
       >
         <div className="p-6">
           <nav className="space-y-0">
-            {" "}
-            {/* Changed space-y-4 to space-y-0 to control spacing with borders */}
             {[
-              { label: "Get Info Now", section: "contact" },
-              { label: "Destinations", section: "destinations" },
-              { label: "How It Works", section: "about" },
-              { label: "FAQ", section: "faq" },
+              { label: "Get Info Now", section: "contact", type: "scroll" },
+              { label: "Destinations", section: "/destinations", type: "link" },
+              { label: "Services", section: "/services", type: "link" }, // New mobile link for Services
+              { label: "How It Works", section: "about", type: "scroll" },
+              { label: "FAQ", section: "faq", type: "scroll" },
             ].map((item, index, array) => (
-              <button
-                key={item.section}
-                onClick={() => handleNavigationClick(item.section)}
-                className={`block w-full text-left px-4 py-3 rounded-lg text-lg font-medium text-gray-800 hover:bg-gold-50 hover:text-gold-800 transition-all duration-200 ${
-                  index < array.length - 1
-                    ? "border-b border-gray-100"
-                    : ""
-                }`}
-              >
-                {item.label}
-              </button>
+              item.type === "link" ? (
+                <Link
+                  key={item.section}
+                  to={item.section}
+                  onClick={() => setIsMenuOpen(false)} // Close menu on link click
+                  className={`block w-full text-left px-4 py-3 rounded-lg text-lg font-medium text-gray-800 hover:bg-gold-50 hover:text-gold-800 transition-all duration-200 ${
+                    index < array.length - 1 ? "border-b border-gray-100" : ""
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <button
+                  key={item.section}
+                  onClick={() => handleNavigationClick(item.section)}
+                  className={`block w-full text-left px-4 py-3 rounded-lg text-lg font-medium text-gray-800 hover:bg-gold-50 hover:text-gold-800 transition-all duration-200 ${
+                    index < array.length - 1 ? "border-b border-gray-100" : ""
+                  }`}
+                >
+                  {item.label}
+                </button>
+              )
             ))}
           </nav>
         </div>

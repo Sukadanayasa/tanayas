@@ -1,11 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Import Link
 import { ArrowRight } from "lucide-react";
 import { destinations } from "../data/content";
-import useScrollToSection from "../hooks/useScrollToSection"; // Import the new hook
+// useScrollToSection is no longer needed for the button, but might be used elsewhere if needed
 
 const Destinations: React.FC = () => {
-  const scrollToSection = useScrollToSection(); // Use the custom hook
-
   return (
     <section
       id="destinations"
@@ -49,13 +48,13 @@ const Destinations: React.FC = () => {
                   {destination.description}
                 </p>
 
-                <button
-                  onClick={() => scrollToSection("contact")} // Use the hook function
+                <Link
+                  to={`/destinations/${destination.id}`} // Use Link to navigate to detail page
                   className="group/btn inline-flex items-center space-x-2 text-gold-700 hover:text-gold-900 font-semibold transition-all duration-300 dark:text-gold-400 dark:hover:text-gold-500"
                 >
-                  <span>Learn More &amp; Get Schedules</span>
+                  <span>Learn More</span>
                   <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                </button>
+                </Link>
               </div>
             </div>
           ))}

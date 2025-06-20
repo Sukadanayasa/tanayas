@@ -1,4 +1,4 @@
-import type { Destination, Testimonial, FAQItem, TravelTip } from "../types";
+import type { Destination, Testimonial, FAQItem, TravelTip, Service } from "../types";
 
 export const destinations: Destination[] = [
   {
@@ -27,6 +27,42 @@ export const destinations: Destination[] = [
     image:
       "https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=800",
     alt: "Lombok coastline with mountains and pristine beaches.",
+  },
+  {
+    id: "nusa-lembongan",
+    title: "Nusa Lembongan",
+    description:
+      "A tranquil island paradise known for its stunning beaches, vibrant marine life, and relaxed atmosphere, perfect for snorkeling and diving.",
+    image:
+      "https://images.pexels.com/photos/1004600/pexels-photo-1004600.jpeg?auto=compress&cs=tinysrgb&w=800", // Placeholder image
+    alt: "Nusa Lembongan beach with clear water and boats.",
+  },
+];
+
+export const services: Service[] = [
+  {
+    id: "activities",
+    title: "Island Activities",
+    description: "Explore thrilling activities like snorkeling, diving, island tours, and more at your chosen destination.",
+    image: "https://images.pexels.com/photos/1004600/pexels-photo-1004600.jpeg?auto=compress&cs=tinysrgb&w=800", // Placeholder
+    alt: "People snorkeling in clear water",
+    icon: "Activity", // Placeholder for Lucide icon name
+  },
+  {
+    id: "private-charter",
+    title: "Private Fastboat Charter",
+    description: "Enjoy the ultimate flexibility with a private fastboat charter, tailored to your schedule and preferences.",
+    image: "https://images.pexels.com/photos/1004600/pexels-photo-1004600.jpeg?auto=compress&cs=tinysrgb&w=800", // Placeholder
+    alt: "Private fastboat on the ocean",
+    icon: "Ship", // Placeholder for Lucide icon name
+  },
+  {
+    id: "customized-route",
+    title: "Customized Island Routes",
+    description: "Design your perfect island hopping itinerary with our expert guidance for a truly unique adventure.",
+    image: "https://images.pexels.com/photos/1004600/pexels-photo-1004600.jpeg?auto=compress&cs=tinysrgb&w=800", // Placeholder
+    alt: "Map with custom route",
+    icon: "Map", // Placeholder for Lucide icon name
   },
 ];
 

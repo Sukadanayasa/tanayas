@@ -1,9 +1,10 @@
 import React from "react";
 import { Facebook, Instagram, Twitter, MessageCircle } from "lucide-react";
-import useScrollToSection from "../hooks/useScrollToSection"; // Import the new hook
+import { Link } from "react-router-dom"; // Import Link
+import useScrollToSection from "../hooks/useScrollToSection";
 
 const Footer: React.FC = () => {
-  const scrollToSection = useScrollToSection(); // Use the custom hook
+  const scrollToSection = useScrollToSection();
 
   return (
     <footer
@@ -33,16 +34,24 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold text-white dark:text-gray-200">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <button
-                  onClick={() => scrollToSection("destinations")} // Use the hook function
+                <Link
+                  to="/destinations" // Use Link for Destinations page
                   className="text-gray-400 hover:text-gold-400 transition-colors duration-200 dark:hover:text-gold-500"
                 >
                   Explore Destinations
-                </button>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services" // New Link for Services page
+                  className="text-gray-400 hover:text-gold-400 transition-colors duration-200 dark:hover:text-gold-500"
+                >
+                  Our Services
+                </Link>
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection("faq")} // Use the hook function
+                  onClick={() => scrollToSection("faq")} // Keep as scroll for now
                   className="text-gray-400 hover:text-gold-400 transition-colors duration-200 dark:hover:text-gold-500"
                 >
                   FAQs &amp; Travel Tips
@@ -50,7 +59,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection("contact")} // Use the hook function
+                  onClick={() => scrollToSection("contact")} // Keep as scroll for now
                   className="text-gray-400 hover:text-gold-400 transition-colors duration-200 dark:hover:text-gold-500"
                 >
                   Contact Local Experts

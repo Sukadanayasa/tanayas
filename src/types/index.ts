@@ -30,3 +30,12 @@ export interface TravelTip {
   icon: TravelTipIcon; // Use the specific icon type
   color: TravelTipColor; // Use the specific color type
 }
+
+export interface Service {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  alt: string;
+  icon: string; // Using string for now, can be Lucide icon name later
+}
