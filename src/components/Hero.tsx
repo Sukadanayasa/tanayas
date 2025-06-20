@@ -14,8 +14,6 @@ const Hero: React.FC = () => {
         className="absolute inset-0 w-full h-full object-cover"
         loading="lazy"
       />
-      {/* Overlay for text readability, adjusted to be more gold-toned */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gold-900/70 via-gold-800/60 to-gold-700/70" />
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         {/* Logo and Tanayas Text */}
