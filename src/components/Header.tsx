@@ -1,7 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
-import { Link } from "react-router-dom"; // Import Link
+import { Link } from "react-router-dom";
 import useScrollToSection from "../hooks/useScrollToSection";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+} from "./ui/dropdown-menu"; // Import DropdownMenu components
+import { destinations, services } from "../data/content"; // Import data
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,9 +38,9 @@ const Header: React.FC = () => {
       >
         <div className="w-full px-4 py-3 max-w-page-max mx-auto border-b border-gray-200">
           <div className="flex items-center justify-between">
-            {/* Logo and Brand Name - now clickable */}
+            {/* Logo and Brand Name */}
             <Link
-              to="/" // Link to homepage
+              to="/"
               className={`flex items-center space-x-3 transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-gold-500 rounded-md p-1 -ml-1`}
               aria-label="Go to homepage"
             >
@@ -49,19 +57,67 @@ const Header: React.FC = () => {
             <div className="flex items-center space-x-4">
               {/* Desktop Navigation */}
               <nav className="hidden lg:flex items-center space-x-4">
-                {/* Use Link for full pages, button with scrollToSection for in-page sections */}
                 <Link
-                  to="/destinations"
+                  to="/"
                   className="px-4 py-2 rounded-full text-gray-700 hover:bg-gold-50 hover:text-gold-800 font-medium transition-all duration-200"
                 >
-                  Destinations
+                  Home
                 </Link>
-                <Link
-                  to="/services" // New link for Services page
+
+                {/* Destinations Dropdown */}
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <button className="px-4 py-2 rounded-full text-gray-700 hover:bg-gold-50 hover:text-gold-800 font-medium transition-all duration-200 cursor-pointer">
+                      Destinations
+                    </button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="w-56">
+                    {destinations.map((dest) => (
+                      <DropdownMenuItem key={dest.id} asChild>
+                        <Link to={`/destinations/${dest.id}`} onClick={() => setIsMenuOpen(false)}>
+                          {dest.title}
+                        </Link>
+                      </DropdownMenuItem>
+                    ))}
+                    <DropdownMenuSeparator />
+                    <DropdownMenuItem asChild>
+                      <Link to="/destinations" onClick={() => setIsMenuOpen(false)}>
+                        View All Destinations
+                      </Link>
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+
+                {/* Services Dropdown */}
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <button className="px-4 py-2 rounded-full text-gray-700 hover:bg-gold-50 hover:text-gold-800 font-medium transition-all duration-200 cursor-pointer">
+                      Services
+                    </button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="w-56">
+                    {services.map((service) => (
+                      <DropdownMenuItem key={service.id} asChild>
+                        <Link to={`/services/${service.id}`} onClick={() => setIsMenuOpen(false)}>
+                          {service.title}
+                        </Link>
+                      </DropdownMenuItem>
+                    ))}
+                    <DropdownMenuSeparator />
+                    <DropdownMenuItem asChild>
+                      <Link to="/services" onClick={() => setIsMenuOpen(false)}>
+                        View All Services
+                      </Link>
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+
+                <button
+                  onClick={() => handleNavigationClick("contact")}
                   className="px-4 py-2 rounded-full text-gray-700 hover:bg-gold-50 hover:text-gold-800 font-medium transition-all duration-200"
                 >
-                  Services
-                </Link>
+                  Contact
+                </button>
               </nav>
 
               {/* Mobile Menu Button */}
@@ -109,35 +165,63 @@ const Header: React.FC = () => {
       >
         <div className="p-6">
           <nav className="space-y-0">
-            {" "}
-            {/* Changed space-y-4 to space-y-0 to control spacing with borders */}
-            {[
-              { label: "Destinations", section: "/destinations", type: "link" },
-              { label: "Services", section: "/services", type: "link" }, // New mobile link for Services
-            ].map((item, index, array) => (
-              item.type === "link" ? (
+            <Link
+              to="/"
+              onClick={() => setIsMenuOpen(false)}
+              className="block w-full text-left px-4 py-3 rounded-lg text-lg font-medium text-gray-800 hover:bg-gold-50 hover:text-gold-800 transition-all duration-200 border-b border-gray-100"
+            >
+              Home
+            </Link>
+            {/* Mobile Destinations List */}
+            <div className="py-3 border-b border-gray-100">
+              <span className="block px-4 text-sm font-semibold text-gray-500 mb-2">Destinations</span>
+              {destinations.map((dest) => (
                 <Link
-                  key={item.section}
-                  to={item.section}
-                  onClick={() => setIsMenuOpen(false)} // Close menu on link click
-                  className={`block w-full text-left px-4 py-3 rounded-lg text-lg font-medium text-gray-800 hover:bg-gold-50 hover:text-gold-800 transition-all duration-200 ${
-                    index < array.length - 1 ? "border-b border-gray-100" : ""
-                  }`}
+                  key={dest.id}
+                  to={`/destinations/${dest.id}`}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="block w-full text-left px-4 py-2 rounded-lg text-base text-gray-700 hover:bg-gold-50 hover:text-gold-800 transition-all duration-200"
                 >
-                  {item.label}
+                  - {dest.title}
                 </Link>
-              ) : (
-                <button
-                  key={item.section}
-                  onClick={() => handleNavigationClick(item.section)}
-                  className={`block w-full text-left px-4 py-3 rounded-lg text-lg font-medium text-gray-800 hover:bg-gold-50 hover:text-gold-800 transition-all duration-200 ${
-                    index < array.length - 1 ? "border-b border-gray-100" : ""
-                  }`}
+              ))}
+              <Link
+                to="/destinations"
+                onClick={() => setIsMenuOpen(false)}
+                className="block w-full text-left px-4 py-2 rounded-lg text-base text-gold-700 hover:bg-gold-50 hover:text-gold-800 transition-all duration-200 font-semibold mt-2"
+              >
+                View All Destinations
+              </Link>
+            </div>
+
+            {/* Mobile Services List */}
+            <div className="py-3 border-b border-gray-100">
+              <span className="block px-4 text-sm font-semibold text-gray-500 mb-2">Services</span>
+              {services.map((service) => (
+                <Link
+                  key={service.id}
+                  to={`/services/${service.id}`}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="block w-full text-left px-4 py-2 rounded-lg text-base text-gray-700 hover:bg-gold-50 hover:text-gold-800 transition-all duration-200"
                 >
-                  {item.label}
-                </button>
-              )
-            ))}
+                  - {service.title}
+                </Link>
+              ))}
+              <Link
+                to="/services"
+                onClick={() => setIsMenuOpen(false)}
+                className="block w-full text-left px-4 py-2 rounded-lg text-base text-gold-700 hover:bg-gold-50 hover:text-gold-800 transition-all duration-200 font-semibold mt-2"
+              >
+                View All Services
+              </Link>
+            </div>
+
+            <button
+              onClick={() => handleNavigationClick("contact")}
+              className="block w-full text-left px-4 py-3 rounded-lg text-lg font-medium text-gray-800 hover:bg-gold-50 hover:text-gold-800 transition-all duration-200"
+            >
+              Contact
+            </button>
           </nav>
         </div>
       </div>
