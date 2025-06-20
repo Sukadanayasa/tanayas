@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; // Import useNavigate
 import useScrollToSection from "../hooks/useScrollToSection";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const scrollToSection = useScrollToSection();
+  const navigate = useNavigate(); // Initialize useNavigate
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -15,10 +16,16 @@ const Header: React.FC = () => {
   }, []);
 
   const handleNavigationClick = (sectionId: string) => {
-    // Ensure we are on the homepage before scrolling
+    // If not on the homepage, navigate to the homepage first
     if (window.location.pathname !== "/") {
-      window.location.href = `/#${sectionId}`; // Navigate to homepage and then scroll
+      navigate("/");
+      // Use a timeout to ensure navigation completes before scrolling
+      // This is a common pattern when navigating and then scrolling to a section
+      setTimeout(() => {
+        scrollToSection(sectionId);
+      }, 100); // Small delay to allow route change to render
     } else {
+      // If already on the homepage, just scroll
       scrollToSection(sectionId);
     }
     setIsMenuOpen(false);
