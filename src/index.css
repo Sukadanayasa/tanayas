@@ -104,9 +104,18 @@ body {
 button:focus,
 a:focus,
 select:focus {
-  outline: 2px solid #F59E0B; /* Gold-500 */
-  outline-offset: 2px;
-  @apply dark:outline-gold-500;
+  outline: none; /* Remove default outline */
+  /* Light mode focus: a 2px solid gold-500 ring with a 4px gold-200 glow */
+  box-shadow: 0 0 0 2px #F59E0B, 0 0 0 4px #FDE68A; /* gold-500 and gold-200 */
+  transition: box-shadow 0.2s ease-in-out; /* Smooth transition for focus */
+}
+
+/* Dark mode adjustments for focus */
+.dark button:focus,
+.dark a:focus,
+.dark select:focus {
+  /* Dark mode focus: a 2px solid gold-400 ring with a 4px gold-700 glow */
+  box-shadow: 0 0 0 2px #FBBF24, 0 0 0 4px #B45309; /* gold-400 and gold-700 */
 }
 
 /* Smooth transitions for all interactive elements */
