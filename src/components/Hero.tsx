@@ -46,12 +46,12 @@ const Hero: React.FC = () => {
           Enjoy personalized service and direct booking via WhatsApp for instant confirmation.
         </p>
 
-        {/* Explore Destinations Button */}
+        {/* Explore Our Services Button */}
         <button
-          onClick={() => scrollToSection('destinations')}
+          onClick={() => scrollToSection('services')} // Changed to 'services'
           className="bg-gradient-to-r from-gold-400 to-gold-600 hover:from-gold-500 hover:to-gold-700 text-white px-8 py-3 rounded-full font-semibold text-xl transition-all transform hover:scale-105 shadow-lg mt-6"
         >
-          Explore Destinations
+          Explore Our Services {/* Changed button text */}
         </button>
       </div>
     </section>
