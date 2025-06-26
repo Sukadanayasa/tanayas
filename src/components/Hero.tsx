@@ -54,7 +54,7 @@ const Hero: React.FC = () => {
 
         {/* Main Description */}
         <p className="text-xl sm:text-2xl text-white mb-4 max-w-3xl mx-auto leading-relaxed">
-          We offer unforgettable fast boat adventures and exciting activities to Bali, Nusa Penida, Gili Islands, and Lombok.
+          We offer fast boat tickets and exciting activities to Lembongan, Nusa Penida, Gili Islands, and Lombok.
         </p>
         <p className="text-xl sm:text-2xl text-white mb-8 max-w-3xl mx-auto leading-relaxed">
           Enjoy personalized service and direct booking via WhatsApp for instant confirmation.
