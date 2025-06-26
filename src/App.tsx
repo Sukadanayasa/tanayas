@@ -1,7 +1,6 @@
 import { useTheme } from "./hooks/useTheme";
 import { usePageAnimations } from "./hooks/usePageAnimations";
 import { Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Destinations from "./components/Destinations";
 import Services from "./components/Services";
@@ -22,7 +21,6 @@ function App() {
       className={`min-h-screen bg-white transition-colors duration-500`}
     >
       <ScrollToTop /> {/* Add ScrollToTop here */}
-      <Header />
       <main>
         <Routes>
           <Route path="/" element={
