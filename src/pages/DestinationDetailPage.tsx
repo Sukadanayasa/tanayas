@@ -8,7 +8,7 @@ const DestinationDetailPage: React.FC = () => {
 
   if (!destination) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-black text-black dark:text-white p-8">
+      <div className="min-h-screen flex flex-col items-center justify-center bg-white/80 dark:bg-black/80 text-black dark:text-white p-8">
         <h1 className="text-4xl font-bold mb-4">Destination Not Found</h1>
         <p className="text-lg mb-8">The destination you are looking for does not exist.</p>
         <Link to="/" className="bg-gold-500 hover:bg-gold-600 text-white px-6 py-3 rounded-full font-semibold transition-colors">
@@ -19,7 +19,7 @@ const DestinationDetailPage: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen pt-24 pb-12 bg-gradient-to-br from-white to-gold-50 dark:from-black dark:to-gray-950 text-black dark:text-white">
+    <div className="min-h-screen pt-24 pb-12 bg-white/80 dark:bg-black/80 text-black dark:text-white">
       <div className="container mx-auto px-4 max-w-page-max">
         <h1 className="text-5xl font-bold text-center mb-8 text-gold-700 dark:text-gold-400">
           {destination.title}

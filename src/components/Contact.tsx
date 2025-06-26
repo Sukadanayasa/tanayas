@@ -10,7 +10,7 @@ const Contact: React.FC = () => {
   return (
     <section
       id="contact"
-      className="py-20 bg-gradient-to-br from-white to-gold-50 dark:from-black dark:to-gray-950" // Light gradient background
+      className="py-20 bg-white/80 dark:bg-black/80" // Light gradient background
     >
       <div className="container mx-auto px-4 max-w-page-max">
         <div className="text-center max-w-4xl mx-auto">
