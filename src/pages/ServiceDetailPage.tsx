@@ -15,7 +15,7 @@ const ServiceDetailPage: React.FC = () => {
 
   if (!service) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-white/80 dark:bg-black/80 text-black dark:text-white p-8">
+      <div className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-black text-black dark:text-white p-8">
         <h1 className="text-4xl font-bold mb-4">Service Not Found</h1>
         <p className="text-lg mb-8">The service you are looking for does not exist.</p>
         <Link to="/" className="bg-gold-500 hover:bg-gold-600 text-white px-6 py-3 rounded-full font-semibold transition-colors">
@@ -28,7 +28,7 @@ const ServiceDetailPage: React.FC = () => {
   const IconComponent = iconMap[service.icon] || Activity; // Default to Activity if icon not found
 
   return (
-    <div className="min-h-screen pt-24 pb-12 bg-white/80 dark:bg-black/80 text-black dark:text-white">
+    <div className="min-h-screen pt-24 pb-12 bg-gradient-to-br from-white to-gold-50 dark:from-black dark:to-gray-950 text-black dark:text-white">
       <div className="container mx-auto px-4 max-w-page-max">
         <div className="flex items-center justify-center space-x-4 mb-8">
           <IconComponent className="w-12 h-12 text-gold-700 dark:text-gold-400" />

@@ -13,7 +13,7 @@ const Services: React.FC = () => {
   return (
     <section
       id="services"
-      className="py-20 bg-white/80 dark:bg-black/80"
+      className="py-20 bg-gradient-to-br from-white to-gold-50 dark:from-black dark:to-gray-950"
     >
       <div className="container mx-auto px-4 max-w-page-max">
         <div className="text-center mb-16">

@@ -11,28 +11,19 @@ import FloatingWhatsApp from "./components/FloatingWhatsApp";
 import About from "./components/About";
 import DestinationDetailPage from "./pages/DestinationDetailPage";
 import ServiceDetailPage from "./pages/ServiceDetailPage";
-import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTop from "./components/ScrollToTop"; // Import the new component
 
 function App() {
   useTheme();
   usePageAnimations();
 
   return (
-    <div className="min-h-screen relative overflow-hidden"> {/* Added relative and overflow-hidden */}
-      {/* Global Background Image */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="https://images.pexels.com/photos/1078981/pexels-photo-1078981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-          alt="Continuous tropical island background"
-          className="w-full h-full object-cover object-center"
-        />
-        {/* Dark overlay for readability */}
-        <div className="absolute inset-0 bg-black/50 dark:bg-black/70" />
-      </div>
-
-      <ScrollToTop />
+    <div
+      className={`min-h-screen bg-white transition-colors duration-500`}
+    >
+      <ScrollToTop /> {/* Add ScrollToTop here */}
       <Header />
-      <main className="relative z-10"> {/* Ensure main content is above the background */}
+      <main>
         <Routes>
           <Route path="/" element={
             <>
