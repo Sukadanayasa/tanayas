@@ -10,13 +10,25 @@ interface CarouselItem {
   image: string;
   alt: string;
   link: string;
+  subtitle?: string; // Optional subtitle for the new CTA slide
 }
 
 const DriverHeroCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [imageLoaded, setImageLoaded] = useState(false);
 
+  const driverCtaItem: CarouselItem = {
+    id: "driver-cta",
+    title: "Jadilah Mitra Driver Tanayas!",
+    subtitle: "Tingkatkan Penghasilan Anda dengan Kami",
+    description: "Bergabunglah dengan jaringan driver kami dan tawarkan layanan fast boat serta aktivitas pulau terbaik kepada pelanggan Anda. Dapatkan komisi menarik dan dukungan penuh dari tim Tanayas.",
+    image: "https://images.pexels.com/photos/1078981/pexels-photo-1078981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", // Reusing hero image
+    alt: "Driver shaking hands with a client, with a fast boat in the background",
+    link: "/contact" // Link to contact page for inquiries
+  };
+
   const carouselItems: CarouselItem[] = [
+    driverCtaItem, // This will be the first slide
     ...destinations.map(d => ({
       id: d.id,
       title: d.title,
@@ -88,7 +100,7 @@ const DriverHeroCarousel: React.FC = () => {
           imageLoaded ? "opacity-100" : "opacity-0"
         }`}
       />
-      {/* Removed: <div className="absolute inset-0 bg-black/50" /> */}
+      {/* No dark overlay as requested */}
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto text-white">
@@ -105,6 +117,11 @@ const DriverHeroCarousel: React.FC = () => {
         </div>
 
         {/* Dynamic Content */}
+        {currentItem.subtitle && (
+          <p className="text-xl sm:text-2xl lg:text-3xl text-gold-300 font-semibold mb-2">
+            {currentItem.subtitle}
+          </p>
+        )}
         <p className="text-2xl sm:text-3xl lg:text-4xl text-gold-400 font-semibold mb-4">
           {currentItem.title}
         </p>
@@ -117,7 +134,7 @@ const DriverHeroCarousel: React.FC = () => {
           to={currentItem.link}
           className="bg-gradient-to-r from-gold-400 to-gold-600 hover:from-gold-500 hover:to-gold-700 text-white px-8 py-3 rounded-full font-semibold text-xl transition-all transform hover:scale-105 shadow-lg mt-6"
         >
-          Lihat Detail
+          {currentItem.id === "driver-cta" ? "Daftar Sekarang" : "Lihat Detail"}
         </Link>
       </div>
 
