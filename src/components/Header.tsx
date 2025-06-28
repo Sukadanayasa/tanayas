@@ -32,13 +32,13 @@ const Header: React.FC = () => {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "glass shadow-soft backdrop-blur-xl dark:glass-dark dark:shadow-xl"
+            ? "glass-effect shadow-modern backdrop-blur-xl dark:glass-effect-dark"
             : "bg-white/95 backdrop-blur-sm dark:bg-black/95"
         }`}
       >
         <div className="w-full px-6 py-4 max-w-page-max mx-auto">
           <div className="flex items-center justify-between">
-            {/* Enhanced Logo */}
+            {/* Modern Logo */}
             <button
               onClick={() => handleNavigationClick("hero")}
               className="group flex items-center space-x-3 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gold-400 focus:ring-offset-2 rounded-xl p-2 -ml-2"
@@ -56,17 +56,17 @@ const Header: React.FC = () => {
                 <span className="text-2xl font-black text-gradient">
                   TANAYAS
                 </span>
-                <Sparkles className="w-5 h-5 text-gold-500 group-hover:animate-pulse" />
+                <Sparkles className="w-5 h-5 text-gold-500 group-hover:animate-spin transition-transform duration-300" />
               </div>
             </button>
 
             <div className="flex items-center space-x-6">
-              {/* Enhanced Desktop Navigation */}
+              {/* Desktop Navigation */}
               <nav className="hidden lg:flex items-center space-x-8">
                 {[
                   { label: "Destinations", sectionId: "destinations" },
                   { label: "Services", sectionId: "services" },
-                  { label: "About Us", sectionId: "about" },
+                  { label: "About", sectionId: "about" },
                   { label: "Contact", sectionId: "contact" },
                 ].map((item) => (
                   <button
@@ -85,7 +85,7 @@ const Header: React.FC = () => {
                 </Link>
               </nav>
 
-              {/* Enhanced CTA Button */}
+              {/* CTA Button */}
               <button
                 onClick={() => handleNavigationClick("contact")}
                 className="hidden lg:block btn-primary text-sm py-3 px-6"
@@ -93,10 +93,10 @@ const Header: React.FC = () => {
                 Get Quote
               </button>
 
-              {/* Enhanced Mobile Menu Button */}
+              {/* Mobile Menu Button */}
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="lg:hidden p-3 text-gray-600 hover:text-gold-700 transition-all duration-300 relative z-50 border-2 border-gold-500/30 hover:border-gold-500 rounded-xl bg-white/50 backdrop-blur-sm dark:bg-gray-900/50 dark:border-gold-400/30 dark:hover:border-gold-400"
+                className="lg:hidden p-3 text-gray-600 hover:text-gold-700 transition-all duration-300 relative z-50 border-2 border-gold-500/30 hover:border-gold-500 rounded-xl glass-effect dark:glass-effect-dark"
                 aria-label="Toggle menu"
               >
                 <div className="relative w-6 h-6">
@@ -123,7 +123,7 @@ const Header: React.FC = () => {
         </div>
       </header>
 
-      {/* Enhanced Mobile Menu */}
+      {/* Mobile Menu */}
       <div
         className={`fixed inset-0 bg-black/60 z-40 lg:hidden transition-all duration-500 ${
           isMenuOpen ? "opacity-100 backdrop-blur-sm" : "opacity-0 pointer-events-none"
@@ -132,7 +132,7 @@ const Header: React.FC = () => {
       />
       
       <div
-        className={`fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white z-40 lg:hidden shadow-2xl transition-transform duration-500 ease-out dark:bg-gray-900 ${
+        className={`fixed top-0 right-0 h-full w-80 max-w-[85vw] glass-effect z-40 lg:hidden shadow-2xl transition-transform duration-500 ease-out dark:glass-effect-dark ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -147,7 +147,7 @@ const Header: React.FC = () => {
             {[
               { label: "Destinations", sectionId: "destinations", path: "/" },
               { label: "Services", sectionId: "services", path: "/" },
-              { label: "About Us", sectionId: "about", path: "/" },
+              { label: "About", sectionId: "about", path: "/" },
               { label: "Contact", sectionId: "contact", path: "/" },
               { label: "Driver", sectionId: "", path: "/driver" },
             ].map((item, index) => (
