@@ -100,35 +100,40 @@ const DriverHeroCarousel: React.FC = () => {
           imageLoaded ? "opacity-100" : "opacity-0"
         }`}
       />
-      {/* No dark overlay as requested */}
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto text-white">
-        {/* Logo and Tanayas Text (consistent) */}
+        {/* Logo and Main Title */}
         <div className="flex flex-col items-center justify-center space-y-4 mb-6">
           <img
             src="/tanayas-logo.svg"
             alt="Tanayas Logo"
             className="h-28 w-auto sm:h-36 lg:h-44"
           />
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-gold-500 leading-tight">
-            TANAYAS
-          </h1>
+          {currentItem.id === "driver-cta" ? (
+            // For the CTA slide, keep TANAYAS as the main brand
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-gold-500 leading-tight">
+              TANAYAS
+            </h1>
+          ) : (
+            // For other slides, use the item's title
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-gold-500 leading-tight">
+              {currentItem.title}
+            </h1>
+          )}
         </div>
 
-        {/* Dynamic Content */}
-        {currentItem.subtitle && (
+        {/* Dynamic Subtitle and Description (only for CTA slide) */}
+        {currentItem.id === "driver-cta" && currentItem.subtitle && (
           <p className="text-xl sm:text-2xl lg:text-3xl text-gold-300 font-semibold mb-2">
             {currentItem.subtitle}
           </p>
         )}
-        <p className="text-2xl sm:text-3xl lg:text-4xl text-gold-400 font-semibold mb-4">
-          {currentItem.title}
-        </p>
-        {/* Removed description for better readability */}
-        {/* <p className="text-xl sm:text-2xl text-white mb-8 max-w-3xl mx-auto leading-relaxed">
-          {currentItem.description}
-        </p> */}
+        {currentItem.id === "driver-cta" && (
+          <p className="text-2xl sm:text-3xl lg:text-4xl text-gold-400 font-semibold mb-4">
+            {currentItem.title}
+          </p>
+        )}
 
         {/* Action Button */}
         <Link
