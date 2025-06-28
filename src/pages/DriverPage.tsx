@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FloatingWhatsApp from "../components/FloatingWhatsApp";
-import DriverHero from "../components/DriverHero";
+import DriverHeroCarousel from "../components/DriverHeroCarousel"; // Mengganti DriverHero
 import DriverProductsCarousel from "../components/DriverProductsCarousel";
 import About from "../components/About"; // Reusing About section
 import Contact from "../components/Contact"; // Reusing Contact section
@@ -14,7 +14,7 @@ const DriverPage: React.FC = () => {
       <ScrollToTop />
       <Header />
       <main>
-        <DriverHero />
+        <DriverHeroCarousel /> {/* Menggunakan DriverHeroCarousel */}
         <DriverProductsCarousel />
         <About /> {/* Reusing the About section */}
         <Contact /> {/* Reusing the Contact section */}
