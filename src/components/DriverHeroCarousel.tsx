@@ -88,7 +88,7 @@ const DriverHeroCarousel: React.FC = () => {
           imageLoaded ? "opacity-100" : "opacity-0"
         }`}
       />
-      <div className="absolute inset-0 bg-black/50" /> {/* Dark overlay for text readability */}
+      {/* Removed: <div className="absolute inset-0 bg-black/50" /> */}
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto text-white">
