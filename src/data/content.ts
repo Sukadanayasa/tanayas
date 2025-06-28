@@ -64,6 +64,14 @@ export const services: Service[] = [
     alt: "Map with custom route",
     icon: "Map", // Placeholder for Lucide icon name
   },
+  {
+    id: "party-boat",
+    title: "Party Boat Experience",
+    description: "Organize unforgettable party boat trips for your clients, complete with music, drinks, and stunning sunset views.",
+    image: "https://images.pexels.com/photos/1078981/pexels-photo-1078981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", // Using Hero image as placeholder
+    alt: "People enjoying a party on a boat at sunset",
+    icon: "PartyPopper", 
+  },
 ];
 
 export const testimonials: Testimonial[] = [
