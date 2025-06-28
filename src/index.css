@@ -1,50 +1,50 @@
 /* inter-300 - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: "Inter";
   font-style: normal;
   font-weight: 300;
-  src: url("/src/assets/fonts/inter-v19-latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("/src/assets/fonts/inter-v19-latin-300.woff2") format("woff2");
 }
 /* inter-400 - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  src: url("/src/assets/fonts/inter-v19-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("/src/assets/fonts/inter-v19-latin-regular.woff2") format("woff2");
 }
 /* inter-500 - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
-  src: url("/src/assets/fonts/inter-v19-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("/src/assets/fonts/inter-v19-latin-500.woff2") format("woff2");
 }
 /* inter-600 - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
-  src: url("/src/assets/fonts/inter-v19-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("/src/assets/fonts/inter-v19-latin-600.woff2") format("woff2");
 }
 /* inter-700 - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  src: url("/src/assets/fonts/inter-v19-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("/src/assets/fonts/inter-v19-latin-700.woff2") format("woff2");
 }
 /* inter-800 - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: "Inter";
   font-style: normal;
   font-weight: 800;
-  src: url("/src/assets/fonts/inter-v19-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("/src/assets/fonts/inter-v19-latin-800.woff2") format("woff2");
 }
 
 @tailwind base;
@@ -57,38 +57,34 @@
 
 body {
   font-family: "Inter", sans-serif;
-  line-height: 1.6;
-  /* Use Tailwind classes for color to support dark mode */
-  @apply text-gray-700 dark:text-gray-300; /* Keep these for general text, will be overridden by specific component styles */
+  line-height: 1.7;
+  @apply text-gray-800 dark:text-gray-200;
   overflow-x: hidden;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
 }
 
-/* Custom scrollbar */
+/* Enhanced scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
-  @apply dark:bg-black; /* Changed to black for dark mode */
+  @apply bg-gray-50 dark:bg-gray-900;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #F59E0B; /* Gold-500 */
-  border-radius: 4px;
-  @apply dark:bg-gold-600; /* Darker gold for dark mode */
+  @apply bg-gradient-to-b from-gold-400 to-gold-600 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #D97706; /* Gold-600 */
-  @apply dark:bg-gold-700; /* Even darker gold for dark mode hover */
+  @apply from-gold-500 to-gold-700;
 }
 
-/* Animation classes */
+/* Enhanced animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
@@ -96,34 +92,109 @@ body {
   }
 }
 
-.animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out forwards;
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-/* Focus states for accessibility */
-/* Remove default outline for all interactive elements */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in-left {
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.animate-fade-in-right {
+  animation: fadeInRight 0.8s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.6s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.1), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Enhanced focus states */
 button:focus,
 a:focus,
 select:focus {
   outline: none;
+  @apply ring-2 ring-gold-400 ring-offset-2 ring-offset-white dark:ring-offset-gray-900;
 }
 
-/* Animated underline for navigation links/buttons */
+/* Enhanced navigation underline */
 .nav-link-underline {
   position: relative;
   display: inline-block;
-  padding-bottom: 2px; /* Space for the underline */
+  padding-bottom: 4px;
 }
 
 .nav-link-underline::after {
   content: '';
   position: absolute;
   width: 0;
-  height: 2px;
+  height: 3px;
   bottom: 0;
-  left: 0;
-  background-color: currentColor; /* Use the text color of the link */
-  transition: width 0.3s ease-out;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #F59E0B, #D97706);
+  border-radius: 2px;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link-underline:hover::after,
@@ -131,9 +202,99 @@ select:focus {
   width: 100%;
 }
 
-/* Smooth transitions for all interactive elements */
+/* Enhanced button styles */
+.btn-primary {
+  @apply bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-gold-700 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-out;
+}
+
+.btn-secondary {
+  @apply bg-white hover:bg-gray-50 text-gold-700 font-semibold px-8 py-4 rounded-full border-2 border-gold-500 hover:border-gold-600 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-out;
+}
+
+/* Enhanced card styles */
+.card-hover {
+  @apply transform hover:-translate-y-3 hover:shadow-2xl transition-all duration-500 ease-out;
+}
+
+.card-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.05), rgba(217, 119, 6, 0.05));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: inherit;
+}
+
+.card-hover:hover::before {
+  opacity: 1;
+}
+
+/* Glass morphism effect */
+.glass {
+  @apply bg-white/80 backdrop-blur-md border border-white/20;
+}
+
+.glass-dark {
+  @apply bg-gray-900/80 backdrop-blur-md border border-gray-700/20;
+}
+
+/* Text gradient */
+.text-gradient {
+  background: linear-gradient(135deg, #F59E0B, #D97706, #B45309);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Enhanced transitions */
 a,
 button,
-select {
-  transition: all 0.2s ease-in-out;
+select,
+.transition-enhanced {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hide scrollbar for carousel */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Enhanced section spacing */
+.section-padding {
+  @apply py-24 lg:py-32;
+}
+
+/* Typography enhancements */
+.heading-xl {
+  @apply text-5xl md:text-6xl lg:text-7xl font-bold leading-tight;
+}
+
+.heading-lg {
+  @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-tight;
+}
+
+.heading-md {
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold leading-tight;
+}
+
+.text-body {
+  @apply text-lg md:text-xl leading-relaxed;
+}
+
+/* Enhanced shadows */
+.shadow-soft {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-gold {
+  box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.2), 0 10px 10px -5px rgba(245, 158, 11, 0.1);
 }

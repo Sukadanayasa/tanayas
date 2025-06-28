@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom"; // Import useNavigate
+import { Menu, X, Sparkles } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
 import useScrollToSection from "../hooks/useScrollToSection";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const scrollToSection = useScrollToSection();
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -16,16 +16,12 @@ const Header: React.FC = () => {
   }, []);
 
   const handleNavigationClick = (sectionId: string) => {
-    // If not on the homepage, navigate to the homepage first
     if (window.location.pathname !== "/") {
       navigate("/");
-      // Use a timeout to ensure navigation completes before scrolling
-      // This is a common pattern when navigating and then scrolling to a section
       setTimeout(() => {
         scrollToSection(sectionId);
-      }, 100); // Small delay to allow route change to render
+      }, 100);
     } else {
-      // If already on the homepage, just scroll
       scrollToSection(sectionId);
     }
     setIsMenuOpen(false);
@@ -34,70 +30,73 @@ const Header: React.FC = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "bg-white/90 backdrop-blur-md shadow-sm dark:bg-black/90 dark:shadow-lg"
-            : "bg-white dark:bg-black"
+            ? "glass shadow-soft backdrop-blur-xl dark:glass-dark dark:shadow-xl"
+            : "bg-white/95 backdrop-blur-sm dark:bg-black/95"
         }`}
       >
-        <div className="w-full px-4 py-3 max-w-page-max mx-auto border-b border-gray-100 dark:border-gray-800">
+        <div className="w-full px-6 py-4 max-w-page-max mx-auto">
           <div className="flex items-center justify-between">
-            {/* Logo and Brand Name - now a button to scroll to hero */}
+            {/* Enhanced Logo */}
             <button
-              onClick={() => handleNavigationClick("hero")} // Call handleNavigationClick for hero section
-              className={`flex items-center space-x-3 transition-transform duration-300 focus:outline-none focus:ring-0 rounded-md p-1 -ml-1`}
-              aria-label="Go to homepage and scroll to top"
+              onClick={() => handleNavigationClick("hero")}
+              className="group flex items-center space-x-3 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gold-400 focus:ring-offset-2 rounded-xl p-2 -ml-2"
+              aria-label="Go to homepage"
             >
-              <img
-                src="/tanayas-logo.svg"
-                alt="Tanayas Logo"
-                className="h-9 w-auto"
-              />
-              <span className="text-xl font-bold text-gold-500">
-                TANAYAS
-              </span>
+              <div className="relative">
+                <img
+                  src="/tanayas-logo.svg"
+                  alt="Tanayas Logo"
+                  className="h-10 w-auto group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute -inset-1 bg-gradient-to-r from-gold-400/20 to-gold-600/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-2xl font-black text-gradient">
+                  TANAYAS
+                </span>
+                <Sparkles className="w-5 h-5 text-gold-500 group-hover:animate-pulse" />
+              </div>
             </button>
 
-            <div className="flex items-center space-x-4">
-              {/* Desktop Navigation */}
-              <nav className="hidden lg:flex items-center space-x-6">
-                <button
-                  onClick={() => handleNavigationClick("destinations")}
-                  className="nav-link-underline text-gray-700 hover:text-gold-700 font-medium transition-colors duration-200 dark:text-gray-300 dark:hover:text-gold-400"
-                >
-                  Destinations
-                </button>
-                <button
-                  onClick={() => handleNavigationClick("services")}
-                  className="nav-link-underline text-gray-700 hover:text-gold-700 font-medium transition-colors duration-200 dark:text-gray-300 dark:hover:text-gold-400"
-                >
-                  Services
-                </button>
-                <button
-                  onClick={() => handleNavigationClick("about")}
-                  className="nav-link-underline text-gray-700 hover:text-gold-700 font-medium transition-colors duration-200 dark:text-gray-300 dark:hover:text-gold-400"
-                >
-                  About Us
-                </button>
-                <button
-                  onClick={() => handleNavigationClick("contact")}
-                  className="nav-link-underline text-gray-700 hover:text-gold-700 font-medium transition-colors duration-200 dark:text-gray-300 dark:hover:text-gold-400"
-                >
-                  Contact
-                </button>
+            <div className="flex items-center space-x-6">
+              {/* Enhanced Desktop Navigation */}
+              <nav className="hidden lg:flex items-center space-x-8">
+                {[
+                  { label: "Destinations", sectionId: "destinations" },
+                  { label: "Services", sectionId: "services" },
+                  { label: "About Us", sectionId: "about" },
+                  { label: "Contact", sectionId: "contact" },
+                ].map((item) => (
+                  <button
+                    key={item.label}
+                    onClick={() => handleNavigationClick(item.sectionId)}
+                    className="nav-link-underline text-gray-700 hover:text-gold-700 font-semibold transition-all duration-300 dark:text-gray-300 dark:hover:text-gold-400 px-2 py-1"
+                  >
+                    {item.label}
+                  </button>
+                ))}
                 <Link
                   to="/driver"
-                  onClick={() => setIsMenuOpen(false)} // Close menu on click
-                  className="nav-link-underline text-gray-700 hover:text-gold-700 font-medium transition-colors duration-200 dark:text-gray-300 dark:hover:text-gold-400"
+                  className="nav-link-underline text-gray-700 hover:text-gold-700 font-semibold transition-all duration-300 dark:text-gray-300 dark:hover:text-gold-400 px-2 py-1"
                 >
                   Driver
                 </Link>
               </nav>
 
-              {/* Mobile Menu Button */}
+              {/* Enhanced CTA Button */}
+              <button
+                onClick={() => handleNavigationClick("contact")}
+                className="hidden lg:block btn-primary text-sm py-3 px-6"
+              >
+                Get Quote
+              </button>
+
+              {/* Enhanced Mobile Menu Button */}
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="lg:hidden p-2 text-gray-600 hover:text-gold-800 transition-colors duration-200 relative z-50 border border-gold-700 rounded-full dark:border-gold-500"
+                className="lg:hidden p-3 text-gray-600 hover:text-gold-700 transition-all duration-300 relative z-50 border-2 border-gold-500/30 hover:border-gold-500 rounded-xl bg-white/50 backdrop-blur-sm dark:bg-gray-900/50 dark:border-gold-400/30 dark:hover:border-gold-400"
                 aria-label="Toggle menu"
               >
                 <div className="relative w-6 h-6">
@@ -105,16 +104,16 @@ const Header: React.FC = () => {
                     size={24}
                     className={`absolute inset-0 transition-all duration-300 ease-out ${
                       isMenuOpen
-                        ? "opacity-0 rotate-90"
-                        : "opacity-100 rotate-0"
+                        ? "opacity-0 rotate-90 scale-75"
+                        : "opacity-100 rotate-0 scale-100"
                     }`}
                   />
                   <X
                     size={24}
                     className={`absolute inset-0 transition-all duration-300 ease-out ${
                       isMenuOpen
-                        ? "opacity-100 rotate-0"
-                        : "opacity-0 -rotate-90"
+                        ? "opacity-100 rotate-0 scale-100"
+                        : "opacity-0 -rotate-90 scale-75"
                     }`}
                   />
                 </div>
@@ -124,35 +123,40 @@ const Header: React.FC = () => {
         </div>
       </header>
 
-      {/* Mobile Menu Overlay */}
+      {/* Enhanced Mobile Menu */}
       <div
-        className={`fixed inset-0 bg-black/40 z-40 lg:hidden transition-opacity duration-500 ${
-          isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        className={`fixed inset-0 bg-black/60 z-40 lg:hidden transition-all duration-500 ${
+          isMenuOpen ? "opacity-100 backdrop-blur-sm" : "opacity-0 pointer-events-none"
         }`}
         onClick={() => setIsMenuOpen(false)}
-        style={{ backdropFilter: "blur(2px)" }}
       />
+      
       <div
-        className={`fixed top-[64px] left-0 right-0 bg-white z-40 lg:hidden shadow-lg transition-transform duration-300 ease-out dark:bg-gray-900 ${
-          isMenuOpen ? "translate-y-0" : "-translate-y-full"
+        className={`fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white z-40 lg:hidden shadow-2xl transition-transform duration-500 ease-out dark:bg-gray-900 ${
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="p-6">
-          <nav className="space-y-0">
+        <div className="p-8 pt-24">
+          {/* Mobile Menu Header */}
+          <div className="text-center mb-8">
+            <div className="text-2xl font-black text-gradient mb-2">TANAYAS</div>
+            <div className="text-sm text-gray-500 dark:text-gray-400">Your Island Adventure Partner</div>
+          </div>
+
+          <nav className="space-y-2">
             {[
               { label: "Destinations", sectionId: "destinations", path: "/" },
               { label: "Services", sectionId: "services", path: "/" },
               { label: "About Us", sectionId: "about", path: "/" },
               { label: "Contact", sectionId: "contact", path: "/" },
-              { label: "Driver", sectionId: "", path: "/driver" }, // New item for Driver page
-            ].map((item, index, array) => (
+              { label: "Driver", sectionId: "", path: "/driver" },
+            ].map((item, index) => (
               item.path === "/" ? (
                 <button
                   key={item.label}
                   onClick={() => handleNavigationClick(item.sectionId)}
-                  className={`nav-link-underline block w-full text-left px-4 py-3 rounded-lg text-lg font-medium text-gray-800 hover:bg-gold-50 hover:text-gold-800 transition-all duration-200 dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:text-gold-400 ${
-                    index < array.length - 1 ? "border-b border-gray-100 dark:border-gray-700" : ""
-                  }`}
+                  className="nav-link-underline block w-full text-left px-6 py-4 rounded-xl text-lg font-semibold text-gray-800 hover:bg-gold-50 hover:text-gold-700 transition-all duration-300 dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:text-gold-400"
+                  style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {item.label}
                 </button>
@@ -161,15 +165,24 @@ const Header: React.FC = () => {
                   key={item.label}
                   to={item.path}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`nav-link-underline block w-full text-left px-4 py-3 rounded-lg text-lg font-medium text-gray-800 hover:bg-gold-50 hover:text-gold-800 transition-all duration-200 dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:text-gold-400 ${
-                    index < array.length - 1 ? "border-b border-gray-100 dark:border-gray-700" : ""
-                  }`}
+                  className="nav-link-underline block w-full text-left px-6 py-4 rounded-xl text-lg font-semibold text-gray-800 hover:bg-gold-50 hover:text-gold-700 transition-all duration-300 dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:text-gold-400"
+                  style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {item.label}
                 </Link>
               )
             ))}
           </nav>
+
+          {/* Mobile CTA */}
+          <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
+            <button
+              onClick={() => handleNavigationClick("contact")}
+              className="btn-primary w-full text-center"
+            >
+              Get Your Quote Now
+            </button>
+          </div>
         </div>
       </div>
     </>
