@@ -125,9 +125,10 @@ const DriverHeroCarousel: React.FC = () => {
         <p className="text-2xl sm:text-3xl lg:text-4xl text-gold-400 font-semibold mb-4">
           {currentItem.title}
         </p>
-        <p className="text-xl sm:text-2xl text-white mb-8 max-w-3xl mx-auto leading-relaxed">
+        {/* Removed description for better readability */}
+        {/* <p className="text-xl sm:text-2xl text-white mb-8 max-w-3xl mx-auto leading-relaxed">
           {currentItem.description}
-        </p>
+        </p> */}
 
         {/* Action Button */}
         <Link
