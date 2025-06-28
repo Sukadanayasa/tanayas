@@ -123,17 +123,14 @@ const DriverHeroCarousel: React.FC = () => {
           )}
         </div>
 
-        {/* Dynamic Subtitle and Description (only for CTA slide) */}
-        {currentItem.id === "driver-cta" && currentItem.subtitle && (
-          <p className="text-xl sm:text-2xl lg:text-3xl text-gold-300 font-semibold mb-2">
-            {currentItem.subtitle}
-          </p>
-        )}
-        {currentItem.id === "driver-cta" && (
-          <p className="text-2xl sm:text-3xl lg:text-4xl text-gold-400 font-semibold mb-4">
-            {currentItem.title}
-          </p>
-        )}
+        {/* Dynamic Subtitle (always render to maintain spacing) */}
+        <p className="text-xl sm:text-2xl lg:text-3xl text-gold-300 font-semibold mb-2">
+          {currentItem.id === "driver-cta" ? currentItem.subtitle : ''}
+        </p>
+        {/* Dynamic Title (only for CTA, otherwise empty to maintain spacing) */}
+        <p className="text-2xl sm:text-3xl lg:text-4xl text-gold-400 font-semibold mb-4">
+          {currentItem.id === "driver-cta" ? currentItem.title : ''}
+        </p>
 
         {/* Action Button */}
         <Link
