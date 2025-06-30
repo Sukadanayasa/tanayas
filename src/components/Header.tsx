@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom";
 import useScrollToSection from "../hooks/useScrollToSection";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const scrollToSection = useScrollToSection();
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -16,16 +16,12 @@ const Header = () => {
   }, []);
 
   const handleNavigationClick = (sectionId: string) => {
-    // If not on the homepage, navigate to the homepage first
     if (window.location.pathname !== "/") {
       navigate("/");
-      // Use a timeout to ensure navigation completes before scrolling
-      // This is a common pattern when navigating and then scrolling to a section
       setTimeout(() => {
         scrollToSection(sectionId);
-      }, 100); // Small delay to allow route change to render
+      }, 100);
     } else {
-      // If already on the homepage, just scroll
       scrollToSection(sectionId);
     }
     setIsMenuOpen(false);
@@ -42,9 +38,8 @@ const Header = () => {
       >
         <div className="w-full px-4 py-3 max-w-page-max mx-auto border-b border-gray-100 dark:border-gray-800">
           <div className="flex items-center justify-between">
-            {/* Logo and Brand Name - now a button to scroll to hero */}
             <button
-              onClick={() => handleNavigationClick("hero")} // Call handleNavigationClick for hero section
+              onClick={() => handleNavigationClick("hero")}
               className={`flex items-center space-x-3 transition-transform duration-300 focus:outline-none focus:ring-0 rounded-md p-1 -ml-1`}
               aria-label="Go to homepage and scroll to top"
             >
@@ -59,7 +54,6 @@ const Header = () => {
             </button>
 
             <div className="flex items-center space-x-4">
-              {/* Desktop Navigation */}
               <nav className="hidden lg:flex items-center space-x-6">
                 <button
                   onClick={() => handleNavigationClick("destinations")}
@@ -87,7 +81,6 @@ const Header = () => {
                 </button>
               </nav>
 
-              {/* Mobile Menu Button */}
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="lg:hidden p-2 text-gray-600 hover:text-gold-800 transition-colors duration-200 relative z-50 border border-gold-700 rounded-full dark:border-gold-500"
@@ -117,7 +110,6 @@ const Header = () => {
         </div>
       </header>
 
-      {/* Mobile Menu Overlay */}
       <div
         className={`fixed inset-0 bg-black/40 z-40 lg:hidden transition-opacity duration-500 ${
           isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
@@ -153,3 +145,6 @@ const Header = () => {
       </div>
     </>
   );
+};
+
+export default Header;
