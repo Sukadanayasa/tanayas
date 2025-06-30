@@ -50,6 +50,38 @@ export const destinations: Destination[] = [
     image:
       "https://images.pexels.com/photos/1483053/pexels-photo-1483053.jpeg?auto=compress&cs=tinysrgb&w=800",
     alt: "Gili Islands tropical beach with clear blue water and palm trees.",
+    attractions: [
+      {
+        id: "gili-trawangan",
+        name: "Gili Trawangan",
+        description: "The largest and most vibrant of the three Gilis, famous for its lively nightlife, dive schools, and iconic ocean swings.",
+        image: "https://images.pexels.com/photos/3727250/pexels-photo-3727250.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        id: "turtle-point",
+        name: "Snorkel with Turtles",
+        description: "Swim alongside majestic sea turtles in the clear waters between Gili Meno and Gili Trawangan. A truly magical experience.",
+        image: "https://images.pexels.com/photos/847393/pexels-photo-847393.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        id: "gili-meno",
+        name: "Gili Meno",
+        description: "The most tranquil of the islands, Gili Meno is perfect for a romantic getaway with its secluded beaches and the famous underwater statues.",
+        image: "https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      }
+    ],
+    gallery: [
+      "https://images.pexels.com/photos/3225528/pexels-photo-3225528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/1031588/pexels-photo-1031588.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/1089306/pexels-photo-1089306.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/1483053/pexels-photo-1483053.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    ],
+    travelTips: [
+      "There are no motorized vehicles. Rent a bicycle to explore the islands or use a 'cidomo' (horse-drawn cart).",
+      "Bring enough cash, especially for smaller islands like Gili Meno and Gili Air, as ATMs can be unreliable.",
+      "Book your fast boat in advance, particularly during high season, to secure your spot.",
+      "Respect the local culture by dressing modestly when away from the beach areas."
+    ]
   },
   {
     id: "lombok",
@@ -59,6 +91,38 @@ export const destinations: Destination[] = [
     image:
       "https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=800",
     alt: "Lombok coastline with mountains and pristine beaches.",
+    attractions: [
+      {
+        id: "mount-rinjani",
+        name: "Mount Rinjani",
+        description: "Challenge yourself with a trek to the summit of Indonesia's second-highest volcano for breathtaking crater lake views.",
+        image: "https://images.pexels.com/photos/2397653/pexels-photo-2397653.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        id: "kuta-lombok",
+        name: "Kuta Lombok Beaches",
+        description: "Explore stunning beaches like Tanjung Aan, famous for its unique 'pepper sand', and enjoy world-class surfing spots.",
+        image: "https://images.pexels.com/photos/2405628/pexels-photo-2405628.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        id: "sasak-village",
+        name: "Sasak Traditional Villages",
+        description: "Visit traditional Sasak villages like Sade and Ende to learn about the indigenous culture, architecture, and weaving traditions of Lombok.",
+        image: "https://images.pexels.com/photos/10258999/pexels-photo-10258999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      }
+    ],
+    gallery: [
+      "https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/1680140/pexels-photo-1680140.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/2674052/pexels-photo-2674052.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    ],
+    travelTips: [
+      "Lombok is more conservative than Bali. Dress modestly, especially when visiting villages and religious sites.",
+      "Renting a scooter is the best way to explore the island's vast and beautiful landscapes.",
+      "Don't miss out on local Sasak cuisine, such as 'Ayam Taliwang' (spicy grilled chicken).",
+      "Be prepared for a more rugged and adventurous travel experience compared to Bali."
+    ]
   },
   {
     id: "nusa-lembongan",
@@ -66,8 +130,40 @@ export const destinations: Destination[] = [
     description:
       "A tranquil island paradise known for its stunning beaches, vibrant marine life, and relaxed atmosphere, perfect for snorkeling and diving.",
     image:
-      "https://images.pexels.com/photos/1004600/pexels-photo-1004600.jpeg?auto=compress&cs=tinysrgb&w=800", // Placeholder image
+      "https://images.pexels.com/photos/2387866/pexels-photo-2387866.jpeg?auto=compress&cs=tinysrgb&w=800",
     alt: "Nusa Lembongan beach with clear water and boats.",
+    attractions: [
+      {
+        id: "devils-tear",
+        name: "Devil's Tear",
+        description: "A dramatic rocky outcrop where powerful waves crash against the cliffs, creating spectacular plumes of water. A must-see at sunset.",
+        image: "https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        id: "yellow-bridge",
+        name: "The Yellow Bridge",
+        description: "The iconic 'Bridge of Love' connects Nusa Lembongan to its smaller sister island, Nusa Ceningan. Perfect for a photo op.",
+        image: "https://images.pexels.com/photos/4179490/pexels-photo-4179490.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        id: "mangrove-forest",
+        name: "Mangrove Forest",
+        description: "Explore the serene and lush mangrove forest by traditional boat or stand-up paddleboard for a peaceful nature experience.",
+        image: "https://images.pexels.com/photos/2418486/pexels-photo-2418486.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      }
+    ],
+    gallery: [
+      "https://images.pexels.com/photos/3823495/pexels-photo-3823495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/2088205/pexels-photo-2088205.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/1004600/pexels-photo-1004600.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/2387866/pexels-photo-2387866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    ],
+    travelTips: [
+      "Nusa Lembongan is much more relaxed than Nusa Penida, making it ideal for unwinding.",
+      "It's a great spot for surfing, with breaks suitable for all levels. Diving with Manta Rays is also a popular activity.",
+      "Easily explore Nusa Ceningan by crossing the Yellow Bridge on foot or by scooter.",
+      "Observe the local seaweed farming, which is a major part of the island's economy."
+    ]
   },
 ];
 
