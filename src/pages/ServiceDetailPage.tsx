@@ -1,7 +1,8 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { services } from '../data/content';
-import { Activity, Ship, Map } from 'lucide-react'; // Import Lucide icons
+import { Activity, Ship, Map } from 'lucide-react';
+import useScrollToSection from '../hooks/useScrollToSection';
 
 const iconMap: { [key: string]: React.ElementType } = {
   Activity: Activity,
@@ -12,6 +13,15 @@ const iconMap: { [key: string]: React.ElementType } = {
 const ServiceDetailPage = () => {
   const { id } = useParams<{ id: string }>();
   const service = services.find(s => s.id === id);
+  const navigate = useNavigate();
+  const scrollToSection = useScrollToSection();
+
+  const handleBackToServicesClick = () => {
+    navigate('/');
+    setTimeout(() => {
+      scrollToSection('services');
+    }, 100); // Delay to ensure navigation completes before scrolling
+  };
 
   if (!service) {
     return (
@@ -25,7 +35,7 @@ const ServiceDetailPage = () => {
     );
   }
 
-  const IconComponent = iconMap[service.icon] || Activity; // Default to Activity if icon not found
+  const IconComponent = iconMap[service.icon] || Activity;
 
   return (
     <div className="min-h-screen pt-24 pb-12 bg-gradient-to-br from-white to-gold-50 dark:from-black dark:to-gray-950 text-black dark:text-white">
@@ -57,9 +67,12 @@ const ServiceDetailPage = () => {
             <Link to="/contact" className="inline-flex items-center space-x-2 bg-gold-500 hover:bg-gold-600 text-white px-6 py-3 rounded-full font-semibold transition-colors shadow-md">
               Inquire About This Service
             </Link>
-            <Link to="/services" className="ml-4 text-gold-700 hover:text-gold-900 dark:text-gold-400 dark:hover:text-gold-500 font-semibold">
+            <button
+              onClick={handleBackToServicesClick}
+              className="ml-4 text-gold-700 hover:text-gold-900 dark:text-gold-400 dark:hover:text-gold-500 font-semibold"
+            >
               Back to Services
-            </Link>
+            </button>
           </div>
         </div>
       </div>
