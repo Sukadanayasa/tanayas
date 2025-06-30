@@ -4,6 +4,15 @@ export interface Destination {
   description: string;
   image: string;
   alt: string;
+  // New detailed content fields
+  gallery?: string[];
+  attractions?: {
+    id: string;
+    name: string;
+    description: string;
+    image: string;
+  }[];
+  travelTips?: string[];
 }
 
 export interface Testimonial {

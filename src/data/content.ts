@@ -9,6 +9,38 @@ export const destinations: Destination[] = [
     image:
       "https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=800",
     alt: "Aerial view of Nusa Penida coastline with turquoise waters and cliffs.",
+    attractions: [
+      {
+        id: "kelingking-beach",
+        name: "Kelingking Beach",
+        description: "Famous for its T-Rex shaped cliff, this spot offers jaw-dropping views and a challenging trek down to a pristine, secluded beach.",
+        image: "https://images.pexels.com/photos/3776207/pexels-photo-3776207.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        id: "angels-billabong",
+        name: "Angel's Billabong",
+        description: "A stunning natural infinity pool framed by rock cliffs. At low tide, you can swim in its crystal-clear waters.",
+        image: "https://images.pexels.com/photos/1320694/pexels-photo-1320694.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        id: "broken-beach",
+        name: "Broken Beach (Pasih Uug)",
+        description: "A spectacular circular cove with an archway that lets the ocean flow in. It's a perfect photo spot and a marvel of nature.",
+        image: "https://images.pexels.com/photos/2404444/pexels-photo-2404444.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      }
+    ],
+    gallery: [
+      "https://images.pexels.com/photos/847393/pexels-photo-847393.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/1658967/pexels-photo-1658967.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/3601425/pexels-photo-3601425.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    ],
+    travelTips: [
+      "Rent a scooter for flexibility, but be cautious as roads can be challenging. Hiring a private driver is a safer, more comfortable option.",
+      "Bring cash, as ATMs are scarce and not always reliable.",
+      "Start your day early to avoid the crowds at popular spots like Kelingking Beach.",
+      "Wear sturdy shoes, not flip-flops, especially if you plan to hike down to the beaches."
+    ]
   },
   {
     id: "gili-islands",
