@@ -2,7 +2,7 @@
 
 import React from "react";
 
-const FloatingWhatsApp: React.FC = () => {
+const FloatingWhatsApp = () => {
   const whatsappUrl =
     "https://wa.me/628176314753?text=Hi%20Tanayas!%20I'm%20looking%20for%20fastboat%20info%20for%20my%20trip.%20Can%20you%20help%3F";
 

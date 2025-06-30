@@ -9,7 +9,7 @@ const iconMap: { [key: string]: React.ElementType } = {
   Map: Map,
 };
 
-const ServiceDetailPage: React.FC = () => {
+const ServiceDetailPage = () => {
   const { id } = useParams<{ id: string }>();
   const service = services.find(s => s.id === id);
 

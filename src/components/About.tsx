@@ -1,7 +1,7 @@
 import React from 'react';
 import { MessageCircleCode, Compass, PhoneCall } from 'lucide-react';
 
-const About: React.FC = () => {
+const About = () => {
   // Placeholder for translations - using hardcoded strings as no translation hook/data is provided
   const t = {
     aboutUsTitle: "Why Choose Tanayas?",

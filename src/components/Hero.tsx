@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { ArrowRight } from "lucide-react";
 import useScrollToSection from "../hooks/useScrollToSection";
 
-const Hero: React.FC = () => {
+const Hero = () => {
   const scrollToSection = useScrollToSection();
   const [imageLoaded, setImageLoaded] = useState(false);
 

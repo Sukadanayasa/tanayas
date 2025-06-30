@@ -9,7 +9,7 @@ const iconMap: { [key: string]: React.ElementType } = {
   Map: Map,
 };
 
-const Services: React.FC = () => {
+const Services = () => {
   return (
     <section
       id="services"

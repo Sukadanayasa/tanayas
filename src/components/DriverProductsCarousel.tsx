@@ -21,7 +21,7 @@ interface DriverProductItem {
   icon?: string; // Only for services
 }
 
-const DriverProductsCarousel: React.FC = () => {
+const DriverProductsCarousel = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   // Combine destinations and services into a single array

@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { destinations } from "../data/content";
 // useScrollToSection is no longer needed for the button, but might be used elsewhere if needed
 
-const Destinations: React.FC = () => {
+const Destinations = () => {
   return (
     <section
       id="destinations"

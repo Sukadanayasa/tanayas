@@ -13,7 +13,7 @@ interface CarouselItem {
   subtitle?: string; // Optional subtitle for the new CTA slide
 }
 
-const DriverHeroCarousel: React.FC = () => {
+const DriverHeroCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [imageLoaded, setImageLoaded] = useState(false);
 

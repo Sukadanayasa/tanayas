@@ -3,7 +3,7 @@ import { Facebook, Instagram, Twitter } from "lucide-react";
 import { Link } from "react-router-dom";
 import useScrollToSection from "../hooks/useScrollToSection";
 
-const Footer: React.FC = () => {
+const Footer = () => {
   const scrollToSection = useScrollToSection();
 
   return (

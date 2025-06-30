@@ -8,7 +8,7 @@ import About from "../components/About"; // Reusing About section
 import Contact from "../components/Contact"; // Reusing Contact section
 import ScrollToTop from "../components/ScrollToTop"; // Ensure scroll to top on page load
 
-const DriverPage: React.FC = () => {
+const DriverPage = () => {
   return (
     <div className={`min-h-screen bg-white transition-colors duration-500`}>
       <ScrollToTop />

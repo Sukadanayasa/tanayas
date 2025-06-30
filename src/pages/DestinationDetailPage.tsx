@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { destinations } from '../data/content';
 
-const DestinationDetailPage: React.FC = () => {
+const DestinationDetailPage = () => {
   const { id } = useParams<{ id: string }>();
   const destination = destinations.find(d => d.id === id);
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { Mail, Clock } from "lucide-react";
 
-const Contact: React.FC = () => {
+const Contact = () => {
   const whatsappUrl =
     "https://wa.me/6281234567890?text=Hi%20Tanayas!%20I%20need%20fastboat%20information%20for%20my%20trip.%20Can%20you%20help%3F";
   const emailUrl =
