@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { services } from "../data/content";
-import { Activity, Ship, Map } from 'lucide-react'; // Import Lucide icons
+import { Activity, Ship, Map, PartyPopper } from 'lucide-react'; // Import Lucide icons
 
 const iconMap: { [key: string]: React.ElementType } = {
   Activity: Activity,
   Ship: Ship,
   Map: Map,
+  PartyPopper: PartyPopper,
 };
 
 const Services = () => {
@@ -26,7 +27,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => {
             const IconComponent = iconMap[service.icon] || Activity; // Default icon if not found
             return (
