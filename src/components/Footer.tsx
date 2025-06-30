@@ -68,12 +68,12 @@ const Footer = () => {
                 </button>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/driver"
                   className="nav-link-underline text-gray-400 hover:text-gold-400 transition-colors duration-200"
                 >
-                  Privacy Policy
-                </a>
+                  For Drivers
+                </Link>
               </li>
             </ul>
           </div>

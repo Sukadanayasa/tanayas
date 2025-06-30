@@ -85,13 +85,6 @@ const Header = () => {
                 >
                   Contact
                 </button>
-                <Link
-                  to="/driver"
-                  onClick={() => setIsMenuOpen(false)} // Close menu on click
-                  className="nav-link-underline text-gray-700 hover:text-gold-700 font-medium transition-colors duration-200 dark:text-gray-300 dark:hover:text-gold-400"
-                >
-                  Driver
-                </Link>
               </nav>
 
               {/* Mobile Menu Button */}
@@ -140,40 +133,23 @@ const Header = () => {
         <div className="p-6">
           <nav className="space-y-0">
             {[
-              { label: "Destinations", sectionId: "destinations", path: "/" },
-              { label: "Services", sectionId: "services", path: "/" },
-              { label: "About Us", sectionId: "about", path: "/" },
-              { label: "Contact", sectionId: "contact", path: "/" },
-              { label: "Driver", sectionId: "", path: "/driver" }, // New item for Driver page
+              { label: "Destinations", sectionId: "destinations" },
+              { label: "Services", sectionId: "services" },
+              { label: "About Us", sectionId: "about" },
+              { label: "Contact", sectionId: "contact" },
             ].map((item, index, array) => (
-              item.path === "/" ? (
-                <button
-                  key={item.label}
-                  onClick={() => handleNavigationClick(item.sectionId)}
-                  className={`nav-link-underline block w-full text-left px-4 py-3 rounded-lg text-lg font-medium text-gray-800 hover:bg-gold-50 hover:text-gold-800 transition-all duration-200 dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:text-gold-400 ${
-                    index < array.length - 1 ? "border-b border-gray-100 dark:border-gray-700" : ""
-                  }`}
-                >
-                  {item.label}
-                </button>
-              ) : (
-                <Link
-                  key={item.label}
-                  to={item.path}
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`nav-link-underline block w-full text-left px-4 py-3 rounded-lg text-lg font-medium text-gray-800 hover:bg-gold-50 hover:text-gold-800 transition-all duration-200 dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:text-gold-400 ${
-                    index < array.length - 1 ? "border-b border-gray-100 dark:border-gray-700" : ""
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              )
+              <button
+                key={item.label}
+                onClick={() => handleNavigationClick(item.sectionId)}
+                className={`nav-link-underline block w-full text-left px-4 py-3 rounded-lg text-lg font-medium text-gray-800 hover:bg-gold-50 hover:text-gold-800 transition-all duration-200 dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:text-gold-400 ${
+                  index < array.length - 1 ? "border-b border-gray-100 dark:border-gray-700" : ""
+                }`}
+              >
+                {item.label}
+              </button>
             ))}
           </nav>
         </div>
       </div>
     </>
   );
-};
-
-export default Header;
