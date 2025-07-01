@@ -139,7 +139,7 @@ const Header = () => {
       />
       <div
         className={`fixed top-[60px] left-0 right-0 z-40 lg:hidden transition-transform duration-300 ease-out ${
-          isMenuOpen ? "translate-y-0" : "-translate-y-full pointer-events-none"
+          isMenuOpen ? "translate-y-0 visible" : "-translate-y-full invisible"
         } ${
           isScrolled
             ? "bg-white shadow-lg dark:bg-gray-900"
