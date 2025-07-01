@@ -48,13 +48,3 @@ export interface Service {
   alt: string;
   icon: string; // Using string for now, can be Lucide icon name later
 }
-
-export interface Route {
-  id:string;
-  from: string;
-  to: string;
-  image: string;
-  alt: string;
-  duration: string;
-  price: string;
-}

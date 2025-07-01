@@ -1,4 +1,4 @@
-import type { Destination, Testimonial, FAQItem, TravelTip, Service, Route } from "../types";
+import type { Destination, Testimonial, FAQItem, TravelTip, Service } from "../types";
 
 export const destinations: Destination[] = [
   {
@@ -286,43 +286,4 @@ export const travelTips: TravelTip[] = [
     icon: "CalendarPlus",
     color: "purple",
   },
-];
-
-export const popularRoutes: Route[] = [
-  {
-    id: 'bali-penida',
-    from: 'Bali (Sanur)',
-    to: 'Nusa Penida',
-    image: 'https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=800',
-    alt: 'Kelingking Beach in Nusa Penida',
-    duration: 'Approx. 45 mins',
-    price: 'From $15'
-  },
-  {
-    id: 'bali-gili',
-    from: 'Bali (Padang Bai)',
-    to: 'Gili Trawangan',
-    image: 'https://images.pexels.com/photos/1483053/pexels-photo-1483053.jpeg?auto=compress&cs=tinysrgb&w=800',
-    alt: 'Beach swing on Gili Trawangan',
-    duration: 'Approx. 1.5 hours',
-    price: 'From $25'
-  },
-  {
-    id: 'bali-lombok',
-    from: 'Bali (Padang Bai)',
-    to: 'Lombok',
-    image: 'https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=800',
-    alt: 'Coastline of Lombok',
-    duration: 'Approx. 2 hours',
-    price: 'From $30'
-  },
-  {
-    id: 'bali-lembongan',
-    from: 'Bali (Sanur)',
-    to: 'Nusa Lembongan',
-    image: 'https://images.pexels.com/photos/2387866/pexels-photo-2387866.jpeg?auto=compress&cs=tinysrgb&w=800',
-    alt: 'Boats docked at Nusa Lembongan',
-    duration: 'Approx. 30 mins',
-    price: 'From $12'
-  }
 ];

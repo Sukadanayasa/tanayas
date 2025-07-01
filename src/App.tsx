@@ -13,7 +13,6 @@ import DestinationDetailPage from "./pages/DestinationDetailPage";
 import ServiceDetailPage from "./pages/ServiceDetailPage";
 import ScrollToTop from "./components/ScrollToTop";
 import DriverPage from "./pages/DriverPage"; // Import the new DriverPage
-import PopularRoutes from "./components/PopularRoutes";
 
 function App() {
   useTheme();
@@ -30,7 +29,6 @@ function App() {
           <Route path="/" element={
             <>
               <Hero />
-              <PopularRoutes />
               <Destinations />
               <Services />
               <About />
