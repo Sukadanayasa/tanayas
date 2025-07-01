@@ -138,8 +138,12 @@ const Header = () => {
         style={{ backdropFilter: "blur(2px)" }}
       />
       <div
-        className={`fixed top-[60px] left-0 right-0 bg-white z-40 lg:hidden shadow-lg transition-transform duration-300 ease-out dark:bg-gray-900 ${
+        className={`fixed top-[60px] left-0 right-0 z-40 lg:hidden transition-all duration-300 ease-out ${
           isMenuOpen ? "translate-y-0" : "-translate-y-full"
+        } ${
+          isScrolled
+            ? "bg-white shadow-lg dark:bg-gray-900"
+            : "bg-black/80 backdrop-blur-md"
         }`}
       >
         <div className="p-6">
@@ -153,9 +157,15 @@ const Header = () => {
               <button
                 key={item.label}
                 onClick={() => handleNavigationClick(item.sectionId)}
-                className={`nav-link-underline block w-full text-left px-4 py-3 rounded-lg text-lg font-medium text-gray-800 hover:bg-gold-50 hover:text-gold-800 transition-all duration-200 dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:text-gold-400 ${
+                className={`nav-link-underline block w-full text-left px-4 py-3 rounded-lg text-lg font-medium transition-all duration-200 ${
+                  isScrolled
+                    ? "text-gray-800 hover:bg-gold-50 hover:text-gold-800 dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:text-gold-400"
+                    : "text-white hover:bg-white/10"
+                } ${
                   index < array.length - 1
-                    ? "border-b border-gray-100 dark:border-gray-700"
+                    ? isScrolled
+                      ? "border-b border-gray-100 dark:border-gray-700"
+                      : "border-b border-white/20"
                     : ""
                 }`}
               >
