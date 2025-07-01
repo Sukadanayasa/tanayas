@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { popularRoutes } from '../data/content';
-import { ArrowRight, Ship, Clock, Tag } from 'lucide-react';
+import { ArrowRight, Clock, Tag } from 'lucide-react';
 
 const PopularRoutes = () => {
   return (
@@ -21,37 +21,39 @@ const PopularRoutes = () => {
           {popularRoutes.map((route) => (
             <div
               key={route.id}
-              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2 dark:bg-gray-800 dark:shadow-xl dark:hover:shadow-2xl dark:shadow-gray-950/50 flex flex-col"
+              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2 dark:bg-gray-800 dark:shadow-xl dark:hover:shadow-2xl dark:shadow-gray-950/50 flex flex-col"
             >
               <div className="relative overflow-hidden">
                 <img
                   src={route.image}
                   alt={route.alt}
-                  className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <div className="absolute bottom-0 left-0 p-4 text-white">
-                  <h3 className="text-2xl font-bold leading-tight">{route.to}</h3>
                   <p className="text-sm text-gold-300">from {route.from}</p>
+                  <h3 className="text-2xl font-bold leading-tight" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}>{route.to}</h3>
                 </div>
               </div>
               <div className="p-6 flex-grow flex flex-col">
-                <div className="space-y-3 mb-6 text-sm">
-                  <div className="flex items-center text-gray-600 dark:text-gray-300">
-                    <Clock size={16} className="mr-2 text-gold-600 dark:text-gold-400" />
+                <div className="flex-grow">
+                  <div className="flex items-center text-gray-600 dark:text-gray-300 mb-3">
+                    <Clock size={16} className="mr-2 text-gold-600 dark:text-gold-400 flex-shrink-0" />
                     <span>{route.duration}</span>
                   </div>
-                  <div className="flex items-center text-gray-600 dark:text-gray-300">
-                    <Tag size={16} className="mr-2 text-gold-600 dark:text-gold-400" />
-                    <span>{route.price} / person</span>
+                  <div className="mb-4">
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Starting from</p>
+                    <p className="text-3xl font-bold text-gold-600 dark:text-gold-400">{route.price}</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">/ person</p>
                   </div>
                 </div>
                 <Link
                   to="/contact"
-                  className="group/btn mt-auto w-full text-center bg-gradient-to-r from-gold-600 to-gold-700 hover:from-gold-700 hover:to-gold-800 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  className="group/btn mt-auto w-full inline-flex items-center justify-center space-x-2 bg-gold-100 text-gold-800 hover:bg-gold-200 hover:text-gold-900 px-6 py-3 rounded-full font-semibold transition-all duration-300 dark:bg-gold-900/50 dark:text-gold-300 dark:hover:bg-gold-900"
                 >
-                  Get Schedules
+                  <span>Get Schedules</span>
+                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
                 </Link>
               </div>
             </div>

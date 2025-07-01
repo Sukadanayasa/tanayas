@@ -17,6 +17,8 @@ const Hero = () => {
     }
   }, []);
 
+  const textShadowStyle = { textShadow: '0 2px 10px rgba(0, 0, 0, 0.5)' };
+
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden py-20">
       {/* Background Image */}
@@ -36,33 +38,33 @@ const Hero = () => {
             alt="Tanayas Logo"
             className="h-28 w-auto sm:h-36 lg:h-44"
           />
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-gold-500 leading-tight">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-gold-500 leading-tight" style={textShadowStyle}>
             TANAYAS
           </h1>
         </div>
 
         {/* Subtitle */}
-        <p className="text-2xl sm:text-3xl lg:text-4xl text-gold-400 font-semibold mb-4">
+        <p className="text-2xl sm:text-3xl lg:text-4xl text-gold-400 font-semibold mb-4" style={textShadowStyle}>
           Fast Boat & Activities Organizer
         </p>
 
         {/* Trusted Partner */}
-        <p className="text-xl sm:text-2xl text-gold-200 mb-6 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-xl sm:text-2xl text-gold-200 mb-6 max-w-2xl mx-auto leading-relaxed" style={textShadowStyle}>
           Your trusted partner since 2007.
         </p>
 
         {/* Main Description */}
-        <p className="text-xl sm:text-2xl text-white mb-4 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-xl sm:text-2xl text-white mb-4 max-w-3xl mx-auto leading-relaxed" style={textShadowStyle}>
           We offer fast boat tickets and exciting activities to Lembongan, Nusa Penida, Gili Islands, and Lombok.
         </p>
-        <p className="text-xl sm:text-2xl text-white mb-8 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-xl sm:text-2xl text-white mb-8 max-w-3xl mx-auto leading-relaxed" style={textShadowStyle}>
           Enjoy personalized service and direct booking via WhatsApp for instant confirmation.
         </p>
 
         {/* Explore Destinations Button */}
         <button
           onClick={() => scrollToSection('destinations')}
-          className="bg-gradient-to-r from-gold-400 to-gold-600 hover:from-gold-500 hover:to-gold-700 text-white px-8 py-3 rounded-full font-semibold text-xl transition-all transform hover:scale-105 shadow-lg mt-6"
+          className="bg-gradient-to-r from-gold-400 to-gold-600 hover:from-gold-500 hover:to-gold-700 text-white px-10 py-4 rounded-full font-semibold text-xl transition-all transform hover:scale-105 shadow-lg mt-6"
         >
           Explore Destinations
         </button>

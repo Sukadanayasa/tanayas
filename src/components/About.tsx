@@ -43,7 +43,7 @@ const About = () => {
             {t.aboutUsTitle}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-gold-700 to-gold-600 mx-auto rounded-full mb-8 dark:from-gold-500 dark:to-gold-400" />
-          <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed dark:text-gray-400">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed dark:text-gray-400">
             {t.aboutUsDescription}
           </p>
         </div>
