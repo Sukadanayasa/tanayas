@@ -36,20 +36,20 @@ const Header = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 h-[60px] ${
           isScrolled
             ? "bg-white/90 backdrop-blur-md shadow-sm dark:bg-black/90 dark:shadow-lg"
             : "bg-transparent"
         }`}
       >
         <div
-          className={`w-full px-4 py-3 max-w-page-max mx-auto transition-colors duration-300 ${
+          className={`w-full px-4 h-full max-w-page-max mx-auto transition-colors duration-300 ${
             isScrolled
               ? "border-b border-gray-100 dark:border-gray-800"
               : "border-b border-transparent"
           }`}
         >
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between h-full">
             <button
               onClick={() => handleNavigationClick("hero")}
               className="flex items-center space-x-3 transition-transform duration-300 focus:outline-none focus:ring-0 rounded-md p-1 -ml-1"
@@ -138,7 +138,7 @@ const Header = () => {
         style={{ backdropFilter: "blur(2px)" }}
       />
       <div
-        className={`fixed top-[64px] left-0 right-0 bg-white z-40 lg:hidden shadow-lg transition-transform duration-300 ease-out dark:bg-gray-900 ${
+        className={`fixed top-[60px] left-0 right-0 bg-white z-40 lg:hidden shadow-lg transition-transform duration-300 ease-out dark:bg-gray-900 ${
           isMenuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
