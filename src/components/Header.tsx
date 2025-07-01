@@ -138,12 +138,12 @@ const Header = () => {
         style={{ backdropFilter: "blur(2px)" }}
       />
       <div
-        className={`fixed top-[60px] left-0 right-0 z-40 lg:hidden transition-all duration-300 ease-out ${
-          isMenuOpen ? "translate-y-0" : "-translate-y-full"
+        className={`fixed top-[60px] left-0 right-0 z-40 lg:hidden transition-transform duration-300 ease-out ${
+          isMenuOpen ? "translate-y-0" : "-translate-y-full pointer-events-none"
         } ${
           isScrolled
             ? "bg-white shadow-lg dark:bg-gray-900"
-            : "bg-black/80 backdrop-blur-md"
+            : "bg-black/80"
         }`}
       >
         <div className="p-6">
