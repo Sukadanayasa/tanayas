@@ -27,20 +27,32 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
+  const navLinkClasses = `nav-link-underline font-medium transition-colors duration-200 ${
+    isScrolled
+      ? "text-gray-700 hover:text-gold-700 dark:text-gray-300 dark:hover:text-gold-400"
+      : "text-white hover:text-gold-300"
+  }`;
+
   return (
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
             ? "bg-white/90 backdrop-blur-md shadow-sm dark:bg-black/90 dark:shadow-lg"
-            : "bg-white dark:bg-black"
+            : "bg-transparent"
         }`}
       >
-        <div className="w-full px-4 py-3 max-w-page-max mx-auto border-b border-gray-100 dark:border-gray-800">
+        <div
+          className={`w-full px-4 py-3 max-w-page-max mx-auto transition-colors duration-300 ${
+            isScrolled
+              ? "border-b border-gray-100 dark:border-gray-800"
+              : "border-b border-transparent"
+          }`}
+        >
           <div className="flex items-center justify-between">
             <button
               onClick={() => handleNavigationClick("hero")}
-              className={`flex items-center space-x-3 transition-transform duration-300 focus:outline-none focus:ring-0 rounded-md p-1 -ml-1`}
+              className="flex items-center space-x-3 transition-transform duration-300 focus:outline-none focus:ring-0 rounded-md p-1 -ml-1"
               aria-label="Go to homepage and scroll to top"
             >
               <img
@@ -48,7 +60,11 @@ const Header = () => {
                 alt="Tanayas Logo"
                 className="h-9 w-auto"
               />
-              <span className="text-xl font-bold text-gold-500">
+              <span
+                className={`text-xl font-bold transition-colors duration-300 ${
+                  isScrolled ? "text-gold-500" : "text-gold-400"
+                }`}
+              >
                 TANAYAS
               </span>
             </button>
@@ -57,25 +73,25 @@ const Header = () => {
               <nav className="hidden lg:flex items-center space-x-6">
                 <button
                   onClick={() => handleNavigationClick("destinations")}
-                  className="nav-link-underline text-gray-700 hover:text-gold-700 font-medium transition-colors duration-200 dark:text-gray-300 dark:hover:text-gold-400"
+                  className={navLinkClasses}
                 >
                   Destinations
                 </button>
                 <button
                   onClick={() => handleNavigationClick("services")}
-                  className="nav-link-underline text-gray-700 hover:text-gold-700 font-medium transition-colors duration-200 dark:text-gray-300 dark:hover:text-gold-400"
+                  className={navLinkClasses}
                 >
                   Services
                 </button>
                 <button
                   onClick={() => handleNavigationClick("about")}
-                  className="nav-link-underline text-gray-700 hover:text-gold-700 font-medium transition-colors duration-200 dark:text-gray-300 dark:hover:text-gold-400"
+                  className={navLinkClasses}
                 >
                   About Us
                 </button>
                 <button
                   onClick={() => handleNavigationClick("contact")}
-                  className="nav-link-underline text-gray-700 hover:text-gold-700 font-medium transition-colors duration-200 dark:text-gray-300 dark:hover:text-gold-400"
+                  className={navLinkClasses}
                 >
                   Contact
                 </button>
@@ -83,7 +99,11 @@ const Header = () => {
 
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="lg:hidden p-2 text-gray-600 hover:text-gold-800 transition-colors duration-200 relative z-50 border border-gold-700 rounded-full dark:border-gold-500"
+                className={`lg:hidden p-2 rounded-full transition-colors duration-200 relative z-50 border ${
+                  isScrolled
+                    ? "text-gray-600 border-gold-700 dark:border-gold-500"
+                    : "text-white border-white"
+                }`}
                 aria-label="Toggle menu"
               >
                 <div className="relative w-6 h-6">
@@ -134,7 +154,9 @@ const Header = () => {
                 key={item.label}
                 onClick={() => handleNavigationClick(item.sectionId)}
                 className={`nav-link-underline block w-full text-left px-4 py-3 rounded-lg text-lg font-medium text-gray-800 hover:bg-gold-50 hover:text-gold-800 transition-all duration-200 dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:text-gold-400 ${
-                  index < array.length - 1 ? "border-b border-gray-100 dark:border-gray-700" : ""
+                  index < array.length - 1
+                    ? "border-b border-gray-100 dark:border-gray-700"
+                    : ""
                 }`}
               >
                 {item.label}
