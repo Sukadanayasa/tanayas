@@ -27,7 +27,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-8 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service) => {
             const IconComponent = iconMap[service.icon] || Activity;
             return (
@@ -39,7 +39,7 @@ const Services = () => {
                   <img
                     src={service.image}
                     alt={service.alt}
-                    className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -47,8 +47,8 @@ const Services = () => {
                     <IconComponent className="w-6 h-6 text-white" />
                   </div>
                 </div>
-                <div className="p-8 flex-grow flex flex-col">
-                  <h3 className="text-3xl font-bold text-gray-800 mb-4 group-hover:text-gold-800 transition-colors duration-300 dark:text-white dark:group-hover:text-gold-400">
+                <div className="p-6 flex-grow flex flex-col">
+                  <h3 className="text-2xl font-bold text-gray-800 mb-4 group-hover:text-gold-800 transition-colors duration-300 dark:text-white dark:group-hover:text-gold-400">
                     {service.title}
                   </h3>
                   <p className="text-gray-600 mb-6 leading-relaxed flex-grow dark:text-gray-300">
