@@ -4,9 +4,6 @@ import { ArrowRight } from "lucide-react";
 import { destinations } from "../data/content";
 
 const Destinations = () => {
-  const featuredDestination = destinations[0];
-  const otherDestinations = destinations.slice(1);
-
   return (
     <section
       id="destinations"
@@ -25,75 +22,38 @@ const Destinations = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-          {/* Featured Destination */}
-          <div
-            key={featuredDestination.id}
-            className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2 dark:bg-gray-800 dark:shadow-xl dark:hover:shadow-2xl dark:shadow-gray-950/50 lg:flex lg:flex-col h-full"
-          >
-            <div className="relative overflow-hidden">
-              <img
-                src={featuredDestination.image}
-                alt={featuredDestination.alt}
-                className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <span className="absolute top-4 right-4 bg-gold-500 text-white text-sm font-semibold px-3 py-1 rounded-full">
-                Most Popular
-              </span>
-            </div>
-            <div className="p-8 flex-grow flex flex-col">
-              <h3 className="text-3xl font-bold text-gray-800 mb-4 group-hover:text-gold-800 transition-colors duration-300 dark:text-white dark:group-hover:text-gold-400">
-                {featuredDestination.title}
-              </h3>
-              <p className="text-gray-600 mb-6 leading-relaxed flex-grow dark:text-gray-300">
-                {featuredDestination.description}
-              </p>
-              <Link
-                to={`/destinations/${featuredDestination.id}`}
-                className="group/btn inline-flex items-center space-x-2 text-gold-700 hover:text-gold-900 font-semibold transition-all duration-300 dark:text-gold-400 dark:hover:text-gold-500 mt-auto"
-              >
-                <span>Learn More</span>
-                <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
-              </Link>
-            </div>
-          </div>
-
-          {/* Other Destinations */}
-          <div className="grid grid-cols-1 gap-8">
-            {otherDestinations.map((destination) => (
-              <div
-                key={destination.id}
-                className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2 dark:bg-gray-800 dark:shadow-xl dark:hover:shadow-2xl dark:shadow-gray-950/50 flex flex-col sm:flex-row"
-              >
-                <div className="relative overflow-hidden sm:w-1/3">
-                  <img
-                    src={destination.image}
-                    alt={destination.alt}
-                    className="w-full h-48 sm:h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    loading="lazy"
-                  />
-                   <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </div>
-                <div className="p-6 flex-grow flex flex-col sm:w-2/3">
-                  <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-gold-800 transition-colors duration-300 dark:text-white dark:group-hover:text-gold-400">
-                    {destination.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4 text-sm leading-relaxed flex-grow dark:text-gray-300">
-                    {destination.description}
-                  </p>
-                  <Link
-                    to={`/destinations/${destination.id}`}
-                    className="group/btn inline-flex items-center space-x-2 text-gold-700 hover:text-gold-900 font-semibold transition-all duration-300 dark:text-gold-400 dark:hover:text-gold-500 mt-auto text-sm"
-                  >
-                    <span>Learn More</span>
-                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                  </Link>
-                </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {destinations.map((destination) => (
+            <div
+              key={destination.id}
+              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2 dark:bg-gray-800 dark:shadow-xl dark:hover:shadow-2xl dark:shadow-gray-950/50 flex flex-col h-full"
+            >
+              <div className="relative overflow-hidden">
+                <img
+                  src={destination.image}
+                  alt={destination.alt}
+                  className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
-            ))}
-          </div>
+              <div className="p-8 flex-grow flex flex-col">
+                <h3 className="text-3xl font-bold text-gray-800 mb-4 group-hover:text-gold-800 transition-colors duration-300 dark:text-white dark:group-hover:text-gold-400">
+                  {destination.title}
+                </h3>
+                <p className="text-gray-600 mb-6 leading-relaxed flex-grow dark:text-gray-300">
+                  {destination.description}
+                </p>
+                <Link
+                  to={`/destinations/${destination.id}`}
+                  className="group/btn inline-flex items-center space-x-2 text-gold-700 hover:text-gold-900 font-semibold transition-all duration-300 dark:text-gold-400 dark:hover:text-gold-500 mt-auto"
+                >
+                  <span>Learn More</span>
+                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                </Link>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
